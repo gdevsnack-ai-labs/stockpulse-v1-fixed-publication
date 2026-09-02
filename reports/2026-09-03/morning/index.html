@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Publication home · StockPulse V1 Fixed</title>
+<title>Morning report · 2026-09-03 · StockPulse V1 Fixed</title>
 <style>
 :root { color-scheme: light; --ink:#142033; --muted:#617086; --line:#dbe3ed; --soft:#f4f7fb; --blue:#2563eb; --green:#087f5b; --amber:#9a6700; }
 * { box-sizing:border-box; }
@@ -58,27 +58,67 @@ tr:last-child td { border-bottom:0; }
 </style>
 </head>
 <body>
-<header class="site-header"><nav class="nav"><a class="brand" href="index.html">StockPulse V1 Fixed</a><div class="nav-links"><a href="index.html">Publication home</a><a href="index.html#archive">Archive</a><a href="index.htmldata/projection.json">Projection JSON</a></div></nav></header>
-<main class="container">
-<section class="hero">
-<div class="eyebrow">V1 Fixed · Live Shadow</div>
-<h1>StockPulse V1 Fixed Publication</h1>
-<p class="lede">사람이 읽는 Morning / Evening 시장 리포트와 실험 상태를 분리해 보관하는 V1 Fixed static preview입니다. 원본 evidence는 private run artifact에 있고, 이 preview는 public-safe projection만 사용합니다.</p>
-<div class="badges"><span class="badge green">Active</span><span class="badge">Live Shadow</span><span class="badge">Day 1</span><span class="badge amber">Evening available</span></div>
-<div class="grid metrics">
-<div class="card"><div class="metric-label">Morning LLM</div><div class="metric-value ">하락 0.68</div><div class="metric-note">prediction</div></div>
-<div class="card"><div class="metric-label">Actual KOSPI</div><div class="metric-value green">미확인</div><div class="metric-note">Evening pending</div></div>
-<div class="card"><div class="metric-label">LLM result</div><div class="metric-value green">Pending</div><div class="metric-note">Morning vs actual</div></div>
-<div class="card"><div class="metric-label">ML evaluation</div><div class="metric-value amber">0/50 · Pending</div><div class="metric-note">50 predictions</div></div>
-<div class="card"><div class="metric-label">Improvement</div><div class="metric-value ">None</div><div class="metric-note">No evaluated failure</div></div>
-</div>
-</section>
-<section id="archive" class="section">
-<div class="section-header"><div><h2>Archive</h2><p>날짜별 publication record를 선택하세요.</p></div><span class="badge">1 day</span></div>
-<div class="table-wrap"><table><thead><tr><th>Date</th><th>Morning</th><th>Market result</th><th>LLM</th><th>ML</th><th>Reports</th></tr></thead><tbody><tr><td><strong>2026-09-03</strong></td><td>하락 0.68</td><td>Evening pending · 미확인</td><td><span class="badge green">Pending</span></td><td>0/50 · Pending</td><td class="report-links"><a href="reports/2026-09-03/morning/index.html">Morning report ↗</a><span>Evening pending</span></td></tr></tbody></table></div>
-</section>
-<section class="section"><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));"><div class="card"><h3>Public boundary</h3><p class="metric-note">private execution material과 raw model records는 포함하지 않습니다.</p></div><div class="card"><h3>Project state</h3><p class="metric-note">Run Board와 Lab UI는 별도 <a href="https://devsnack-blog.vercel.app/labs/stockpulse-v1-fixed">Project route</a>에서 확인합니다.</p></div></div></section>
-<p class="footer">Generated from read-only public projection · stockpulse-v1-fixed-projector-1.1.0 · Daily Lab slug 없음</p>
+<header class="site-header"><nav class="nav"><a class="brand" href="../../../index.html">StockPulse V1 Fixed</a><div class="nav-links"><a href="../../../index.html">Publication home</a><a href="../../../index.html#archive">Archive</a><a href="../../../index.htmldata/projection.json">Projection JSON</a></div></nav></header>
+<main class="container report">
+<div class="eyebrow">morning report · 2026-09-03</div>
+<div class="badges"><span class="badge">V1 Fixed · Live Shadow</span><span class="badge green">available</span></div>
+<article class="report-body"><h1>StockPulse V1 Fixed — 2026-09-03 Morning</h1>
+<blockquote>사람을 위한 아침 시장 브리핑입니다. 실험 원본은 private run artifact에 보존되고, 이 문서는 public projection입니다.</blockquote>
+<h2>시장 전망</h2>
+<ul>
+<li>대상 시장: KOSPI</li>
+<li>Yura LLM 전망: <strong>하락</strong></li>
+<li>Confidence: <strong>0.68</strong> (미표기)</li>
+<li>Confidence 성격: subjective_assessment_not_calibrated_probability</li>
+<li>판단 요약: 전일 급락 이후 해외 증시는 반등했지만, KOSPI의 추세 약세와 ML의 약세 편향을 고려하면 오늘은 하락 압력이 우세해 보여요.</li>
+</ul>
+<h2>해외시장 · macro · overnight</h2>
+<p>미국 주요 지수와 반도체 관련 지수는 전반적으로 상승했고 VIX도 하락해 overnight 환경은 우호적이지만, 국내 급락 이후의 수급 회복 여부가 중요해요.</p>
+<h3>Macro</h3>
+<p>동결된 거시·일정 자료를 기준으로 뚜렷한 방향성 재료보다 국내 단기 추세와 변동성의 영향이 큰 국면으로 보여요.</p>
+<h2>국내 시장 기준</h2>
+<p>KOSPI는 전일 3.99% 하락해 6,562.72로 마감했고, 20일 이동평균선 아래에 있어 단기 추세는 약해 보여요.</p>
+<h2>Sentiment · 수급 · 주요 시장 이슈</h2>
+<h3>주요 이슈</h3>
+<ul>
+<li>KOSPI가 전일 3.99% 급락했고 20일선 대비 약세예요.</li>
+<li>ML 일일 예측의 시장 편향이 약세이고 평균 모델 수익률도 음수예요.</li>
+<li>공포·탐욕 지수는 중립이지만 외국인·기관 수급 데이터가 없어 반등 지속을 확인하기 어려워요.</li>
+<li>미국 증시와 반도체주는 반등해 하락 폭을 줄일 수 있는 상쇄 요인은 있어요.</li>
+</ul>
+<h2>ML prediction 요약</h2>
+<p>LightGBM·XGBoost·LSTM 3개 모델이 참여한 50종목 예측에서 시장 편향은 약세였고, 평균 모델 수익률은 -0.8%로 제시됐어요.</p>
+<ul>
+<li>예측 수: <strong>50개</strong></li>
+<li>ML evaluation: <strong>pending</strong> (50 pending)</li>
+</ul>
+<h2>관찰 포인트</h2>
+<ul>
+<li>KOSPI 6,562.72 및 20일선 6,672.16 회복 여부</li>
+<li>미국 증시·반도체 반등의 국내 시장 전이</li>
+<li>외국인·기관 수급 데이터 복구 여부</li>
+<li>장 초반 변동성과 급락 이후 반발 매수 강도</li>
+</ul>
+<h2>실험 상태</h2>
+<ul>
+<li>Morning: ML prediction 및 Yura LLM prediction 생성 완료</li>
+<li>실제 시장 결과: 아직 없음 — Evening not_started</li>
+<li>Improvement: none</li>
+<li>Daily Lab Note slug: 생성하지 않음</li>
+</ul>
+<h2>불확실성·누락</h2>
+<ul>
+<li>외국인·기관 수급 데이터가 제공되지 않았어요.</li>
+<li>해외시장 반등이 국내 장 초반에 얼마나 반영될지 불확실해요.</li>
+<li>confidence는 주관적 판단이며 보정된 확률이 아니에요.</li>
+</ul>
+<h2>Public boundary</h2>
+<ul>
+<li>이 문서는 private run artifact의 읽기 전용 projection입니다.</li>
+<li>private execution material은 포함하지 않습니다.</li>
+<li>Evening report는 장 마감 후 별도 evaluation이 끝난 경우에만 생성합니다.</li>
+</ul></article>
+<p class="footer"><a href="../../../index.html">← Publication home</a> · <span>Evening report pending</span></p>
 </main>
 </body>
 </html>
