@@ -13,7 +13,7 @@
     "improvement.json": "866882bf6c99651954c04c8b8cc802471e4bb808c0b03f5ab0609f4fa34ab047",
     "day1-morning-verification.json": "3009bab9faaa10a5ba1c5d297da1fe723049ad433105b83092922ce0a5c93314"
   },
-  "generator_version": "stockpulse-v1-fixed-projector-1.1.0",
+  "generator_version": "stockpulse-v1-fixed-projector-1.2.0",
   "generator_command_template": "python3 scripts/project_publication.py --source-run <private-run-dir> --output-dir <output-dir> [--projected-at <iso>]",
   "source_path_projected": false,
   "schema_version": 1,
