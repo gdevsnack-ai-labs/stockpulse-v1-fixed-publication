@@ -3,17 +3,17 @@
   "project_id": "stockpulse-v1-fixed",
   "snapshot": {
     "live_shadow_day": "Day 1 Morning",
-    "current_state": "day1_complete",
+    "current_state": "morning_complete_evening_not_started",
     "run_count": 1,
-    "llm_evaluated": 1,
-    "llm_correct": false,
+    "llm_evaluated": 0,
+    "llm_correct": null,
     "ml_prediction_count": 50,
     "ml_evaluated": 0,
     "ml_correct": null,
     "ml_evaluation_state": "pending",
-    "improvement_cycles": 1,
-    "improvement_status": "applied",
-    "applied_count": 1,
+    "improvement_cycles": 0,
+    "improvement_status": "none",
+    "applied_count": 0,
     "rejected_count": 0,
     "pending_count": 0,
     "current_effective_config": {
@@ -37,16 +37,16 @@
   },
   "runs": [
     {
-      "run_id": "live-shadow-2026-09-03-morning-01",
-      "trading_date": "2026-09-03",
+      "run_id": "live-shadow-2026-09-04-morning-01",
+      "trading_date": "2026-09-04",
       "prediction_count": 50,
       "ml_evaluated_count": 0,
-      "ml_pending_count": 100,
+      "ml_pending_count": 50,
       "ml_correct_count": null,
-      "llm_evaluated": true,
-      "llm_correct": false,
-      "improvement_cycles": 1,
-      "actual_applied_count": 1,
+      "llm_evaluated": false,
+      "llm_correct": null,
+      "improvement_cycles": 0,
+      "actual_applied_count": 0,
       "evaluation_status": "pending"
     }
   ]

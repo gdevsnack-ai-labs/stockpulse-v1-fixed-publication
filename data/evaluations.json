@@ -3,18 +3,18 @@
   "project_id": "stockpulse-v1-fixed",
   "records": [
     {
-      "evaluation_id": "evaluation-live-shadow-2026-09-03-morning-01",
-      "run_id": "live-shadow-2026-09-03-morning-01",
-      "prediction_id": "prediction-live-shadow-2026-09-03-morning-01",
-      "llm_prediction_id": "llm-prediction-2026-09-03",
-      "snapshot_id": "input-snapshot-b31efaba14c81c01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-04-morning-01",
+      "run_id": "live-shadow-2026-09-04-morning-01",
+      "prediction_id": "prediction-live-shadow-2026-09-04-morning-01",
+      "llm_prediction_id": "llm-prediction-2026-09-04",
+      "snapshot_id": "input-snapshot-20d232a6e1bc7e81",
       "scope": "v1_fixed_fresh_ml_predictions_and_morning_llm",
       "status": "pending",
       "evaluated_count": 0,
-      "pending_count": 100,
+      "pending_count": 50,
       "correct_count": null,
-      "llm_success": false,
-      "llm_failure": true,
+      "llm_success": null,
+      "llm_failure": null,
       "target_maturity": {
         "status": "not_mature",
         "reason": "target_date_unavailable"
@@ -28,19 +28,19 @@
       "evidence_refs": [
         {
           "kind": "run",
-          "id": "live-shadow-2026-09-03-morning-01"
+          "id": "live-shadow-2026-09-04-morning-01"
         },
         {
           "kind": "input_snapshot",
-          "id": "input-snapshot-b31efaba14c81c01"
+          "id": "input-snapshot-20d232a6e1bc7e81"
         },
         {
           "kind": "prediction",
-          "id": "prediction-live-shadow-2026-09-03-morning-01"
+          "id": "prediction-live-shadow-2026-09-04-morning-01"
         },
         {
           "kind": "evaluation",
-          "id": "evaluation-live-shadow-2026-09-03-morning-01"
+          "id": "evaluation-live-shadow-2026-09-04-morning-01"
         }
       ]
     }
