@@ -9,7 +9,7 @@
       "source_experiment_id": "stockpulse-v1-fixed-phase8b",
       "run_mode": "live_shadow",
       "stage": "morning",
-      "overall_status": "in_progress_evening_not_started",
+      "overall_status": "complete",
       "lane": "v1_fixed_fresh",
       "trading_date": "2026-09-03",
       "run_status": "success",
@@ -30,9 +30,9 @@
       "morning_llm_prediction": {
         "llm_prediction_id": "llm-prediction-2026-09-03",
         "generation_status": "generated",
-        "evaluation_status": "pending",
-        "success": null,
-        "failure": null,
+        "evaluation_status": "evaluated",
+        "success": false,
+        "failure": true,
         "market": "KOSPI",
         "direction": "하락",
         "confidence": 0.68,
@@ -1743,26 +1743,40 @@
           "외국인·기관 수급 원자료"
         ]
       },
+      "evening_analysis": {
+        "actual_driver_analysis": "국내 시장은 전일 KOSPI 6,562.72의 3.99% 급락과 20일선 6,672.16 하회라는 약한 출발점에서 시작했지만, 당일 KOSPI는 6,579.48로 반등했고 KOSDAQ은 790.21로 마감했습니다. Morning에 보존된 국내 기술 맥락에서는 삼성전자 -4.02%, SK하이닉스 -4.73%, 현대차 -5.62%, 기아 -5.18% 등 주요 종목의 전일 약세와 자동차·배터리·인터넷 일부 종목의 역배열 및 저점 신호가 하방 위험을 지지했습니다. 반면 overnight 자료에서는 S&P500 +0.46%, Nasdaq +0.45%, Dow +0.56%, SOX +0.45%, NVDA +3.21%, MU +2.43%, SMH +0.96%, VIX -6.98%로 위험선호와 반도체 리더 반등이 확인됐고, 이 상쇄 요인이 국내 지수의 실제 반등에 기여했을 가능성이 큽니다. 당일 시가·고가·저가·거래대금·상승하락 종목 수와 장중 리더 행동은 별도 수치로 보존되지 않아 장중 breadth의 방향은 확인할 수 없습니다.",
+        "data_synthesis": {
+          "cross_asset": "reviewed",
+          "domestic": "reviewed",
+          "macro": "reviewed",
+          "ml_relative": "reviewed",
+          "sentiment_news": "reviewed"
+        },
+        "failure_analysis": "Yura LLM의 KOSPI 절대 방향 예측은 실제 상승과 불일치했습니다. 관찰 가능한 원인은 국내 추세·전일 급락·수급 부재를 해외 위험선호 회복보다 강하게 가중한 점과, 전일 급락 뒤 반발 매수 및 해외 반등의 국내 전이 가능성을 충분히 반영하지 못한 점입니다. 다만 당일 breadth, 장중 고저·거래대금, 외국인·기관 실수급은 보존된 입력에서 확인되지 않으므로 단일 원인으로 확정하지 않습니다. ML 50건은 5개 관측 세션이 아직 없어 평가 실패가 아니며, 개선 제안은 생성하지 않습니다.",
+        "improvement": "none",
+        "rationale_vs_actual": "Morning의 하락 판단을 지지한 요인은 전일 국내 지수의 급락, 20일선 하회, KOSPI 모멘텀·이격도 약세, 일부 대형주의 역배열, 그리고 ML 시장 편향 약세였습니다. 실제와 반대 결과를 만든 요인은 overnight 해외 지수와 반도체주의 동반 반등, VIX 하락, 원/달러 -1.02%로 나타난 달러 약세였습니다. Morning 판단에도 해외 반등이 하락 압력을 완화할 수 있다고 적시했지만, 국내 절대 방향을 뒤집을 정도의 상쇄 가능성을 충분히 높게 반영하지 못했습니다. 공포·탐욕 점수 57은 중립이고 최근 10일 중 7일 상승이라는 회복 신호가 있었으나, 변동성 3.01%와 20일선 대비 -1.64% 약세가 함께 있어 신호가 혼재했습니다. ML은 KOSPI 방향이 아니라 5일 후 KOSPI 대비 종목 상대 초과수익을 예측하며, 50개 예측의 평가가 아직 성숙하지 않았으므로 이번 KOSPI 상승과 ML 약세를 직접적인 실패로 해석하지 않습니다.",
+        "summary": "Morning은 전일 국내 급락과 국내 추세 약세, ML의 약세 편향을 근거로 하락을 전망했으나, 2026-09-03 KOSPI는 6,579.48로 0.25538191% 상승하고 KOSDAQ은 790.21로 마감했습니다. 따라서 KOSPI 절대 방향에 대한 Morning 판단은 실제와 불일치했습니다. 다만 해외 위험선호 회복과 반도체 중심의 반등 가능성을 상쇄 요인으로 명시했다는 점은 실제 반등과 일부 부합합니다."
+      },
       "actual_market_result": {
-        "status": "not_available",
-        "reason": "evening_not_started",
-        "kospi_close": null,
-        "kosdaq_close": null,
-        "direction": null,
-        "return_pct": null,
-        "observed_at": null,
-        "llm_success": null
+        "status": "available",
+        "reason": null,
+        "kospi_close": 6579.48,
+        "kosdaq_close": 790.21,
+        "direction": "상승",
+        "return_pct": 0.25538191,
+        "observed_at": "2026-09-03T16:48:38.730648+09:00",
+        "llm_success": false
       },
       "llm_evaluation": {
-        "status": "pending",
-        "success": null,
-        "failure": null
+        "status": "evaluated",
+        "success": false,
+        "failure": true
       },
       "ml_evaluation": {
         "prediction_count": 50,
         "status": "pending",
         "evaluated_count": 0,
-        "pending_count": 50,
+        "pending_count": 100,
         "correct_count": null,
         "reason": "target_date_unavailable"
       },
@@ -1778,8 +1792,8 @@
           "path": "reports/2026-09-03/morning/"
         },
         "evening": {
-          "status": "not_started",
-          "path": null
+          "status": "available",
+          "path": "reports/2026-09-03/evening/"
         }
       },
       "evidence_refs": [
