@@ -2,11 +2,46 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 0,
-    "applied_count": 0,
+    "status": "applied",
+    "reason": null,
+    "proposal_count": 1,
+    "applied_count": 1,
     "pending_count": 0
   },
-  "records": []
+  "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-09-03-morning-01",
+      "run_id": "live-shadow-2026-09-03-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-03-morning-01",
+      "proposal_id": "proposal-8c6f8e12974860f6",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "절대 방향 판단에서 국내 추세 약세와 해외 위험선호·반도체·환율 반등이 충돌할 때, 해외 counter-signal을 별도 평가한 뒤 최종 방향을 결정합니다. 장중 breadth·외국인/기관 수급이 없으면 이를 불확실성으로 표시하고 국내 약세 근거로 대체하지 않습니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "Yura LLM의 KOSPI 절대 방향 예측은 실제 상승과 불일치했습니다. 관찰 가능한 원인은 국내 추세·전일 급락·수급 부재를 해외 위험선호 회복보다 강하게 가중한 점과, 전일 급락 뒤 반발 매수 및 해외 반등의 국내 전이 가능성을 충분히 반영하지 못한 점입니다. 다만 당일 breadth, 장중 고저·거래대금, 외국인·기관 실수급은 보존된 입력에서 확인되지 않으므로 단일 원인으로 확정하지 않습니다. ML 50건은 5개 관측 세션이 아직 없어 평가 실패가 아니며, 개선 제안은 생성하지 않습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "국내 추세 신호와 반대되는 해외·환율 counter-signal의 누락을 줄이고 다음 Morning의 방향 판단 근거를 균형화합니다."
+      },
+      "status": "applied",
+      "approved": true,
+      "actual_applied": true,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": true,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-03-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-03-morning-01"
+        }
+      ]
+    }
+  ]
 }

@@ -11,9 +11,9 @@
     "ml_evaluated": 0,
     "ml_correct": null,
     "ml_evaluation_state": "pending",
-    "improvement_cycles": 0,
-    "improvement_status": "none",
-    "applied_count": 0,
+    "improvement_cycles": 1,
+    "improvement_status": "applied",
+    "applied_count": 1,
     "rejected_count": 0,
     "pending_count": 0,
     "current_effective_config": {
@@ -45,8 +45,8 @@
       "ml_correct_count": null,
       "llm_evaluated": true,
       "llm_correct": false,
-      "improvement_cycles": 0,
-      "actual_applied_count": 0,
+      "improvement_cycles": 1,
+      "actual_applied_count": 1,
       "evaluation_status": "pending"
     }
   ]

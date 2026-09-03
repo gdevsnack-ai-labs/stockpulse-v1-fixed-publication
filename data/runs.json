@@ -1781,10 +1781,10 @@
         "reason": "target_date_unavailable"
       },
       "improvement": {
-        "status": "none",
-        "proposal_id": null,
-        "actual_applied": false,
-        "observation_state": "not_started"
+        "status": "applied",
+        "proposal_id": "proposal-8c6f8e12974860f6",
+        "actual_applied": true,
+        "observation_state": "pending"
       },
       "publications": {
         "morning": {
