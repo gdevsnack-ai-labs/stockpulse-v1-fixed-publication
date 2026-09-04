@@ -11,10 +11,10 @@
       "scope": "v1_fixed_fresh_ml_predictions_and_morning_llm",
       "status": "pending",
       "evaluated_count": 0,
-      "pending_count": 50,
+      "pending_count": 150,
       "correct_count": null,
-      "llm_success": null,
-      "llm_failure": null,
+      "llm_success": false,
+      "llm_failure": true,
       "target_maturity": {
         "status": "not_mature",
         "reason": "target_date_unavailable"

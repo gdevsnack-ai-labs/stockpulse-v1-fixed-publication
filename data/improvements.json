@@ -2,11 +2,46 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 0,
-    "applied_count": 0,
+    "status": "applied",
+    "reason": null,
+    "proposal_count": 1,
+    "applied_count": 1,
     "pending_count": 0
   },
-  "records": []
+  "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-09-04-morning-01",
+      "run_id": "live-shadow-2026-09-04-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-04-morning-01",
+      "proposal_id": "proposal-4cd09d3ef93100d6",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "절대 방향 판단에서 국내 추세 약세와 해외 위험선호·반도체·환율 반등이 충돌할 때, 해외 counter-signal을 별도 평가한 뒤 최종 방향을 결정합니다. 장중 breadth·외국인/기관 수급이 없으면 이를 불확실성으로 표시하고 국내 약세 근거로 대체하지 않습니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "Yura Morning의 KOSPI 절대 방향 예측은 실제 상승과 불일치했습니다. 관찰 가능한 원인은 국내 추세·KOSDAQ 약세와 수급 부재를 해외 위험선호·환율·변동성 개선보다 강하게 반영한 점, 그리고 전일 국내 약세 이후 반등이 발생할 가능성을 충분히 높이지 않은 점입니다. 이번 비교에서 확인된 실제 상승은 KOSPI 절대 방향에 대한 LLM 실패로 평가합니다. 반면 ML 50개 종목 신호는 5세션 상대 초과성과를 대상으로 하며 아직 성숙하지 않아 평가_count 0, pending 150으로 남아 있습니다. 따라서 ML 약세 신호를 이번 KOSPI 상승의 평가 실패나 개선 근거로 사용하지 않습니다. 수급과 breadth가 제공되지 않은 상태에서 이를 특정 투자 주체의 매수·매도로 해석하지 않습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "국내 추세 신호와 반대되는 해외·환율 counter-signal의 누락을 줄이고 다음 Morning의 방향 판단 근거를 균형화합니다."
+      },
+      "status": "applied",
+      "approved": true,
+      "actual_applied": true,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": true,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-04-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-04-morning-01"
+        }
+      ]
+    }
+  ]
 }

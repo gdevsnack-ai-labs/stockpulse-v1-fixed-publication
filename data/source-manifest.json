@@ -5,13 +5,13 @@
   "trading_date": "2026-09-04",
   "artifact_count": 7,
   "artifact_hashes": {
-    "run.json": "451fd0c726674b803321c41392cc873b45d0f4d25d61cbe4f39195ef33905d0e",
+    "run.json": "adef326ffb4a8a557cd512501bcf5839c61bd93905034b204203d15895934a29",
     "input_manifest.json": "dc9daeceed93f7004ebefe611cd871ab7b06061bae5d66cf1942b29372d5df26",
     "quality.json": "c7e72dccf69b5f52f4ba2482dc3b3e1ad200c5b86bf270e1431f122c8a99604c",
     "ml_prediction.json": "163662e7152b0b345c14a89b1c9f386e92adf73284f5956ce08a39a492a90b8a",
-    "llm_prediction.json": "05feee4bb87cb6080869676c496e34de33759769665d452a66b838c2d4fcec4b",
-    "improvement.json": "00f34e244a8473e1e55fa11989981bb5e9474f8fcd3bcc04a4466c15713e4d13",
-    "day1-morning-verification.json": "3b63169de7c7703d75905aa2a05eeca83a232198c0fd3d9e0247df3bfef7a311"
+    "llm_prediction.json": "47cabe1df01a1aed1bd8441ffa9fc6a94ab61fdb89bf838d667a4e8f996f9cb0",
+    "improvement.json": "8eb4ba4b394135fd7d61f3561044a32877792ba0565cc3fcee987bf8928226e7",
+    "day1-morning-verification.json": "78765b5731061517e99f9bff1b1886d3d6c1c5ab7f047a65b8ff8fc21d583341"
   },
   "generator_version": "stockpulse-v1-fixed-projector-1.2.0",
   "generator_command_template": "python3 scripts/project_publication.py --source-run <private-run-dir> --output-dir <output-dir> [--projected-at <iso>]",

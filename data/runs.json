@@ -9,7 +9,7 @@
       "source_experiment_id": "stockpulse-v1-fixed-phase8b",
       "run_mode": "live_shadow",
       "stage": "morning",
-      "overall_status": "in_progress_evening_not_started",
+      "overall_status": "complete",
       "lane": "v1_fixed_fresh",
       "trading_date": "2026-09-04",
       "run_status": "success",
@@ -30,9 +30,9 @@
       "morning_llm_prediction": {
         "llm_prediction_id": "llm-prediction-2026-09-04",
         "generation_status": "generated",
-        "evaluation_status": "pending",
-        "success": null,
-        "failure": null,
+        "evaluation_status": "evaluated",
+        "success": false,
+        "failure": true,
         "market": "KOSPI",
         "direction": "보합",
         "confidence": 0.61,
@@ -1762,35 +1762,48 @@
           "외국인·기관 수급 원자료"
         ]
       },
-      "evening_analysis": {},
+      "evening_analysis": {
+        "actual_driver_analysis": "실제 KOSPI는 Morning 기준값 6,579.48에서 6,687.21로 상승했고, KOSDAQ도 790.21에서 813.5로 반등했습니다. Morning에 없던 장 마감 수치로 지수 방향은 확인되지만, 시가·고가·저가·거래대금·전체 상승하락 종목 수와 업종별 breadth는 보존된 자료에 없어 장중 경로와 시장 확산 폭은 확인할 수 없습니다. 종목 기술 자료에서는 LG화학 +6.69%, KB금융 +5.20%, LG에너지솔루션 +5.18%, 기아 +2.41%, 현대차 +1.46% 등이 상승했고, 삼성전자 -0.20%, SK하이닉스 -1.05%, 삼성바이오로직스 -1.60%, NAVER -0.72%는 약세였습니다. 따라서 지수 상승은 전 종목의 균일한 추세 전환이라기보다 일부 대형주·이차전지·금융 중심의 반등이 포함된 혼조 흐름일 가능성이 있으나, breadth 원자료 부재로 단정하지 않습니다. 해외에서는 전일 Nasdaq +1.40%, S&P500 +1.06%, Dow +1.18%, QQQ +1.19%, SMH +0.39%, NVDA +1.80%가 상승했고, DXY -0.56%, 달러/원 -1.24%, 미국 10년물 -0.71%, VIX -5.79%가 확인되어 국내 위험자산에 우호적인 출발 배경을 제공했습니다. 다만 니케이225 -2.85%, DAX -0.50% 등 지역별 약세와 SOX의 제한적 상승은 전면적 위험선호로 해석하기 어렵게 합니다.",
+        "data_synthesis": {
+          "cross_asset": "reviewed; US indices, semiconductor proxies, ADRs, FX, rates, volatility, oil and gold available",
+          "domestic": "reviewed; close read-back available, intraday breadth and trading-flow raw data unavailable",
+          "macro": "reviewed; latest CPI/PPI/unemployment observations are dated 2026-07-01, US August CPI is scheduled for 2026-09-11 and FOMC for 2026-09-16",
+          "ml_relative": "reviewed; LightGBM/XGBoost/LSTM 73 features, 50 predictions, relative five-session target, 150 pending and 0 evaluated",
+          "sentiment_news": "reviewed; fear-greed is 58 neutral, watchlist news signals conflict across semiconductor, battery, auto, bio, internet and financial names"
+        },
+        "failure_analysis": "Yura Morning의 KOSPI 절대 방향 예측은 실제 상승과 불일치했습니다. 관찰 가능한 원인은 국내 추세·KOSDAQ 약세와 수급 부재를 해외 위험선호·환율·변동성 개선보다 강하게 반영한 점, 그리고 전일 국내 약세 이후 반등이 발생할 가능성을 충분히 높이지 않은 점입니다. 이번 비교에서 확인된 실제 상승은 KOSPI 절대 방향에 대한 LLM 실패로 평가합니다. 반면 ML 50개 종목 신호는 5세션 상대 초과성과를 대상으로 하며 아직 성숙하지 않아 평가_count 0, pending 150으로 남아 있습니다. 따라서 ML 약세 신호를 이번 KOSPI 상승의 평가 실패나 개선 근거로 사용하지 않습니다. 수급과 breadth가 제공되지 않은 상태에서 이를 특정 투자 주체의 매수·매도로 해석하지 않습니다.",
+        "improvement": "none",
+        "rationale_vs_actual": "Morning의 보합 판단은 국내 KOSPI가 20일선 6,671.22를 1.38% 하회하고 KOSDAQ이 20일선 대비 -4.75%였다는 추세 약세, 공포·탐욕 58의 중립, 거래량 5일/20일 1.03배, 국내 수급·breadth 부재에 기반했습니다. 실제로는 해외 주식시장 반등, 원화 강세, 금리 하락, VIX 하락이 국내 약세 신호를 상쇄했고, 국내 일부 주도주의 상승이 지수 방향을 위로 전환했습니다. Morning도 해외 반등 가능성을 기록했지만 국내 추세 약세와 ML 약세 상대신호를 더 크게 반영하여 상승 가능성을 보합으로 낮춘 것이 오차의 핵심으로 보입니다. 다만 실제 외국인·기관 순매수, 프로그램 수급, 장중 breadth와 지수 고저가가 없어 상쇄 요인의 기여도를 정량적으로 분리할 수 없습니다.",
+        "summary": "Morning은 KOSPI 6,579.48의 20일선 하회, KOSDAQ 약세, 국내 수급·breadth 부재와 ML의 약세 상대신호를 근거로 보합을 전망했습니다. 실제 KOSPI는 6,687.21로 1.63736344% 상승하고 KOSDAQ은 813.5로 마감하여 KOSPI 절대 방향 판단은 상승과 불일치했습니다. 미국 주요 지수와 원화·금리·변동성의 우호적 흐름, 그리고 국내 대형주·이차전지·금융 일부의 반등이 국내 지수 상승을 지지한 것으로 관찰됩니다."
+      },
       "actual_market_result": {
-        "status": "not_available",
-        "reason": "evening_not_started",
-        "kospi_close": null,
-        "kosdaq_close": null,
-        "direction": null,
-        "return_pct": null,
-        "observed_at": null,
-        "llm_success": null
+        "status": "available",
+        "reason": null,
+        "kospi_close": 6687.21,
+        "kosdaq_close": 813.5,
+        "direction": "상승",
+        "return_pct": 1.63736344,
+        "observed_at": "2026-09-04T16:30:10.958762+09:00",
+        "llm_success": false
       },
       "llm_evaluation": {
-        "status": "pending",
-        "success": null,
-        "failure": null
+        "status": "evaluated",
+        "success": false,
+        "failure": true
       },
       "ml_evaluation": {
         "prediction_count": 50,
         "status": "pending",
         "evaluated_count": 0,
-        "pending_count": 50,
+        "pending_count": 150,
         "correct_count": null,
         "reason": "target_date_unavailable"
       },
       "improvement": {
-        "status": "none",
-        "proposal_id": null,
-        "actual_applied": false,
-        "observation_state": "not_started"
+        "status": "applied",
+        "proposal_id": "proposal-4cd09d3ef93100d6",
+        "actual_applied": true,
+        "observation_state": "pending"
       },
       "publications": {
         "morning": {
@@ -1798,8 +1811,8 @@
           "path": "reports/2026-09-04/morning/"
         },
         "evening": {
-          "status": "not_started",
-          "path": null
+          "status": "available",
+          "path": "reports/2026-09-04/evening/"
         }
       },
       "evidence_refs": [
