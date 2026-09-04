@@ -58,22 +58,38 @@ tr:last-child td { border-bottom:0; }
 </style>
 </head>
 <body>
-<header class="site-header"><nav class="nav"><a class="brand" href="../../../index.html">StockPulse V1 Fixed</a><div class="nav-links"><a href="../../../index.html">Publication home</a><a href="../../../index.html#archive">Archive</a><a href="../../../index.htmldata/projection.json">Projection JSON</a></div></nav></header>
+<header class="site-header"><nav class="nav"><a class="brand" href="../../../index.html">StockPulse V1 Fixed</a><div class="nav-links"><a href="../../../index.html">Publication home</a><a href="../../../index.html#archive">Archive</a><a href="../../../data/projection.json">Projection JSON</a></div></nav></header>
 <main class="container report">
 <div class="eyebrow">morning report · 2026-09-03</div>
 <div class="badges"><span class="badge">V1 Fixed · Live Shadow</span><span class="badge green">available</span></div>
-<article class="report-body"><h1>📊 아침 시장 전망 리포트 — 2026-09-03</h1>
-<blockquote>생성 기준: 2026-09-03T08:01:07.956749+09:00 | 전일 확정 데이터와 장 개장 전 수집 자료를 반영했습니다.</blockquote>
-<blockquote>보강 수집 자료: snapshot freeze 이후 추가 수집한 공개 데이터는 기사 밀도 보완용이며, 이미 freeze된 Yura 판단을 변경하지 않는다.</blockquote>
-<blockquote>이 문서는 사람이 읽는 시장 브리핑이며, 실험 원본은 별도 private run artifact에 보존합니다.</blockquote>
-<p>---</p>
-<h2>1️⃣ 전일 국내 증시 마감 · KOSPI / KOSDAQ 전망</h2>
-<p><strong>방향성: 하락 — confidence 0.68</strong> 전일 급락 이후 해외 증시는 반등했지만, KOSPI의 추세 약세와 ML의 약세 편향을 고려하면 오늘은 하락 압력이 우세해 보입니다.</p>
+<article class="report-body"><h1>📊 Morning Brief — 2026-09-03</h1>
+<blockquote>생성 기준: 2026-09-03T08:01:07.956749+09:00 | Morning snapshot 이후의 장중 결과는 포함하지 않습니다.</blockquote>
+<h2>1. 오늘 한눈에</h2>
+<p><strong>오늘의 전망: 하락</strong> <strong>Confidence: 68%</strong> (주관적 판단, 보정 확률 아님)</p>
+<h3>상방</h3>
+<ul>
+<li>S&amp;P 500 +0.46%</li>
+<li>Nasdaq +0.45%</li>
+<li>SOX +0.45%</li>
+</ul>
+<h3>하방</h3>
+<ul>
+<li>KOSPI 20일선 하회(6,562.72 &lt; 6,672.16)</li>
+<li>KOSDAQ -2.10%</li>
+<li>ML 종목 상대신호는 약세 일괄 편향</li>
+</ul>
+<ul>
+<li>수급 상태: <strong>미확보 — 원자료 확인 필요</strong></li>
+<li>가장 중요한 uncertainty: <strong>외국인·기관 수급 데이터가 제공되지 않았습니다.</strong></li>
+<li>판단 한 줄: 전일 급락 이후 해외 증시는 반등했지만, KOSPI의 추세 약세와 ML의 약세 편향을 고려하면 오늘은 하락 압력이 우세해 보입니다.</li>
+</ul>
+<h2>2. 국내 시장 — Morning reference</h2>
+<blockquote>아래 값은 장 시작 전 판단에 사용한 직전 확정 세션 기준값입니다. Evening의 실제 종가와 다른 시점입니다.</blockquote>
 <div class="table-wrap"><table><thead><tr>
-<th>구분</th>
-<th>전일 종가</th>
-<th>등락률</th>
-<th>기술 기준</th>
+<th>시장</th>
+<th>Morning reference</th>
+<th>직전 등락</th>
+<th>기술 위치</th>
 </tr></thead><tbody>
 <tr>
 <td>KOSPI</td>
@@ -85,954 +101,145 @@ tr:last-child td { border-bottom:0; }
 <td>KOSDAQ</td>
 <td>803.98</td>
 <td>-2.10%</td>
-<td>20일 이격 -3.15%</td>
+<td>20일선 확인하지 못함 / 이격 -3.15%</td>
 </tr>
 </tbody></table></div>
-<p><strong>핵심 근거:</strong></p>
-<ul>
-<li>KOSPI가 전일 3.99% 급락했고 20일선 대비 약세입니다.</li>
-<li>ML 일일 예측의 시장 편향이 약세이고 평균 모델 수익률도 음수입니다.</li>
-<li>공포·탐욕 지수는 중립이지만 외국인·기관 수급 데이터가 없어 반등 지속을 확인하기 어렵습니다.</li>
-<li>미국 증시와 반도체주는 반등해 하락 폭을 줄일 수 있는 상쇄 요인은 있습니다.</li>
-</ul>
-<h3>오늘의 판단 구조</h3>
-<ul>
-<li>기본 전망: 해외 반등이 하락 압력을 일부 완화할 수 있지만, 국내 추세 약세와 수급 공백을 감안하면 보합보다 하락 가능성을 높게 봅니다.</li>
-<li>확인할 변수: KOSPI 6,562.72 및 20일선 6,672.16 회복 여부</li>
-<li>확인할 변수: 미국 증시·반도체 반등의 국내 시장 전이</li>
-<li>확인할 변수: 외국인·기관 수급 데이터 복구 여부</li>
-<li>확인할 변수: 장 초반 변동성과 급락 이후 반발 매수 강도</li>
-</ul>
-<p>---</p>
-<h2>2️⃣ 야간 해외 동향</h2>
+<p>수급: <strong>미확보 — 원자료 확인 필요</strong>. 확보되지 않은 외국인·기관·개인 순매수는 0으로 대체하지 않았습니다.</p>
+<h2>3. 해외·매크로</h2>
 <p>미국 주요 지수와 반도체 관련 지수는 전반적으로 상승했고 VIX도 하락해 overnight 환경은 우호적이지만, 국내 급락 이후의 수급 회복 여부가 중요합니다.</p>
 <div class="table-wrap"><table><thead><tr>
-<th>지수·자산</th>
-<th>최근 종가</th>
-<th>등락률</th>
-<th>구분</th>
+<th>자산</th>
+<th>최근치</th>
+<th>변동률</th>
 </tr></thead><tbody>
 <tr>
 <td>S&amp;P 500</td>
 <td>7,666.60</td>
 <td>+0.46%</td>
-<td>index</td>
 </tr>
 <tr>
 <td>Nasdaq</td>
 <td>26,217.83</td>
 <td>+0.45%</td>
-<td>index</td>
-</tr>
-<tr>
-<td>Dow</td>
-<td>53,061.95</td>
-<td>+0.56%</td>
-<td>index</td>
 </tr>
 <tr>
 <td>SOX</td>
 <td>11,339.25</td>
 <td>+0.45%</td>
-<td>semiconductor</td>
-</tr>
-<tr>
-<td>NVDA</td>
-<td>224.41</td>
-<td>+3.21%</td>
-<td>semiconductor</td>
-</tr>
-<tr>
-<td>AMD</td>
-<td>457.06</td>
-<td>-0.55%</td>
-<td>semiconductor</td>
-</tr>
-<tr>
-<td>MU</td>
-<td>956.08</td>
-<td>+2.43%</td>
-<td>semiconductor</td>
-</tr>
-<tr>
-<td>퀄컴</td>
-<td>169.96</td>
-<td>+2.01%</td>
-<td>semiconductor</td>
-</tr>
-<tr>
-<td>인텔</td>
-<td>90.05</td>
-<td>+1.21%</td>
-<td>semiconductor</td>
 </tr>
 <tr>
 <td>VIX</td>
 <td>15.20</td>
 <td>-6.98%</td>
-<td>volatility</td>
 </tr>
 <tr>
-<td>VXN</td>
-<td>21.07</td>
-<td>-4.05%</td>
-<td>volatility</td>
+<td>달러/원</td>
+<td>1,358.90</td>
+<td>-1.02%</td>
 </tr>
 <tr>
 <td>10Y국채</td>
 <td>4.80</td>
 <td>+0.00%</td>
-<td>rate</td>
-</tr>
-<tr>
-<td>달러/원</td>
-<td>1,358.90</td>
-<td>-1.02%</td>
-<td>fx</td>
-</tr>
-<tr>
-<td>USD/JPY</td>
-<td>158.84</td>
-<td>-0.85%</td>
-<td>fx</td>
-</tr>
-<tr>
-<td>DXY</td>
-<td>99.58</td>
-<td>-0.09%</td>
-<td>fx</td>
-</tr>
-<tr>
-<td>브렌트유</td>
-<td>95.30</td>
-<td>+0.69%</td>
-<td>commodity</td>
-</tr>
-<tr>
-<td>WTI 원유</td>
-<td>90.70</td>
-<td>+0.53%</td>
-<td>commodity</td>
-</tr>
-<tr>
-<td>금 선물</td>
-<td>4,427.80</td>
-<td>+1.84%</td>
-<td>commodity</td>
-</tr>
-<tr>
-<td>니케이225</td>
-<td>66,215.34</td>
-<td>-0.15%</td>
-<td>asia</td>
-</tr>
-<tr>
-<td>항셍</td>
-<td>25,329.73</td>
-<td>-0.93%</td>
-<td>asia</td>
-</tr>
-<tr>
-<td>유로 STOXX 50</td>
-<td>6,368.98</td>
-<td>-0.80%</td>
-<td>europe</td>
-</tr>
-<tr>
-<td>DAX</td>
-<td>25,970.11</td>
-<td>-1.10%</td>
-<td>europe</td>
-</tr>
-<tr>
-<td>QQQ</td>
-<td>709.24</td>
-<td>+0.23%</td>
-<td>sector_etf</td>
-</tr>
-<tr>
-<td>SMH(반도체ETF)</td>
-<td>550.48</td>
-<td>+0.96%</td>
-<td>sector_etf</td>
-</tr>
-<tr>
-<td>POSCOADR</td>
-<td>61.43</td>
-<td>+0.52%</td>
-<td>adr</td>
-</tr>
-<tr>
-<td>KB금융ADR</td>
-<td>126.25</td>
-<td>+1.29%</td>
-<td>adr</td>
-</tr>
-<tr>
-<td>신한지주ADR</td>
-<td>81.41</td>
-<td>+1.84%</td>
-<td>adr</td>
-</tr>
-<tr>
-<td>한전ADR</td>
-<td>11.60</td>
-<td>-0.51%</td>
-<td>adr</td>
-</tr>
-<tr>
-<td>KTADR</td>
-<td>19.65</td>
-<td>-0.10%</td>
-<td>adr</td>
-</tr>
-<tr>
-<td>SK텔레콤ADR</td>
-<td>37.07</td>
-<td>-1.83%</td>
-<td>adr</td>
 </tr>
 </tbody></table></div>
-<h3>반도체와 ADR</h3>
-<p>SOX와 주요 반도체주, 한국 ADR은 국내 대형주 장초반 심리를 확인하는 보조 지표로 기록했습니다. 수치가 없는 자산은 추정하지 않았습니다.</p>
-<p>---</p>
-<h2>3️⃣ 원자재·환율</h2>
-<div class="table-wrap"><table><thead><tr>
-<th>자산</th>
-<th>최근치</th>
-<th>변동률</th>
-<th>해석 범주</th>
-</tr></thead><tbody>
-<tr>
-<td>달러/원</td>
-<td>1,358.90</td>
-<td>-1.02%</td>
-<td>fx</td>
-</tr>
-<tr>
-<td>USD/JPY</td>
-<td>158.84</td>
-<td>-0.85%</td>
-<td>fx</td>
-</tr>
-<tr>
-<td>DXY</td>
-<td>99.58</td>
-<td>-0.09%</td>
-<td>fx</td>
-</tr>
-<tr>
-<td>브렌트유</td>
-<td>95.30</td>
-<td>+0.69%</td>
-<td>commodity</td>
-</tr>
-<tr>
-<td>WTI 원유</td>
-<td>90.70</td>
-<td>+0.53%</td>
-<td>commodity</td>
-</tr>
-<tr>
-<td>금 선물</td>
-<td>4,427.80</td>
-<td>+1.84%</td>
-<td>commodity</td>
-</tr>
-</tbody></table></div>
-<p>---</p>
-<h2>4️⃣ 투자자별 수급 분석</h2>
-<p>원래 V1 수집 항목인 외국인·기관 수급을 이번 snapshot에서 확인하지 못했습니다. 수급 방향을 추정해 채우지 않았습니다.</p>
-<h3>관심종목 수급</h3>
+<p>매크로·일정: 동결된 거시·일정 자료를 기준으로 뚜렷한 방향성 재료보다 국내 단기 추세와 변동성의 영향이 큰 국면으로 보입니다. 나머지 cross-asset와 상세 collector 결과는 public projection의 technical detail에 보존합니다.</p>
+<h2>4. ML signals — relative vs realized</h2>
+<ul>
+<li>Model relative-strength score: 종목 간 상대순위 신호이며 KOSPI 절대 방향 확률이 아닙니다.</li>
+<li>Target: 5세션 후 KOSPI 대비 초과수익</li>
+<li>모델 편향: <strong>약세</strong> | 분석 종목: <strong>50개</strong></li>
+<li>Recent 5-day realized return: 최근 실제 수익률이며 모델 상대순위와 별도 값입니다.</li>
+</ul>
 <div class="table-wrap"><table><thead><tr>
 <th>종목</th>
-<th>외국인 순매수</th>
-<th>기관 순매수</th>
-<th>합계</th>
+<th>Model relative-strength score</th>
+<th>Recent 5-day realized return</th>
+<th>Model bias</th>
 </tr></thead><tbody>
 <tr>
-<td>삼성전자</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-</tr>
-<tr>
-<td>SK하이닉스</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-</tr>
-<tr>
 <td>티엠씨</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
+<td>+80.00%</td>
+<td>-11.41%</td>
+<td>약세</td>
 </tr>
 <tr>
-<td>나우IB</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
+<td>HD현대중공업</td>
+<td>+68.00%</td>
+<td>-9.15%</td>
+<td>약세</td>
 </tr>
 <tr>
-<td>엔투텍</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-</tr>
-<tr>
-<td>퀄리타스반도체</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-</tr>
-<tr>
-<td>유안타증권</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
+<td>SK스퀘어</td>
+<td>+64.60%</td>
+<td>-7.18%</td>
+<td>약세</td>
 </tr>
 <tr>
 <td>유안타증권우</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
-<td>확인하지 못함</td>
+<td>+20.00%</td>
+<td>-0.46%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>엔투텍</td>
+<td>+24.30%</td>
+<td>-6.04%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>퀄리타스반도체</td>
+<td>+25.10%</td>
+<td>-4.26%</td>
+<td>약세</td>
 </tr>
 </tbody></table></div>
-<p>---</p>
-<h2>5️⃣ 국내 기술분석·시장 스캔</h2>
-<p>관심종목·시총 상위 기술분석 결과 중 상위 10개를 표시했습니다. 전체 분석 수: <strong>49개</strong></p>
+<h2>5. 뉴스·이벤트</h2>
+<p>공포·탐욕: <strong>57/100 (중립)</strong></p>
 <div class="table-wrap"><table><thead><tr>
-<th>종목</th>
-<th>종가</th>
-<th>스코어</th>
-<th>당일 등락</th>
-<th>기술 상태</th>
-</tr></thead><tbody>
-<tr>
-<td>신한지주</td>
-<td>110,500</td>
-<td>70</td>
-<td>-0.54%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>LG에너지솔루션</td>
-<td>347,500</td>
-<td>65</td>
-<td>-5.31%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>삼성SDI</td>
-<td>538,000</td>
-<td>65</td>
-<td>-5.45%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>KB금융</td>
-<td>169,100</td>
-<td>65</td>
-<td>-1.23%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>포스코퓨처엠</td>
-<td>176,000</td>
-<td>65</td>
-<td>-8.00%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>삼성화재</td>
-<td>657,000</td>
-<td>65</td>
-<td>-2.95%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>LG전자</td>
-<td>200,500</td>
-<td>65</td>
-<td>-2.91%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>하나금융지주</td>
-<td>134,900</td>
-<td>65</td>
-<td>-1.82%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>카카오페이</td>
-<td>44,750</td>
-<td>65</td>
-<td>-2.51%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>아모레퍼시픽</td>
-<td>142,300</td>
-<td>65</td>
-<td>-2.73%</td>
-<td>정배열</td>
-</tr>
-</tbody></table></div>
-<h3>급등 상위</h3>
-<div class="table-wrap"><table><thead><tr>
-<th>종목</th>
-<th>종가</th>
-<th>등락률</th>
-<th>기술 상태</th>
-</tr></thead><tbody>
-<tr>
-<td>메리츠금융지주</td>
-<td>129,800</td>
-<td>+3.51%</td>
-<td>BB상단(1.06), 거래량x2.3, 정배열</td>
-</tr>
-<tr>
-<td>대한항공</td>
-<td>28,900</td>
-<td>+0.52%</td>
-<td>BB상단(0.91), 정배열</td>
-</tr>
-<tr>
-<td>우리금융지주</td>
-<td>34,500</td>
-<td>-0.14%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>카카오뱅크</td>
-<td>21,900</td>
-<td>-0.23%</td>
-<td>혼조</td>
-</tr>
-<tr>
-<td>기업은행</td>
-<td>20,850</td>
-<td>-0.24%</td>
-<td>BB상단(0.91)</td>
-</tr>
-</tbody></table></div>
-<h3>급락 상위</h3>
-<div class="table-wrap"><table><thead><tr>
-<th>종목</th>
-<th>종가</th>
-<th>등락률</th>
-<th>기술 상태</th>
-</tr></thead><tbody>
-<tr>
-<td>포스코퓨처엠</td>
-<td>176,000</td>
-<td>-8.00%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>에코프로비엠</td>
-<td>106,300</td>
-<td>-7.06%</td>
-<td>혼조</td>
-</tr>
-<tr>
-<td>SK</td>
-<td>545,000</td>
-<td>-7.00%</td>
-<td>혼조</td>
-</tr>
-<tr>
-<td>현대건설</td>
-<td>112,600</td>
-<td>-6.71%</td>
-<td>정배열</td>
-</tr>
-<tr>
-<td>현대모비스</td>
-<td>415,500</td>
-<td>-6.31%</td>
-<td>RSI저점(32), BB하단(-0.09), 역배열</td>
-</tr>
-</tbody></table></div>
-<p>---</p>
-<h2>6️⃣ 투자심리·뉴스 감성</h2>
-<p><strong>공포·탐욕 지수: 57/100 (중립)</strong></p>
-<ul>
-<li>해석: 관망 또는 선별 매수</li>
-</ul>
-<div class="table-wrap"><table><thead><tr>
-<th>구성요소</th>
-<th>점수</th>
-<th>원자료 값</th>
-<th>설명</th>
-</tr></thead><tbody>
-<tr>
-<td>모멘텀</td>
-<td>42</td>
-<td>-1.64</td>
-<td>KOSPI 20일선 대비 -1.64%</td>
-</tr>
-<tr>
-<td>변동성</td>
-<td>98</td>
-<td>3.01</td>
-<td>KOSPI 20일 변동성 3.01%</td>
-</tr>
-<tr>
-<td>투자심리</td>
-<td>70</td>
-<td>7</td>
-<td>최근 10일 중 7일 상승</td>
-</tr>
-<tr>
-<td>이격도</td>
-<td>40</td>
-<td>-1.64</td>
-<td>20일 이격도 -1.64%</td>
-</tr>
-<tr>
-<td>거래량</td>
-<td>29</td>
-<td>0.94</td>
-<td>거래량 5일/20일 비율 0.94x</td>
-</tr>
-<tr>
-<td>고저비율</td>
-<td>49</td>
-<td>확인하지 못함</td>
-<td>52주高 근접 1개, 低 근접 2개 (/50)</td>
-</tr>
-</tbody></table></div>
-<h3>종목별 뉴스 감성 상·하위</h3>
-<p><strong>긍정 신호</strong></p>
-<div class="table-wrap"><table><thead><tr>
-<th>종목</th>
-<th>점수</th>
-<th>라벨</th>
-<th>요약</th>
+<th>핵심 종목</th>
+<th>신호</th>
+<th>판단 관련 요약</th>
 </tr></thead><tbody>
 <tr>
 <td>HPSP</td>
-<td>28</td>
 <td>긍정</td>
 <td>호재: 상승, 매수, 순매수</td>
 </tr>
 <tr>
 <td>셀트리온</td>
-<td>21</td>
 <td>긍정</td>
 <td>호재: 주주환원, 자사주 매입, 상승</td>
 </tr>
 <tr>
-<td>신한지주</td>
-<td>9</td>
-<td>중립</td>
-<td>호재: 호실적, 기대, 매수 / 악재: 하락, 악재</td>
-</tr>
-<tr>
-<td>SK하이닉스</td>
-<td>6</td>
-<td>중립</td>
-<td>호재: 매수, 반등 / 악재: 약세, 매도</td>
-</tr>
-<tr>
-<td>LG에너지솔루션</td>
-<td>6</td>
-<td>중립</td>
-<td>호재: 상승, 수혜, 반등 / 악재: 하락, 악재</td>
-</tr>
-<tr>
-<td>삼성SDI</td>
-<td>6</td>
-<td>중립</td>
-<td>호재: 신고가, 기대, 매수 / 악재: 하락</td>
-</tr>
-</tbody></table></div>
-<ul>
-<li>HPSP: HPSP 주가, 9월 2일 장중 51,200원 0.39% 상승 - 톱스타뉴스</li>
-<li>HPSP: HPSP 주가, 웃음꽃... 증권가 전망은? - 금강일보</li>
-<li>셀트리온: 셀트리온, 1천억 규모 자사주 또 매입… 주가 변동 주목 - 중부일보</li>
-<li>셀트리온: 셀트리온 “매년 순이익 3분의 1 주주환원”…자사주 1000억원 매입 - 전자신문</li>
-<li>신한지주: 신한증권, 하나금융지주 목표주가↑…"3분기 호실적 기대" - 연합뉴스</li>
-<li>신한지주: [장중수급포착] 신한지주, 기관 9일 연속 순매수행진... 주가 +1.08% - 뉴스핌</li>
-<li>SK하이닉스: [연금] SK하이닉스로 살펴보는 반도체ETF... 11일 연속 65만주, 총 715만주 매수 - 네이버 프리미엄콘텐츠</li>
-<li>SK하이닉스: LS증권 "삼성전자 목표주가 상향·SK하이닉스 하향, HBM 경쟁구도 정상화" - businesspost.co.kr</li>
-<li>LG에너지솔루션: LG에너지솔루션 주가, 9월 1일 장중 380,500원 0.66% 상승 유지 - topstarnews.net</li>
-<li>LG에너지솔루션: [리포트 브리핑]LG에너지솔루션, '미국 BESS 현지화의 최대 수혜' 목표가 574,000원 - 유안타증권 - 뉴스핌</li>
-<li>삼성SDI: 전고점향해 달리는 삼성SDI … ESS, 데이터센터서 금맥캔다 - 한국경제</li>
-<li>삼성SDI: 한 달 새 40% 넘게 오른 삼성SDI…실적이 주가 입증할까 - 매일일보</li>
-</ul>
-<p><strong>부정 신호</strong></p>
-<div class="table-wrap"><table><thead><tr>
-<th>종목</th>
-<th>점수</th>
-<th>라벨</th>
-<th>요약</th>
-</tr></thead><tbody>
-<tr>
 <td>기아</td>
-<td>-28</td>
 <td>부정</td>
 <td>악재: 급락, 부진, 하락</td>
 </tr>
 <tr>
 <td>리노공업</td>
-<td>-21</td>
 <td>부정</td>
 <td>호재: 성장 / 악재: 하락, 블록딜, 우려</td>
 </tr>
-<tr>
-<td>삼성바이오로직스</td>
-<td>-15</td>
-<td>부정</td>
-<td>호재: 성장, 기대 / 악재: 유상증자, 희석, 하락</td>
-</tr>
-<tr>
-<td>카카오</td>
-<td>-6</td>
-<td>중립</td>
-<td>악재: 하락</td>
-</tr>
-<tr>
-<td>포스코퓨처엠</td>
-<td>-6</td>
-<td>중립</td>
-<td>호재: 급등, 기대감, 기대 / 악재: 하락, 급락, 악재</td>
-</tr>
-<tr>
-<td>에코프로비엠</td>
-<td>-6</td>
-<td>중립</td>
-<td>악재: 하락, 부진</td>
-</tr>
 </tbody></table></div>
-<ul>
-<li>기아: 현대차 6%, 기아 5.6% 현대모비스 6%...현대차그룹주, 현대차 8월 글로벌 판매 부진에 일제히 급락 - 비욘드포스트</li>
-<li>기아: 기아 주가, 9월 2일 장중 124,500원 5.11% 하락 - 톱스타뉴스</li>
-<li>리노공업: 40일째 분규...리노공업 노사 '평행선' - knn.co.kr</li>
-<li>리노공업: [단독] 리노공업, 8600억 규모 블록딜 철회 검토…주가하락·파업 내우외환 - 녹색경제신문</li>
-<li>삼성바이오로직스: [주식] 3조 유상증자한 삼성바이오로직스, 주가는 7% 빠졌다 - hitnews.co.kr</li>
-<li>삼성바이오로직스: 3조 투자에도 싸늘한 삼성바이오 주가, '성장 방정식' 의문 커지나 - 아이뉴스24</li>
-<li>카카오: [마켓파워] 주가 70%↓·임직원 30% 이탈…시험대 오른 신원근의 ‘책임경영’ - 아시아투데이</li>
-<li>카카오: 카카오 주가, 9월 2일 35,100원 3.84% 하락 마감 - topstarnews.net</li>
-<li>포스코퓨처엠: 포스코퓨처엠 주가, 9월 2일 176,000원 7.99퍼센트 하락 마감 - topstarnews.net</li>
-<li>포스코퓨처엠: 포스코퓨처엠 주가 15,300원 하락 후 장마감 - 아시아뉴스통신</li>
-<li>에코프로비엠: 에코프로비엠 유증 일정 확정…규모는 3천억가량 감소 - 연합인포맥스</li>
-<li>에코프로비엠: 에코프로비엠, 주가 하락에 유증 규모 3000억원 축소 - 뉴스핌</li>
-</ul>
-<p>---</p>
-<h2>7️⃣ ML 예측과 상대 강도</h2>
-<p>LightGBM·XGBoost·LSTM 3개 모델이 참여한 50종목 예측에서 시장 편향은 약세였고, 평균 모델 수익률은 -0.8%로 제시됐습니다.</p>
-<div class="table-wrap"><table><thead><tr>
-<th>모델</th>
-<th>AUC</th>
-<th>정확도</th>
-<th>상태</th>
-</tr></thead><tbody>
-<tr>
-<td>Tree ensemble</td>
-<td>0.776</td>
-<td>0.708</td>
-<td>available</td>
-</tr>
-<tr>
-<td>LSTM</td>
-<td>0.7719</td>
-<td>0.7084</td>
-<td>available</td>
-</tr>
-</tbody></table></div>
-<ul>
-<li>모델 참여: LightGBM, XGBoost, LSTM</li>
-<li>분석 종목: <strong>50개</strong></li>
-<li>타겟: 5일 후 KOSPI 대비 초과수익 &gt; 0</li>
-<li>시장 편향: <strong>약세</strong></li>
-<li>종목 표의 상대 순위는 모델의 횡단면 신호이며, 개별 종목의 상승 확률이나 매매 추천으로 해석하지 않는다.</li>
-</ul>
-<h3>상대적 강세 관찰 목록</h3>
-<div class="table-wrap"><table><thead><tr>
-<th>종목</th>
-<th>가격</th>
-<th>상대 순위</th>
-<th>5일 수익률</th>
-<th>신뢰 표기</th>
-</tr></thead><tbody>
-<tr>
-<td>티엠씨</td>
-<td>10,330</td>
-<td>+80.00%</td>
-<td>-11.41%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>HD현대중공업</td>
-<td>422,000</td>
-<td>+68.00%</td>
-<td>-9.15%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>SK스퀘어</td>
-<td>982,000</td>
-<td>+64.60%</td>
-<td>-7.18%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>SK이노베이션</td>
-<td>131,500</td>
-<td>+62.90%</td>
-<td>+18.26%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>현대모비스</td>
-<td>415,500</td>
-<td>+62.00%</td>
-<td>-10.45%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>두산</td>
-<td>1,121,000</td>
-<td>+60.30%</td>
-<td>-5.00%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>삼성전기</td>
-<td>1,400,000</td>
-<td>+58.60%</td>
-<td>+5.26%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>삼성SDI</td>
-<td>538,000</td>
-<td>+58.60%</td>
-<td>+4.26%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>두산에너빌리티</td>
-<td>76,600</td>
-<td>+57.70%</td>
-<td>-10.72%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>SK하이닉스</td>
-<td>1,613,000</td>
-<td>+56.00%</td>
-<td>-4.44%</td>
-<td>높음</td>
-</tr>
-</tbody></table></div>
-<h3>상대적 약세 관찰 목록</h3>
-<div class="table-wrap"><table><thead><tr>
-<th>종목</th>
-<th>가격</th>
-<th>상대 순위</th>
-<th>5일 수익률</th>
-<th>신뢰 표기</th>
-</tr></thead><tbody>
-<tr>
-<td>유안타증권우</td>
-<td>4,285</td>
-<td>+20.00%</td>
-<td>-0.46%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>엔투텍</td>
-<td>1,276</td>
-<td>+24.30%</td>
-<td>-6.04%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>퀄리타스반도체</td>
-<td>8,530</td>
-<td>+25.10%</td>
-<td>-4.26%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>한미반도체</td>
-<td>213,500</td>
-<td>+27.70%</td>
-<td>-2.73%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>삼성바이오로직스</td>
-<td>1,501,000</td>
-<td>+29.40%</td>
-<td>-6.13%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>나우IB</td>
-<td>1,462</td>
-<td>+31.10%</td>
-<td>-1.88%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>KB금융</td>
-<td>169,100</td>
-<td>+32.00%</td>
-<td>+1.50%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>HMM</td>
-<td>20,800</td>
-<td>+32.00%</td>
-<td>-2.58%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>KT&amp;G</td>
-<td>174,400</td>
-<td>+32.00%</td>
-<td>-0.17%</td>
-<td>높음</td>
-</tr>
-<tr>
-<td>알테오젠</td>
-<td>298,500</td>
-<td>+32.90%</td>
-<td>-4.17%</td>
-<td>높음</td>
-</tr>
-</tbody></table></div>
-<p>---</p>
-<h2>8️⃣ 오늘의 주요 이벤트</h2>
-<p>동결된 거시·일정 자료를 기준으로 뚜렷한 방향성 재료보다 국내 단기 추세와 변동성의 영향이 큰 국면으로 보입니다.</p>
-<div class="table-wrap"><table><thead><tr>
-<th>지표</th>
-<th>최근 값</th>
-<th>기준일</th>
-<th>YoY</th>
-<th>MoM</th>
-</tr></thead><tbody>
-<tr>
-<td>CPI(All)</td>
-<td>332.813</td>
-<td>2026-07-01</td>
-<td>+3.54%</td>
-<td>+0.07%</td>
-</tr>
-<tr>
-<td>PPI(All)</td>
-<td>284.057</td>
-<td>2026-07-01</td>
-<td>+8.27%</td>
-<td>-0.78%</td>
-</tr>
-<tr>
-<td>실업률</td>
-<td>4.1</td>
-<td>2026-07-01</td>
-<td>+0.00%</td>
-<td>-2.38%</td>
-</tr>
-</tbody></table></div>
-<div class="table-wrap"><table><thead><tr>
-<th>예정일</th>
-<th>이벤트</th>
-<th>분류</th>
-<th>남은 일수</th>
-</tr></thead><tbody>
-<tr>
-<td>2026-09-11</td>
-<td>US 8월 CPI</td>
-<td>cpi</td>
-<td>8</td>
-</tr>
-<tr>
-<td>2026-09-16</td>
-<td>FOMC</td>
-<td>fomc</td>
-<td>13</td>
-</tr>
-<tr>
-<td>2026-10-10</td>
-<td>US 9월 CPI</td>
-<td>cpi</td>
-<td>37</td>
-</tr>
-<tr>
-<td>2026-10-16</td>
-<td>한은 금통위</td>
-<td>korea_rate</td>
-<td>43</td>
-</tr>
-<tr>
-<td>2026-11-05</td>
-<td>FOMC</td>
-<td>fomc</td>
-<td>63</td>
-</tr>
-<tr>
-<td>2026-11-13</td>
-<td>US 10월 CPI</td>
-<td>cpi</td>
-<td>71</td>
-</tr>
-<tr>
-<td>2026-11-27</td>
-<td>한은 금통위</td>
-<td>korea_rate</td>
-<td>85</td>
-</tr>
-<tr>
-<td>2026-12-11</td>
-<td>US 11월 CPI</td>
-<td>cpi</td>
-<td>99</td>
-</tr>
-</tbody></table></div>
-<p>---</p>
-<h2>9️⃣ 오늘의 전망 및 전략</h2>
-<h3>기본 전망</h3>
-<p>해외 반등이 하락 압력을 일부 완화할 수 있지만, 국내 추세 약세와 수급 공백을 감안하면 보합보다 하락 가능성을 높게 봅니다.</p>
-<h3>핵심 체크포인트</h3>
+<p>주요 예정 이벤트: 2026-09-11 US 8월 CPI, 2026-09-16 FOMC, 2026-10-10 US 9월 CPI</p>
+<h2>6. 오늘 확인할 것</h2>
 <ul>
 <li>KOSPI 6,562.72 및 20일선 6,672.16 회복 여부</li>
 <li>미국 증시·반도체 반등의 국내 시장 전이</li>
 <li>외국인·기관 수급 데이터 복구 여부</li>
 <li>장 초반 변동성과 급락 이후 반발 매수 강도</li>
 </ul>
-<h3>리스크와 한계</h3>
+<h2>7. 실험·데이터 경계</h2>
 <ul>
-<li>외국인·기관 수급 데이터가 제공되지 않았습니다.</li>
-<li>해외시장 반등이 국내 장 초반에 얼마나 반영될지 불확실합니다.</li>
-<li>confidence는 주관적 판단이며 보정된 확률이 아닙니다.</li>
-<li>수집 누락: 외국인·기관 수급 원자료</li>
-<li>현재 Yura 계약은 수치형 KOSPI/KOSDAQ 예상 범위와 확률 분포를 생성하지 않으므로, 확인되지 않은 범위를 임의로 채우지 않았습니다.</li>
-</ul>
-<p>---</p>
-<h2>🔟 실험 상태와 참고 출처</h2>
-<ul>
-<li>Morning: ML prediction 및 Yura LLM prediction 생성 완료</li>
 <li>ML evaluation: <strong>pending</strong> (0 evaluated / 100 pending)</li>
-<li>실제 시장 결과: 확인됨</li>
-<li>Improvement: <strong>applied</strong></li>
-<li>Daily Lab Note slug: 생성하지 않음</li>
+<li>Current runtime improvement: <strong>No prior-cycle application evidenced in this Morning snapshot</strong></li>
+<li>Today's new proposal: <strong>None (Morning stage)</strong></li>
+<li>Today's applied change: <strong>None (Evening stage에서만 판정)</strong></li>
+<li>데이터 제약: 외국인·기관 수급 원자료 (미확보)</li>
+<li>Daily Lab Note slug는 생성하지 않습니다.</li>
 </ul>
-<h3>수집 출처</h3>
-<ul>
-<li>V1 Fixed overnight collector: available</li>
-<li>V1 Fixed macro collector: available</li>
-<li>V1 Fixed fear/greed + investor-flow collector: available</li>
-<li>V1 Fixed news sentiment collector: available</li>
-<li>V1 Fixed daily market technical scan: available</li>
-</ul>
-<blockquote>⚠️ 본 리포트는 투자 권유가 아니라 StockPulse V1 Fixed의 시장 관찰·예측 성능 측정을 위한 자료입니다. 실제 매매는 본인의 판단과 책임으로 결정해야 합니다.</blockquote></article>
+<blockquote>⚠️ 본 문서는 투자 권유가 아니라 StockPulse V1 Fixed의 시장 관찰·예측 성능 측정 자료입니다. 실제 매매는 본인의 판단과 책임으로 결정해야 합니다.</blockquote></article>
 <p class="footer"><a href="../../../index.html">← Publication home</a> · <a href="../evening/index.html">Open Evening report ↗</a></p>
 </main>
 </body>

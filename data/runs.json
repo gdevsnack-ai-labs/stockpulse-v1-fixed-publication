@@ -38,6 +38,12 @@
         "confidence": 0.61,
         "confidence_label": null,
         "confidence_type": "subjective_assessment_not_calibrated_probability",
+        "runtime_improvement": {
+          "status": "applied",
+          "source": "previous_cycle",
+          "readback_verified": true,
+          "sha256": "ce3274d5d84fa63e2586fdc75406105afb7993857aeab4090a4b74d681011be0"
+        },
         "snapshot_cutoff": "2026-09-04T07:31:10.017095+09:00",
         "generated_at": "2026-09-04T07:35:16.773000+09:00",
         "summary": "KOSPI는 전일 0.26% 상승했지만 6,579.48로 20일선 6,671.22를 1.38% 밑돌고, KOSDAQ은 1.71% 하락해 국내 추세는 혼조·약세 쪽입니다. 반면 미국 증시와 주요 ADR, 달러 약세, VIX 하락은 위험선호와 반도체·대형주 반등 가능성을 보탭니다. 수급과 국내 breadth가 비어 있고 ML은 50개 종목 모두 약세 상대신호를 내므로, 어느 한 방향으로 강하게 기울기보다 보합을 기본 시나리오로 판단합니다.",
@@ -177,12 +183,19 @@
             }
           ],
           "supply": {
+            "status": "missing",
             "available": false,
+            "source": "KRX/pykrx",
+            "reason": null,
+            "as_of": null,
+            "market_scope": [],
+            "market_statuses": [],
             "investors": [],
             "watchlist": [
               {
                 "ticker": "005930",
                 "name": "삼성전자",
+                "status": "missing",
                 "foreign_net": null,
                 "institution_net": null,
                 "total_net": null
@@ -190,6 +203,7 @@
               {
                 "ticker": "000660",
                 "name": "SK하이닉스",
+                "status": "missing",
                 "foreign_net": null,
                 "institution_net": null,
                 "total_net": null
@@ -197,6 +211,7 @@
               {
                 "ticker": "217590",
                 "name": "티엠씨",
+                "status": "missing",
                 "foreign_net": null,
                 "institution_net": null,
                 "total_net": null
@@ -204,6 +219,7 @@
               {
                 "ticker": "293580",
                 "name": "나우IB",
+                "status": "missing",
                 "foreign_net": null,
                 "institution_net": null,
                 "total_net": null
@@ -211,6 +227,7 @@
               {
                 "ticker": "227950",
                 "name": "엔투텍",
+                "status": "missing",
                 "foreign_net": null,
                 "institution_net": null,
                 "total_net": null
@@ -218,6 +235,7 @@
               {
                 "ticker": "432720",
                 "name": "퀄리타스반도체",
+                "status": "missing",
                 "foreign_net": null,
                 "institution_net": null,
                 "total_net": null
@@ -225,6 +243,7 @@
               {
                 "ticker": "003470",
                 "name": "유안타증권",
+                "status": "missing",
                 "foreign_net": null,
                 "institution_net": null,
                 "total_net": null
@@ -232,6 +251,7 @@
               {
                 "ticker": "003475",
                 "name": "유안타증권우",
+                "status": "missing",
                 "foreign_net": null,
                 "institution_net": null,
                 "total_net": null
@@ -1329,7 +1349,7 @@
               "summary": "호재: 매수, 순매수, 주주환원",
               "articles": [
                 "셀트리온, 시밀러 시장서 도약...2026년 실적·주가 분수령 - 증권일보",
-                "[장중수급포착] 셀트리온, 외국인/기관 동시 순매수… 주가 +1.88% - 뉴스핌"
+                "셀트리온, 1천억 규모 자사주 또 매입… 주가 변동 주목 - 중부일보"
               ]
             },
             {
@@ -1339,7 +1359,6 @@
               "label": "긍정",
               "summary": "호재: 상승, 매수, 순매수 | 악재: 하락",
               "articles": [
-                "HPSP 주가, 9월 1일 51,000원 1.59% 상승 마감 - 톱스타뉴스",
                 "[오늘 이 종목] \"현대차 수급 방어력과 HPSP AI 모멘텀 주목… 밸류체인 및 실적 핵심주 담아라\" - v.daum.net"
               ]
             },
@@ -1350,8 +1369,8 @@
               "label": "중립",
               "summary": "호재: 상승, 수혜, 반등 | 악재: 하락, 악재",
               "articles": [
-                "LG에너지솔루션 주가, 9월 3일 365,500원 5.18% 상승 마감 - 톱스타뉴스",
-                "[리포트 브리핑]LG에너지솔루션, '미국 BESS 현지화의 최대 수혜' 목표가 574,000원 - 유안타증권 - 뉴스핌"
+                "[리포트 브리핑]LG에너지솔루션, '미국 BESS 현지화의 최대 수혜' 목표가 574,000원 - 유안타증권 - 뉴스핌",
+                "\"이러다 공모가도 볼 판\"…흑자에도 주가 떨어지자 '한숨' [종목+] - hankyung.com"
               ]
             },
             {
@@ -1383,8 +1402,8 @@
               "label": "중립",
               "summary": "호재: 상승, 급등, 기대감 | 악재: 하락, 부진, 매각",
               "articles": [
-                "포스코퓨처엠 주가, 9월 3일 183,800원 4.43% 상승 마감 - 톱스타뉴스",
-                "포스코퓨처엠 주가 3%대 하락…전날 7% 급등 후 숨고르기 - 잡포스트"
+                "포스코퓨처엠 주가 3%대 하락…전날 7% 급등 후 숨고르기 - 잡포스트",
+                "포스코퓨처엠 투자분석 2026. 09. 01 - 주달"
               ]
             }
           ],
@@ -1397,7 +1416,7 @@
               "summary": "호재: 상승, 반등 | 악재: 급락, 부진, 하락",
               "articles": [
                 "현대차 6%, 기아 5.6% 현대모비스 6%...현대차그룹주, 현대차 8월 글로벌 판매 부진에 일제히 급락 - 비욘드포스트",
-                "기아 주가, 9월 2일 장중 124,500원 5.11% 하락 - 톱스타뉴스"
+                "실시간 주가 정보 | 기아 일자별 주가와 분석차트 | 기아 글로벌 브랜드 사이트 - Kia Global"
               ]
             },
             {
@@ -1419,7 +1438,7 @@
               "summary": "호재: 강세, 기대, 상승 | 악재: 붕괴, 하락, 악재",
               "articles": [
                 "[특징주] 석유화학 구조재편 기대…관련株 'LG화학·롯데케미칼' 강세 - 뉴스핌",
-                "LG화학 주가 상승 중 - 아시아뉴스통신"
+                "\"엔솔 분할 뒤 주가 3분의 1토막\"…LG화학 해외주주 달래기 - v.daum.net"
               ]
             },
             {
@@ -1759,7 +1778,7 @@
           }
         ],
         "data_gaps": [
-          "외국인·기관 수급 원자료"
+          "외국인·기관 수급 원자료 (미확보)"
         ]
       },
       "evening_analysis": {

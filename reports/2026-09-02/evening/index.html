@@ -58,37 +58,486 @@ tr:last-child td { border-bottom:0; }
 </style>
 </head>
 <body>
-<header class="site-header"><nav class="nav"><a class="brand" href="../../../index.html">StockPulse V1 Fixed</a><div class="nav-links"><a href="../../../index.html">Publication home</a><a href="../../../index.html#archive">Archive</a><a href="../../../index.htmldata/projection.json">Projection JSON</a></div></nav></header>
+<header class="site-header"><nav class="nav"><a class="brand" href="../../../index.html">StockPulse V1 Fixed</a><div class="nav-links"><a href="../../../index.html">Publication home</a><a href="../../../index.html#archive">Archive</a><a href="../../../data/projection.json">Projection JSON</a></div></nav></header>
 <main class="container report">
 <div class="eyebrow">evening report · 2026-09-02</div>
 <div class="badges"><span class="badge">V1 Fixed · Live Shadow</span><span class="badge green">available</span></div>
-<article class="report-body"><h1>StockPulse V1 Fixed — 2026-09-02 Evening</h1>
-<blockquote>사람을 위한 장 마감 리포트입니다. Morning 판단은 freeze된 상태로 실제 결과와 비교합니다.</blockquote>
-<h2>실제 KOSPI/KOSDAQ 마감</h2>
+<article class="report-body"><h1>📊 장 마감 시황 리포트 — 2026-09-02</h1>
+<blockquote>Morning 판단은 freeze된 상태로 보존하고, 실제 장 마감·전체 수집 데이터·Yura의 사후 분석을 함께 기록했습니다.</blockquote>
+<p>---</p>
+<h2>1️⃣ 실제 KOSPI/KOSDAQ 마감</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>시장</th>
+<th>실제 종가</th>
+<th>실제 방향</th>
+<th>Morning 기준 대비</th>
+<th>관측 시각</th>
+</tr></thead><tbody>
+<tr>
+<td>KOSPI</td>
+<td>6,627.22</td>
+<td>하락</td>
+<td>-3.05%</td>
+<td>2026-09-02T16:05:20.246709+09:00</td>
+</tr>
+<tr>
+<td>KOSDAQ</td>
+<td>813.81</td>
+<td>하락</td>
+<td>-</td>
+<td>2026-09-02T16:05:20.246709+09:00</td>
+</tr>
+</tbody></table></div>
+<h2>2️⃣ 오전 예측과 실제 결과 비교</h2>
 <ul>
-<li>KOSPI: 6627.22</li>
-<li>KOSDAQ: 813.81</li>
-<li>실제 방향: 하락</li>
-<li>관측 시각: 2026-09-02T16:05:20.246709+09:00</li>
+<li>Morning LLM 방향: <strong>하락</strong></li>
+<li>Confidence: <strong>0.62</strong> (주관적 판단, 보정 확률 아님)</li>
+<li>실제 방향: <strong>하락</strong></li>
+<li>비교 결과: <strong>성공</strong></li>
 </ul>
-<h2>Morning LLM 예측 비교</h2>
+<h2>3️⃣ 장 마감 종합 판단</h2>
+<p>어제 수동 Evening run에는 Yura Evening 분석 artifact가 남아 있지 않아, 해당 판단은 확인하지 못했습니다. 아래에는 실제 결과와 Morning snapshot의 전체 자료를 분리해 표시합니다.</p>
+<h2>4️⃣ 장 마감 시장 종합</h2>
+<h3>국내 지수·기술 기준</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>지수</th>
+<th>종가</th>
+<th>등락률</th>
+<th>20일선·이격</th>
+<th>심리</th>
+</tr></thead><tbody>
+<tr>
+<td>KOSPI</td>
+<td>6,835.80</td>
+<td>+0.23%</td>
+<td>6,661.97 / 확인하지 못함</td>
+<td>탐욕</td>
+</tr>
+<tr>
+<td>KOSDAQ</td>
+<td>821.25</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함 / -0.93%</td>
+<td>-</td>
+</tr>
+</tbody></table></div>
+<h3>투자자별 수급</h3>
+<p>외국인·기관 수급 원자료를 확인하지 못했습니다. 방향을 추정해 채우지 않았습니다.</p>
+<h3>야간 해외·환율·원자재</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>지수·자산</th>
+<th>최근치</th>
+<th>등락률</th>
+<th>범주</th>
+</tr></thead><tbody>
+<tr>
+<td>S&amp;P 500</td>
+<td>7,631.47</td>
+<td>-0.71%</td>
+<td>index</td>
+</tr>
+<tr>
+<td>Nasdaq</td>
+<td>26,099.77</td>
+<td>-1.03%</td>
+<td>index</td>
+</tr>
+<tr>
+<td>Dow</td>
+<td>52,766.88</td>
+<td>-0.79%</td>
+<td>index</td>
+</tr>
+<tr>
+<td>SOX</td>
+<td>11,288.61</td>
+<td>-2.14%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>NVDA</td>
+<td>217.44</td>
+<td>-1.51%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>459.61</td>
+<td>-2.36%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>MU</td>
+<td>933.44</td>
+<td>-2.64%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>퀄컴</td>
+<td>166.61</td>
+<td>-2.27%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>인텔</td>
+<td>88.97</td>
+<td>-0.60%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>VIX</td>
+<td>16.34</td>
+<td>+9.52%</td>
+<td>volatility</td>
+</tr>
+<tr>
+<td>VXN</td>
+<td>21.96</td>
+<td>+8.82%</td>
+<td>volatility</td>
+</tr>
+<tr>
+<td>10Y국채</td>
+<td>4.80</td>
+<td>+0.80%</td>
+<td>rate</td>
+</tr>
+<tr>
+<td>QQQ</td>
+<td>707.64</td>
+<td>-1.27%</td>
+<td>sector_etf</td>
+</tr>
+<tr>
+<td>SMH(반도체ETF)</td>
+<td>545.22</td>
+<td>-2.05%</td>
+<td>sector_etf</td>
+</tr>
+<tr>
+<td>POSCOADR</td>
+<td>61.11</td>
+<td>-0.39%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>KB금융ADR</td>
+<td>124.64</td>
+<td>-0.12%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>신한지주ADR</td>
+<td>79.94</td>
+<td>+0.97%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>한전ADR</td>
+<td>11.66</td>
+<td>+0.52%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>KTADR</td>
+<td>19.67</td>
+<td>-0.05%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>SK텔레콤ADR</td>
+<td>37.76</td>
+<td>-1.64%</td>
+<td>adr</td>
+</tr>
+</tbody></table></div>
+<h3>투자심리</h3>
+<p>공포·탐욕 지수는 <strong>67/100 (탐욕)</strong>이고, 해석은 <code>낙관 구간, 분할 매도 고려</code>입니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>구성요소</th>
+<th>점수</th>
+<th>값</th>
+<th>설명</th>
+</tr></thead><tbody>
+<tr>
+<td>모멘텀</td>
+<td>63</td>
+<td>2.61</td>
+<td>KOSPI 20일선 대비 +2.61%</td>
+</tr>
+<tr>
+<td>변동성</td>
+<td>100</td>
+<td>2.86</td>
+<td>KOSPI 20일 변동성 2.86%</td>
+</tr>
+<tr>
+<td>투자심리</td>
+<td>70</td>
+<td>7</td>
+<td>최근 10일 중 7일 상승</td>
+</tr>
+<tr>
+<td>이격도</td>
+<td>66</td>
+<td>2.61</td>
+<td>20일 이격도 +2.61%</td>
+</tr>
+<tr>
+<td>거래량</td>
+<td>30</td>
+<td>0.94</td>
+<td>거래량 5일/20일 비율 0.94x</td>
+</tr>
+<tr>
+<td>고저비율</td>
+<td>51</td>
+<td>확인하지 못함</td>
+<td>52주高 근접 1개, 低 근접 0개 (/50)</td>
+</tr>
+</tbody></table></div>
+<h2>5️⃣ 국내 기술분석·특징주</h2>
+<p>국내 기술분석과 특징주 스캔을 확인하지 못했습니다.</p>
+<h2>6️⃣ 투자심리·뉴스 감성 및 주요 이슈</h2>
+<h3>긍정 신호</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>종목</th>
+<th>점수</th>
+<th>라벨</th>
+<th>요약</th>
+</tr></thead><tbody>
+<tr>
+<td>신한지주</td>
+<td>28</td>
+<td>긍정</td>
+<td>호재: 호실적, 기대, 주주환원</td>
+</tr>
+<tr>
+<td>셀트리온</td>
+<td>25</td>
+<td>긍정</td>
+<td>호재: 자사주 매입, 주주환원, 상승</td>
+</tr>
+<tr>
+<td>HPSP</td>
+<td>25</td>
+<td>긍정</td>
+<td>호재: 상승, 회복, 확대</td>
+</tr>
+<tr>
+<td>삼성SDI</td>
+<td>18</td>
+<td>긍정</td>
+<td>호재: 신고가, 기대, 급등 / 악재: 하락</td>
+</tr>
+<tr>
+<td>LG에너지솔루션</td>
+<td>12</td>
+<td>중립</td>
+<td>호재: 수혜, 상승, 반등</td>
+</tr>
+<tr>
+<td>KB금융</td>
+<td>12</td>
+<td>중립</td>
+<td>호재: 상승, 호재, 기대</td>
+</tr>
+</tbody></table></div>
 <ul>
-<li>Morning 방향: <strong>하락</strong></li>
-<li>Confidence: <strong>0.62</strong></li>
-<li>성공 여부: 성공</li>
+<li>신한지주: 신한증권, 하나금융지주 목표주가↑…"3분기 호실적 기대" - 연합뉴스</li>
+<li>신한지주: 하나금융지주, 호실적에 높아진 주주환원 기대감…목표가↑ - 파이낸셜뉴스</li>
+<li>셀트리온: 셀트리온 "매년 순이익 3분의 1 주주환원" 1000억원 자사주 매입... 주가는 - 조선일보</li>
+<li>셀트리온: 셀트리온 주가 상승 중 - 아시아뉴스통신</li>
+<li>HPSP: HPSP 주가, 9월 1일 51,000원 1.59% 상승 마감 - 톱스타뉴스</li>
+<li>HPSP: HPSP 주가, 웃음꽃... 증권가 전망은? - ggilbo.com</li>
+<li>삼성SDI: 삼성SDI 주가 하락 중 - 아시아뉴스통신</li>
+<li>삼성SDI: 전고점향해 달리는 삼성SDI … ESS, 데이터센터서 금맥캔다 - 한국경제</li>
+<li>LG에너지솔루션: [리포트 브리핑]LG에너지솔루션, '미국 BESS 현지화의 최대 수혜' 목표가 574,000원 - 유안타증권 - 뉴스핌</li>
+<li>LG에너지솔루션: LG에너지솔루션 주가, 9월 1일 장중 380,500원 0.66% 상승 유지 - 톱스타뉴스</li>
+<li>KB금융: "우리·KB금융, 금리·환율 호재..9월 주가 상승 기대" - 포쓰저널</li>
+<li>KB금융: 주가 반토막에 KB뱅크 콜옵션 포기…국민은행이 택한 '시간 벌기' - 딜사이트</li>
 </ul>
-<h2>ML evaluation</h2>
+<h3>부정 신호</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>종목</th>
+<th>점수</th>
+<th>라벨</th>
+<th>요약</th>
+</tr></thead><tbody>
+<tr>
+<td>리노공업</td>
+<td>-25</td>
+<td>부정</td>
+<td>호재: 성장 / 악재: 하락, 블록딜, 우려</td>
+</tr>
+<tr>
+<td>삼성바이오로직스</td>
+<td>-21</td>
+<td>부정</td>
+<td>호재: 기대, 성장 / 악재: 유상증자, 하락, 급락</td>
+</tr>
+<tr>
+<td>NAVER</td>
+<td>-18</td>
+<td>부정</td>
+<td>악재: 하락, 매도, 공매도</td>
+</tr>
+<tr>
+<td>에코프로비엠</td>
+<td>-18</td>
+<td>부정</td>
+<td>호재: 상승 / 악재: 부진, 하락, 하회</td>
+</tr>
+<tr>
+<td>기아</td>
+<td>-9</td>
+<td>중립</td>
+<td>호재: 상승 / 악재: 급락, 하락, 영업이익 감소</td>
+</tr>
+<tr>
+<td>카카오</td>
+<td>-9</td>
+<td>중립</td>
+<td>악재: 하락, 급락</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>리노공업: 40일째 분규...리노공업 노사 '평행선' - knn.co.kr</li>
+<li>리노공업: [단독] 리노공업, 8600억 규모 블록딜 철회 검토…주가하락·파업 내우외환 - greened.kr</li>
+<li>삼성바이오로직스: [주식] 3조 유상증자한 삼성바이오로직스, 주가는 7% 빠졌다 - 히트뉴스</li>
+<li>삼성바이오로직스: DS증권, 삼성바이오 목표가↓…"하반기엔 실적·투심 개선 기대" - 연합뉴스</li>
+<li>NAVER: NAVER 주가 하락 중 - 아시아뉴스통신</li>
+<li>NAVER: 재무정보 - NAVERCorp.</li>
+<li>에코프로비엠: 에코프로비엠, ‘1.2조 유증’ 이후 실적‧주가 부진 어쩌나 - 한국금융신문</li>
+<li>에코프로비엠: 에코프로비엠 주가, 8월 31일 120,800원 2.20% 상승 마감 - 톱스타뉴스</li>
+<li>기아: 기아 주가, 8월 31일 장중 128,800원 0.625% 상승 - 톱스타뉴스</li>
+<li>기아: 기아 주가 상승 중 - 아시아뉴스통신</li>
+<li>카카오: [허정수칼럼] 카카오 인적분할, ‘쪼개기’ 상처 지울까 - 블로터</li>
+<li>카카오: 카카오 주가 하락 중 - 아시아뉴스통신</li>
+</ul>
+<h2>7️⃣ ML 예측과 상대 강도 복기</h2>
 <ul>
 <li>예측 수: <strong>50개</strong></li>
-<li>상태: <strong>pending</strong></li>
-<li>evaluated: 0 / pending: 50</li>
-<li>correct: null</li>
+<li>모델: LightGBM, XGBoost, LSTM</li>
+<li>시장 편향: <strong>약세</strong></li>
 </ul>
-<h2>오늘의 실험 상태</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>모델</th>
+<th>AUC</th>
+<th>정확도</th>
+<th>상태</th>
+</tr></thead><tbody>
+<tr>
+<td>Tree ensemble</td>
+<td>0.7663</td>
+<td>0.7022</td>
+<td>available</td>
+</tr>
+<tr>
+<td>LSTM</td>
+<td>0.7698</td>
+<td>0.7035</td>
+<td>available</td>
+</tr>
+</tbody></table></div>
+<h2>8️⃣ 매크로·다음 일정</h2>
+<div class="table-wrap"><table><thead><tr>
+<th>지표</th>
+<th>최근 값</th>
+<th>기준일</th>
+<th>YoY</th>
+<th>MoM</th>
+</tr></thead><tbody>
+<tr>
+<td>CPI(All)</td>
+<td>332.813</td>
+<td>2026-07-01</td>
+<td>+3.54%</td>
+<td>+0.07%</td>
+</tr>
+<tr>
+<td>PPI(All)</td>
+<td>284.057</td>
+<td>2026-07-01</td>
+<td>+8.27%</td>
+<td>-0.78%</td>
+</tr>
+<tr>
+<td>실업률</td>
+<td>4.1</td>
+<td>2026-07-01</td>
+<td>+0.00%</td>
+<td>-2.38%</td>
+</tr>
+</tbody></table></div>
+<div class="table-wrap"><table><thead><tr>
+<th>예정일</th>
+<th>이벤트</th>
+<th>분류</th>
+<th>남은 일수</th>
+</tr></thead><tbody>
+<tr>
+<td>2026-09-11</td>
+<td>US 8월 CPI</td>
+<td>cpi</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2026-09-16</td>
+<td>FOMC</td>
+<td>fomc</td>
+<td>14</td>
+</tr>
+<tr>
+<td>2026-10-10</td>
+<td>US 9월 CPI</td>
+<td>cpi</td>
+<td>38</td>
+</tr>
+<tr>
+<td>2026-10-16</td>
+<td>한은 금통위</td>
+<td>korea_rate</td>
+<td>44</td>
+</tr>
+<tr>
+<td>2026-11-05</td>
+<td>FOMC</td>
+<td>fomc</td>
+<td>64</td>
+</tr>
+<tr>
+<td>2026-11-13</td>
+<td>US 10월 CPI</td>
+<td>cpi</td>
+<td>72</td>
+</tr>
+<tr>
+<td>2026-11-27</td>
+<td>한은 금통위</td>
+<td>korea_rate</td>
+<td>86</td>
+</tr>
+<tr>
+<td>2026-12-11</td>
+<td>US 11월 CPI</td>
+<td>cpi</td>
+<td>100</td>
+</tr>
+</tbody></table></div>
+<h2>9️⃣ 자가개선 및 다음 실험</h2>
 <ul>
-<li>Improvement: none</li>
-<li>Actual applied: false</li>
-<li>Daily Lab Note slug: 생성하지 않음</li>
+<li>현재 improvement 상태: <strong>none</strong></li>
+<li>ML 평가: <strong>pending</strong> (0 evaluated / 50 pending)</li>
+<li>평가 가능한 실패가 없거나 Evening 개선 분석이 기록되지 않아 proposal을 생성하지 않았습니다.</li>
+</ul>
+<h2>🔟 한계·출처·보존 경계</h2>
+<ul>
+<li>외국인·기관 수급 원자료</li>
+<li>관심종목 기술분석·시장 스캔</li>
+<li>Morning prediction·direction·confidence·snapshot cutoff는 Evening에서 수정하지 않았습니다.</li>
+<li>이 문서는 투자 권유가 아니라 StockPulse V1 Fixed의 장 마감 복기와 자기개선 실험 기록입니다.</li>
+<li>Daily Lab Note slug는 생성하지 않습니다.</li>
 </ul></article>
 <p class="footer"><a href="../../../index.html">← Publication home</a> · <a href="../morning/index.html">Open Morning report ↗</a></p>
 </main>

@@ -58,29 +58,36 @@ tr:last-child td { border-bottom:0; }
 </style>
 </head>
 <body>
-<header class="site-header"><nav class="nav"><a class="brand" href="../../../index.html">StockPulse V1 Fixed</a><div class="nav-links"><a href="../../../index.html">Publication home</a><a href="../../../index.html#archive">Archive</a><a href="../../../index.htmldata/projection.json">Projection JSON</a></div></nav></header>
+<header class="site-header"><nav class="nav"><a class="brand" href="../../../index.html">StockPulse V1 Fixed</a><div class="nav-links"><a href="../../../index.html">Publication home</a><a href="../../../index.html#archive">Archive</a><a href="../../../data/projection.json">Projection JSON</a></div></nav></header>
 <main class="container report">
 <div class="eyebrow">morning report · 2026-09-02</div>
 <div class="badges"><span class="badge">V1 Fixed · Live Shadow</span><span class="badge green">available</span></div>
-<article class="report-body"><h1>StockPulse V1 Fixed — 2026-09-02 Morning</h1>
-<blockquote>사람을 위한 아침 시장 브리핑입니다. 실험 원본은 private run artifact에 보존되고, 이 문서는 public projection입니다.</blockquote>
-<h2>시장 전망</h2>
-<ul>
-<li>대상 시장: KOSPI</li>
-<li>Yura LLM 전망: <strong>하락</strong></li>
-<li>Confidence: <strong>0.62</strong> (중간)</li>
-<li>Confidence 성격: subjective_assessment_not_calibrated_probability</li>
-<li>판단 요약: 2026-09-02 KOSPI는 해외 위험회피와 반도체 약세 연동으로 하락 마감 가능성을 기본 시나리오로 판단합니다. 다만 국내 지수의 최근 상승 흐름과 탐욕 구간 심리가 있어 일방적 급락으로 단정하지 않고 중간 confidence를 부여했습니다.</li>
-</ul>
-<h2>해외시장 · macro · overnight</h2>
-<p>2026-09-01 해외 snapshot은 S&amp;P500 -0.71%, Nasdaq -1.03%, Dow -0.79%, SOX -2.14%였습니다. NVDA -1.51%, AMD -2.36%, MU -2.64%, QQQ -1.27%, SMH -2.05%로 성장주·반도체가 함께 약했고, VIX는 16.34로 +9.52%, VXN은 21.96으로 +8.82%였습니다. 10년물 금리는 4.8로 +0.8%였습니다. 이 조합을 국내 대형주와 반도체에 불리한 overnight risk-off 신호로 해석했습니다.</p>
-<h3>Macro</h3>
-<p>Macro snapshot의 최신 관측일은 모두 2026-07-01입니다. CPI는 전년비 +3.54%, 전월비 +0.07%, PPI는 전년비 +8.27%, 전월비 -0.78%, 실업률은 4.1%입니다. Calendar에는 US CPI 2026-09-11, FOMC 2026-09-16, 한은 금통위 2026-10-16이 기록돼 있습니다. 오늘 실시간 환율·유가·추가 macro 수치는 snapshot에 없으므로 방향 근거로 보강하지 않았습니다.</p>
-<h2>국내 시장 기준</h2>
-<p>동결된 snapshot의 직전 KOSPI는 6,835.80으로 전일 대비 +0.23%, KOSDAQ은 821.25이며 20일 이격도는 -0.93%입니다. KOSPI는 20일선 6,661.97 대비 +2.61%로 최근 추세가 아직 높지만, 이날 장중·장마감 실측값은 이 Morning 판단의 입력으로 사용하지 않습니다.</p>
-<h2>Sentiment · 수급 · 주요 시장 이슈</h2>
-<p>Fear/greed는 67/100 탐욕이고, snapshot KOSPI는 +0.23%, 최근 10일 중 7일 상승으로 기록돼 있습니다. 변동성 component는 100, 거래량 5일/20일 비율은 0.94x, 52주 고점 근접 종목은 1개입니다. sentiment snapshot은 19개 종목 중 긍정 4·중립 11·부정 4이고, 신한지주 +28·셀트리온 +25가 강했으며 리노공업 -25·삼성바이오로직스 -21·NAVER -18이 약했습니다. 관심종목 투자자별 수급은 전체적으로 supply_available=false라 실제 외국인·기관·개인 순매수 방향은 판단하지 않았습니다.</p>
-<h3>주요 이슈</h3>
+<article class="report-body"><h1>📊 아침 시장 전망 리포트 — 2026-09-02</h1>
+<blockquote>생성 기준: 2026-09-02T10:15:28.500799+09:00 | 전일 확정 데이터와 장 개장 전 수집 자료를 반영했습니다.</blockquote>
+<blockquote>이 문서는 사람이 읽는 시장 브리핑이며, 실험 원본은 별도 private run artifact에 보존합니다.</blockquote>
+<p>---</p>
+<h2>1️⃣ 전일 국내 증시 마감 · KOSPI / KOSDAQ 전망</h2>
+<p><strong>방향성: 하락 — confidence 0.62</strong> 2026-09-02 KOSPI는 해외 위험회피와 반도체 약세 연동으로 하락 마감 가능성을 기본 시나리오로 판단합니다. 다만 국내 지수의 최근 상승 흐름과 탐욕 구간 심리가 있어 일방적 급락으로 단정하지 않고 중간 confidence를 부여했습니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>구분</th>
+<th>전일 종가</th>
+<th>등락률</th>
+<th>기술 기준</th>
+</tr></thead><tbody>
+<tr>
+<td>KOSPI</td>
+<td>6,835.80</td>
+<td>+0.23%</td>
+<td>20일선 6,661.97 / 이격 확인하지 못함</td>
+</tr>
+<tr>
+<td>KOSDAQ</td>
+<td>821.25</td>
+<td>확인하지 못함</td>
+<td>20일 이격 -0.93%</td>
+</tr>
+</tbody></table></div>
+<p><strong>핵심 근거:</strong></p>
 <ul>
 <li>S&amp;P500·Nasdaq·Dow가 모두 하락했고 SOX와 주요 반도체 종목 하락폭이 더 커 국내 대형주·반도체의 개장 및 추세 부담으로 연결될 가능성이 높습니다.</li>
 <li>VIX/VXN 상승과 10년물 금리 상승이 위험선호 약화 신호를 보탭니다.</li>
@@ -88,13 +95,657 @@ tr:last-child td { border-bottom:0; }
 <li>ML 50개가 모두 약세 market_bias를 보이지만 상대성과 target이므로 시장 방향 판단의 독립적인 확정 근거로 사용하지 않았습니다.</li>
 <li>투자자별 수급이 snapshot에서 누락돼 하락 확신을 상향할 핵심 확인 항목이 비어 있습니다.</li>
 </ul>
-<h2>ML prediction 요약</h2>
-<p>ML snapshot은 LightGBM·XGBoost·LSTM 50개 예측이며 market_bias는 50개 모두 약세입니다. Tree AUC 0.7663/accuracy 0.7022, LSTM AUC 0.7698/accuracy 0.7035가 기록돼 있습니다. 상위 상대강도에는 티엠씨·HD한국조선해양·삼성물산·현대모비스·신한지주가 있고, 하위에는 삼성전자·NAVER·한미반도체가 있습니다. 이 ML target은 5일 후 KOSPI 대비 초과수익인 상대성과라서 KOSPI 절대 방향 예측과 동일시하지 않고 보조 근거로만 사용했습니다.</p>
+<h3>오늘의 판단 구조</h3>
 <ul>
-<li>예측 수: <strong>50개</strong></li>
-<li>ML evaluation: <strong>pending</strong> (50 pending)</li>
+<li>기본 전망: 오늘 KOSPI 정규장 종가 방향은 하락으로 판단합니다. 숫자형 KOSPI 예상 범위는 frozen snapshot에 제공되지 않아 만들지 않았습니다. 해외 지수·반도체 동반 약세와 변동성 상승이 하방 우세를 만들지만, KOSPI의 최근 상승·탐욕 심리와 일부 금융·방어 상대강도가 하락폭을 완화하거나 장중 반등을 만들 수 있어 confidence는 0.62로 제한했습니다.</li>
+<li>확인할 변수: 국내 반도체 대형주의 해외 반도체 약세 반영 정도</li>
+<li>확인할 변수: 장중 breadth와 외국인·기관 수급 전환 여부 — 현재 snapshot에는 없음</li>
+<li>확인할 변수: KOSPI가 snapshot의 6,835.80 기준을 회복하거나 이탈하는 흐름</li>
+<li>확인할 변수: 변동성 확대가 탐욕 심리를 상쇄하는지 여부</li>
+<li>확인할 변수: snapshot에 없는 환율·유가 및 추가 macro 발표</li>
 </ul>
-<h2>관찰 포인트</h2>
+<p>---</p>
+<h2>2️⃣ 야간 해외 동향</h2>
+<p>2026-09-01 해외 snapshot은 S&amp;P500 -0.71%, Nasdaq -1.03%, Dow -0.79%, SOX -2.14%였습니다. NVDA -1.51%, AMD -2.36%, MU -2.64%, QQQ -1.27%, SMH -2.05%로 성장주·반도체가 함께 약했고, VIX는 16.34로 +9.52%, VXN은 21.96으로 +8.82%였습니다. 10년물 금리는 4.8로 +0.8%였습니다. 이 조합을 국내 대형주와 반도체에 불리한 overnight risk-off 신호로 해석했습니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>지수·자산</th>
+<th>최근 종가</th>
+<th>등락률</th>
+<th>구분</th>
+</tr></thead><tbody>
+<tr>
+<td>S&amp;P 500</td>
+<td>7,631.47</td>
+<td>-0.71%</td>
+<td>index</td>
+</tr>
+<tr>
+<td>Nasdaq</td>
+<td>26,099.77</td>
+<td>-1.03%</td>
+<td>index</td>
+</tr>
+<tr>
+<td>Dow</td>
+<td>52,766.88</td>
+<td>-0.79%</td>
+<td>index</td>
+</tr>
+<tr>
+<td>SOX</td>
+<td>11,288.61</td>
+<td>-2.14%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>NVDA</td>
+<td>217.44</td>
+<td>-1.51%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>459.61</td>
+<td>-2.36%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>MU</td>
+<td>933.44</td>
+<td>-2.64%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>퀄컴</td>
+<td>166.61</td>
+<td>-2.27%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>인텔</td>
+<td>88.97</td>
+<td>-0.60%</td>
+<td>semiconductor</td>
+</tr>
+<tr>
+<td>VIX</td>
+<td>16.34</td>
+<td>+9.52%</td>
+<td>volatility</td>
+</tr>
+<tr>
+<td>VXN</td>
+<td>21.96</td>
+<td>+8.82%</td>
+<td>volatility</td>
+</tr>
+<tr>
+<td>10Y국채</td>
+<td>4.80</td>
+<td>+0.80%</td>
+<td>rate</td>
+</tr>
+<tr>
+<td>QQQ</td>
+<td>707.64</td>
+<td>-1.27%</td>
+<td>sector_etf</td>
+</tr>
+<tr>
+<td>SMH(반도체ETF)</td>
+<td>545.22</td>
+<td>-2.05%</td>
+<td>sector_etf</td>
+</tr>
+<tr>
+<td>POSCOADR</td>
+<td>61.11</td>
+<td>-0.39%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>KB금융ADR</td>
+<td>124.64</td>
+<td>-0.12%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>신한지주ADR</td>
+<td>79.94</td>
+<td>+0.97%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>한전ADR</td>
+<td>11.66</td>
+<td>+0.52%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>KTADR</td>
+<td>19.67</td>
+<td>-0.05%</td>
+<td>adr</td>
+</tr>
+<tr>
+<td>SK텔레콤ADR</td>
+<td>37.76</td>
+<td>-1.64%</td>
+<td>adr</td>
+</tr>
+</tbody></table></div>
+<h3>반도체와 ADR</h3>
+<p>SOX와 주요 반도체주, 한국 ADR은 국내 대형주 장초반 심리를 확인하는 보조 지표로 기록했습니다. 수치가 없는 자산은 추정하지 않았습니다.</p>
+<p>---</p>
+<h2>3️⃣ 원자재·환율</h2>
+<p>원래 V1에서 표시하던 환율·원자재 수집 결과가 이번 자료에 없어 확인하지 못했습니다.</p>
+<p>---</p>
+<h2>4️⃣ 투자자별 수급 분석</h2>
+<p>원래 V1 수집 항목인 외국인·기관 수급을 이번 snapshot에서 확인하지 못했습니다. 수급 방향을 추정해 채우지 않았습니다.</p>
+<h3>관심종목 수급</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>종목</th>
+<th>외국인 순매수</th>
+<th>기관 순매수</th>
+<th>합계</th>
+</tr></thead><tbody>
+<tr>
+<td>삼성전자</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+</tr>
+<tr>
+<td>SK하이닉스</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+</tr>
+<tr>
+<td>티엠씨</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+</tr>
+<tr>
+<td>나우IB</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+</tr>
+<tr>
+<td>엔투텍</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+</tr>
+<tr>
+<td>퀄리타스반도체</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+</tr>
+<tr>
+<td>유안타증권</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+</tr>
+<tr>
+<td>유안타증권우</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+<td>확인하지 못함</td>
+</tr>
+</tbody></table></div>
+<p>---</p>
+<h2>5️⃣ 국내 기술분석·시장 스캔</h2>
+<p>원래 V1에서 수집하던 관심종목 기술분석·급등락·52주 고저 결과가 이번 snapshot에 없어 확인하지 못했습니다.</p>
+<p>---</p>
+<h2>6️⃣ 투자심리·뉴스 감성</h2>
+<p><strong>공포·탐욕 지수: 67/100 (탐욕)</strong></p>
+<ul>
+<li>해석: 낙관 구간, 분할 매도 고려</li>
+</ul>
+<div class="table-wrap"><table><thead><tr>
+<th>구성요소</th>
+<th>점수</th>
+<th>원자료 값</th>
+<th>설명</th>
+</tr></thead><tbody>
+<tr>
+<td>모멘텀</td>
+<td>63</td>
+<td>2.61</td>
+<td>KOSPI 20일선 대비 +2.61%</td>
+</tr>
+<tr>
+<td>변동성</td>
+<td>100</td>
+<td>2.86</td>
+<td>KOSPI 20일 변동성 2.86%</td>
+</tr>
+<tr>
+<td>투자심리</td>
+<td>70</td>
+<td>7</td>
+<td>최근 10일 중 7일 상승</td>
+</tr>
+<tr>
+<td>이격도</td>
+<td>66</td>
+<td>2.61</td>
+<td>20일 이격도 +2.61%</td>
+</tr>
+<tr>
+<td>거래량</td>
+<td>30</td>
+<td>0.94</td>
+<td>거래량 5일/20일 비율 0.94x</td>
+</tr>
+<tr>
+<td>고저비율</td>
+<td>51</td>
+<td>확인하지 못함</td>
+<td>52주高 근접 1개, 低 근접 0개 (/50)</td>
+</tr>
+</tbody></table></div>
+<h3>종목별 뉴스 감성 상·하위</h3>
+<p><strong>긍정 신호</strong></p>
+<div class="table-wrap"><table><thead><tr>
+<th>종목</th>
+<th>점수</th>
+<th>라벨</th>
+<th>요약</th>
+</tr></thead><tbody>
+<tr>
+<td>신한지주</td>
+<td>28</td>
+<td>긍정</td>
+<td>호재: 호실적, 기대, 주주환원</td>
+</tr>
+<tr>
+<td>셀트리온</td>
+<td>25</td>
+<td>긍정</td>
+<td>호재: 자사주 매입, 주주환원, 상승</td>
+</tr>
+<tr>
+<td>HPSP</td>
+<td>25</td>
+<td>긍정</td>
+<td>호재: 상승, 회복, 확대</td>
+</tr>
+<tr>
+<td>삼성SDI</td>
+<td>18</td>
+<td>긍정</td>
+<td>호재: 신고가, 기대, 급등 / 악재: 하락</td>
+</tr>
+<tr>
+<td>LG에너지솔루션</td>
+<td>12</td>
+<td>중립</td>
+<td>호재: 수혜, 상승, 반등</td>
+</tr>
+<tr>
+<td>KB금융</td>
+<td>12</td>
+<td>중립</td>
+<td>호재: 상승, 호재, 기대</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>신한지주: 신한증권, 하나금융지주 목표주가↑…"3분기 호실적 기대" - 연합뉴스</li>
+<li>신한지주: 하나금융지주, 호실적에 높아진 주주환원 기대감…목표가↑ - 파이낸셜뉴스</li>
+<li>셀트리온: 셀트리온 "매년 순이익 3분의 1 주주환원" 1000억원 자사주 매입... 주가는 - 조선일보</li>
+<li>셀트리온: 셀트리온 주가 상승 중 - 아시아뉴스통신</li>
+<li>HPSP: HPSP 주가, 9월 1일 51,000원 1.59% 상승 마감 - 톱스타뉴스</li>
+<li>HPSP: HPSP 주가, 웃음꽃... 증권가 전망은? - ggilbo.com</li>
+<li>삼성SDI: 삼성SDI 주가 하락 중 - 아시아뉴스통신</li>
+<li>삼성SDI: 전고점향해 달리는 삼성SDI … ESS, 데이터센터서 금맥캔다 - 한국경제</li>
+<li>LG에너지솔루션: [리포트 브리핑]LG에너지솔루션, '미국 BESS 현지화의 최대 수혜' 목표가 574,000원 - 유안타증권 - 뉴스핌</li>
+<li>LG에너지솔루션: LG에너지솔루션 주가, 9월 1일 장중 380,500원 0.66% 상승 유지 - 톱스타뉴스</li>
+<li>KB금융: "우리·KB금융, 금리·환율 호재..9월 주가 상승 기대" - 포쓰저널</li>
+<li>KB금융: 주가 반토막에 KB뱅크 콜옵션 포기…국민은행이 택한 '시간 벌기' - 딜사이트</li>
+</ul>
+<p><strong>부정 신호</strong></p>
+<div class="table-wrap"><table><thead><tr>
+<th>종목</th>
+<th>점수</th>
+<th>라벨</th>
+<th>요약</th>
+</tr></thead><tbody>
+<tr>
+<td>리노공업</td>
+<td>-25</td>
+<td>부정</td>
+<td>호재: 성장 / 악재: 하락, 블록딜, 우려</td>
+</tr>
+<tr>
+<td>삼성바이오로직스</td>
+<td>-21</td>
+<td>부정</td>
+<td>호재: 기대, 성장 / 악재: 유상증자, 하락, 급락</td>
+</tr>
+<tr>
+<td>NAVER</td>
+<td>-18</td>
+<td>부정</td>
+<td>악재: 하락, 매도, 공매도</td>
+</tr>
+<tr>
+<td>에코프로비엠</td>
+<td>-18</td>
+<td>부정</td>
+<td>호재: 상승 / 악재: 부진, 하락, 하회</td>
+</tr>
+<tr>
+<td>기아</td>
+<td>-9</td>
+<td>중립</td>
+<td>호재: 상승 / 악재: 급락, 하락, 영업이익 감소</td>
+</tr>
+<tr>
+<td>카카오</td>
+<td>-9</td>
+<td>중립</td>
+<td>악재: 하락, 급락</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>리노공업: 40일째 분규...리노공업 노사 '평행선' - knn.co.kr</li>
+<li>리노공업: [단독] 리노공업, 8600억 규모 블록딜 철회 검토…주가하락·파업 내우외환 - greened.kr</li>
+<li>삼성바이오로직스: [주식] 3조 유상증자한 삼성바이오로직스, 주가는 7% 빠졌다 - 히트뉴스</li>
+<li>삼성바이오로직스: DS증권, 삼성바이오 목표가↓…"하반기엔 실적·투심 개선 기대" - 연합뉴스</li>
+<li>NAVER: NAVER 주가 하락 중 - 아시아뉴스통신</li>
+<li>NAVER: 재무정보 - NAVERCorp.</li>
+<li>에코프로비엠: 에코프로비엠, ‘1.2조 유증’ 이후 실적‧주가 부진 어쩌나 - 한국금융신문</li>
+<li>에코프로비엠: 에코프로비엠 주가, 8월 31일 120,800원 2.20% 상승 마감 - 톱스타뉴스</li>
+<li>기아: 기아 주가, 8월 31일 장중 128,800원 0.625% 상승 - 톱스타뉴스</li>
+<li>기아: 기아 주가 상승 중 - 아시아뉴스통신</li>
+<li>카카오: [허정수칼럼] 카카오 인적분할, ‘쪼개기’ 상처 지울까 - 블로터</li>
+<li>카카오: 카카오 주가 하락 중 - 아시아뉴스통신</li>
+</ul>
+<p>---</p>
+<h2>7️⃣ ML 예측과 상대 강도</h2>
+<p>ML snapshot은 LightGBM·XGBoost·LSTM 50개 예측이며 market_bias는 50개 모두 약세입니다. Tree AUC 0.7663/accuracy 0.7022, LSTM AUC 0.7698/accuracy 0.7035가 기록돼 있습니다. 상위 상대강도에는 티엠씨·HD한국조선해양·삼성물산·현대모비스·신한지주가 있고, 하위에는 삼성전자·NAVER·한미반도체가 있습니다. 이 ML target은 5일 후 KOSPI 대비 초과수익인 상대성과라서 KOSPI 절대 방향 예측과 동일시하지 않고 보조 근거로만 사용했습니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>모델</th>
+<th>AUC</th>
+<th>정확도</th>
+<th>상태</th>
+</tr></thead><tbody>
+<tr>
+<td>Tree ensemble</td>
+<td>0.7663</td>
+<td>0.7022</td>
+<td>available</td>
+</tr>
+<tr>
+<td>LSTM</td>
+<td>0.7698</td>
+<td>0.7035</td>
+<td>available</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>모델 참여: LightGBM, XGBoost, LSTM</li>
+<li>분석 종목: <strong>50개</strong></li>
+<li>타겟: 5일 후 KOSPI 대비 초과수익 &gt; 0</li>
+<li>시장 편향: <strong>약세</strong></li>
+<li>종목 표의 상대 순위는 모델의 횡단면 신호이며, 개별 종목의 상승 확률이나 매매 추천으로 해석하지 않습니다.</li>
+</ul>
+<h3>상대적 강세 관찰 목록</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>종목</th>
+<th>가격</th>
+<th>상대 순위</th>
+<th>5일 수익률</th>
+<th>신뢰 표기</th>
+</tr></thead><tbody>
+<tr>
+<td>티엠씨</td>
+<td>10,650</td>
+<td>+80.00%</td>
+<td>-8.66%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>HD한국조선해양</td>
+<td>336,500</td>
+<td>+78.00%</td>
+<td>-6.66%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>삼성물산</td>
+<td>383,500</td>
+<td>+71.30%</td>
+<td>-1.03%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>현대모비스</td>
+<td>422,500</td>
+<td>+71.30%</td>
+<td>-8.94%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>신한지주</td>
+<td>112,300</td>
+<td>+69.30%</td>
+<td>+4.56%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>LG화학</td>
+<td>279,500</td>
+<td>+66.70%</td>
+<td>+6.07%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>하나금융지주</td>
+<td>138,100</td>
+<td>+65.30%</td>
+<td>+5.05%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>알테오젠</td>
+<td>316,000</td>
+<td>+64.00%</td>
+<td>+1.44%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>현대차</td>
+<td>384,000</td>
+<td>+56.00%</td>
+<td>-5.88%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>우리금융지주</td>
+<td>35,200</td>
+<td>+56.00%</td>
+<td>+6.67%</td>
+<td>높음</td>
+</tr>
+</tbody></table></div>
+<h3>상대적 약세 관찰 목록</h3>
+<div class="table-wrap"><table><thead><tr>
+<th>종목</th>
+<th>가격</th>
+<th>상대 순위</th>
+<th>5일 수익률</th>
+<th>신뢰 표기</th>
+</tr></thead><tbody>
+<tr>
+<td>한미반도체</td>
+<td>213,500</td>
+<td>+20.00%</td>
+<td>-2.73%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>NAVER</td>
+<td>213,000</td>
+<td>+29.30%</td>
+<td>-3.18%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>삼성전자</td>
+<td>255,000</td>
+<td>+32.70%</td>
+<td>-2.49%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>퀄리타스반도체</td>
+<td>8,720</td>
+<td>+34.00%</td>
+<td>-2.13%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>삼성생명</td>
+<td>297,500</td>
+<td>+34.00%</td>
+<td>-3.88%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>두산</td>
+<td>1,150,000</td>
+<td>+34.00%</td>
+<td>-2.54%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>삼성바이오로직스</td>
+<td>1,502,000</td>
+<td>+36.00%</td>
+<td>-6.07%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>엔투텍</td>
+<td>1,299</td>
+<td>+36.70%</td>
+<td>-4.34%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>삼성전자우</td>
+<td>188,800</td>
+<td>+37.30%</td>
+<td>-4.07%</td>
+<td>높음</td>
+</tr>
+<tr>
+<td>LG전자</td>
+<td>201,000</td>
+<td>+37.30%</td>
+<td>+0.25%</td>
+<td>높음</td>
+</tr>
+</tbody></table></div>
+<p>---</p>
+<h2>8️⃣ 오늘의 주요 이벤트</h2>
+<p>Macro snapshot의 최신 관측일은 모두 2026-07-01입니다. CPI는 전년비 +3.54%, 전월비 +0.07%, PPI는 전년비 +8.27%, 전월비 -0.78%, 실업률은 4.1%입니다. Calendar에는 US CPI 2026-09-11, FOMC 2026-09-16, 한은 금통위 2026-10-16이 기록돼 있습니다. 오늘 실시간 환율·유가·추가 macro 수치는 snapshot에 없으므로 방향 근거로 보강하지 않았습니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>지표</th>
+<th>최근 값</th>
+<th>기준일</th>
+<th>YoY</th>
+<th>MoM</th>
+</tr></thead><tbody>
+<tr>
+<td>CPI(All)</td>
+<td>332.813</td>
+<td>2026-07-01</td>
+<td>+3.54%</td>
+<td>+0.07%</td>
+</tr>
+<tr>
+<td>PPI(All)</td>
+<td>284.057</td>
+<td>2026-07-01</td>
+<td>+8.27%</td>
+<td>-0.78%</td>
+</tr>
+<tr>
+<td>실업률</td>
+<td>4.1</td>
+<td>2026-07-01</td>
+<td>+0.00%</td>
+<td>-2.38%</td>
+</tr>
+</tbody></table></div>
+<div class="table-wrap"><table><thead><tr>
+<th>예정일</th>
+<th>이벤트</th>
+<th>분류</th>
+<th>남은 일수</th>
+</tr></thead><tbody>
+<tr>
+<td>2026-09-11</td>
+<td>US 8월 CPI</td>
+<td>cpi</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2026-09-16</td>
+<td>FOMC</td>
+<td>fomc</td>
+<td>14</td>
+</tr>
+<tr>
+<td>2026-10-10</td>
+<td>US 9월 CPI</td>
+<td>cpi</td>
+<td>38</td>
+</tr>
+<tr>
+<td>2026-10-16</td>
+<td>한은 금통위</td>
+<td>korea_rate</td>
+<td>44</td>
+</tr>
+<tr>
+<td>2026-11-05</td>
+<td>FOMC</td>
+<td>fomc</td>
+<td>64</td>
+</tr>
+<tr>
+<td>2026-11-13</td>
+<td>US 10월 CPI</td>
+<td>cpi</td>
+<td>72</td>
+</tr>
+<tr>
+<td>2026-11-27</td>
+<td>한은 금통위</td>
+<td>korea_rate</td>
+<td>86</td>
+</tr>
+<tr>
+<td>2026-12-11</td>
+<td>US 11월 CPI</td>
+<td>cpi</td>
+<td>100</td>
+</tr>
+</tbody></table></div>
+<p>---</p>
+<h2>9️⃣ 오늘의 전망 및 전략</h2>
+<h3>기본 전망</h3>
+<p>오늘 KOSPI 정규장 종가 방향은 하락으로 판단합니다. 숫자형 KOSPI 예상 범위는 frozen snapshot에 제공되지 않아 만들지 않았습니다. 해외 지수·반도체 동반 약세와 변동성 상승이 하방 우세를 만들지만, KOSPI의 최근 상승·탐욕 심리와 일부 금융·방어 상대강도가 하락폭을 완화하거나 장중 반등을 만들 수 있어 confidence는 0.62로 제한했습니다.</p>
+<h3>핵심 체크포인트</h3>
 <ul>
 <li>국내 반도체 대형주의 해외 반도체 약세 반영 정도</li>
 <li>장중 breadth와 외국인·기관 수급 전환 여부 — 현재 snapshot에는 없음</li>
@@ -102,27 +753,35 @@ tr:last-child td { border-bottom:0; }
 <li>변동성 확대가 탐욕 심리를 상쇄하는지 여부</li>
 <li>snapshot에 없는 환율·유가 및 추가 macro 발표</li>
 </ul>
-<h2>실험 상태</h2>
-<ul>
-<li>Morning: ML prediction 및 Yura LLM prediction 생성 완료</li>
-<li>실제 시장 결과: 확인됨</li>
-<li>Improvement: none</li>
-<li>Daily Lab Note slug: 생성하지 않음</li>
-</ul>
-<h2>불확실성·누락</h2>
+<h3>리스크와 한계</h3>
 <ul>
 <li>supply/investor-flow 데이터 unavailable</li>
 <li>snapshot의 macro 최신 관측치가 2026-07-01로 오늘과 시차가 있음</li>
 <li>frozen snapshot에 숫자형 KOSPI 예상 범위가 없어 범위를 제시하지 않음</li>
 <li>confidence 0.62는 보정된 확률이 아닌 Yura의 정성 판단을 수치화한 값임</li>
 <li>Morning snapshot cutoff 이후 데이터·웹 검색·실시간 시장 확인은 사용하지 않음</li>
+<li>수집 누락: 외국인·기관 수급 원자료</li>
+<li>수집 누락: 관심종목 기술분석·시장 스캔</li>
+<li>현재 Yura 계약은 수치형 KOSPI/KOSDAQ 예상 범위와 확률 분포를 생성하지 않으므로, 확인되지 않은 범위를 임의로 채우지 않았습니다.</li>
 </ul>
-<h2>Public boundary</h2>
+<p>---</p>
+<h2>🔟 실험 상태와 참고 출처</h2>
 <ul>
-<li>이 문서는 private run artifact의 읽기 전용 projection입니다.</li>
-<li>private execution material은 포함하지 않습니다.</li>
-<li>Evening report는 장 마감 후 별도 evaluation이 끝난 경우에만 생성합니다.</li>
-</ul></article>
+<li>Morning: ML prediction 및 Yura LLM prediction 생성 완료</li>
+<li>ML evaluation: <strong>pending</strong> (0 evaluated / 50 pending)</li>
+<li>실제 시장 결과: 확인됨</li>
+<li>Improvement: <strong>none</strong></li>
+<li>Daily Lab Note slug: 생성하지 않음</li>
+</ul>
+<h3>수집 출처</h3>
+<ul>
+<li>V1 Fixed overnight collector: available</li>
+<li>V1 Fixed macro collector: available</li>
+<li>V1 Fixed fear/greed + investor-flow collector: available</li>
+<li>V1 Fixed news sentiment collector: available</li>
+<li>V1 Fixed daily market technical scan: unavailable</li>
+</ul>
+<blockquote>⚠️ 본 리포트는 투자 권유가 아니라 StockPulse V1 Fixed의 시장 관찰·예측 성능 측정을 위한 자료입니다. 실제 매매는 본인의 판단과 책임으로 결정해야 합니다.</blockquote></article>
 <p class="footer"><a href="../../../index.html">← Publication home</a> · <a href="../evening/index.html">Open Evening report ↗</a></p>
 </main>
 </body>
