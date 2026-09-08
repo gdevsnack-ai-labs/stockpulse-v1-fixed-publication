@@ -9,7 +9,7 @@
       "source_experiment_id": "stockpulse-v1-fixed-phase8b",
       "run_mode": "live_shadow",
       "stage": "morning",
-      "overall_status": "in_progress_evening_not_started",
+      "overall_status": "complete",
       "lane": "v1_fixed_fresh",
       "trading_date": "2026-09-08",
       "run_status": "success",
@@ -30,9 +30,9 @@
       "morning_llm_prediction": {
         "llm_prediction_id": "llm-prediction-2026-09-08",
         "generation_status": "generated",
-        "evaluation_status": "pending",
-        "success": null,
-        "failure": null,
+        "evaluation_status": "evaluated",
+        "success": false,
+        "failure": true,
         "market": "KOSPI",
         "direction": "상승",
         "confidence": 0.62,
@@ -1840,35 +1840,58 @@
           "외국인·기관 수급 원자료 (미확보)"
         ]
       },
-      "evening_analysis": {},
+      "evening_analysis": {
+        "actual_driver_analysis": "실제 하락을 설명할 수 있는 관찰 가능한 요인은 국내 지수의 단기 과열 부담과 해외 신호의 불일치입니다. Morning 당시 KOSPI는 6,995.39로 전 거래일 대비 4.61% 상승했고 20일선 대비 이격이 +3.98%였으며, 공포·탐욕 지수는 71점 ‘탐욕’이었습니다. 미국 S&P500·나스닥·다우는 각각 약세였고 VIX는 상승해 위험선호가 전면적으로 확인되지 않았습니다. 반도체 업종과 일본·홍콩 증시는 강했지만, 이는 국내 전체 지수의 하락을 막지 못했습니다. 외국인·기관 수급은 KRX 인증 제한으로 확인되지 않았고, 당일 상승·하락 종목 수와 업종별 breadth도 보존된 자료에 없어 실제 하락의 장중 확산 경로는 판정하지 않습니다.",
+        "data_synthesis": {
+          "domestic_market": "Morning 기준 KOSPI 6,995.39, KOSDAQ 822.19에서 시작했으며 실제 종가는 각각 6,954.52, 811.88입니다. KOSPI 실제 수익률은 -0.58424163%이고 방향은 하락입니다. 전 거래일의 급등 이후 지수가 되돌림을 보였지만 당일 시가·고가·저가와 장중 경로는 확인하지 않습니다.",
+          "fear_greed": "공포·탐욕 지수는 71점 ‘탐욕’이었고 KOSPI의 20일선 대비 이격은 +3.98%였습니다. 실제 하락은 이 과열 신호와 단기 되돌림 위험이 상승 추세 신호와 함께 고려되어야 했음을 보여주지만, 과열 지표만으로 하락 원인을 확정하지 않습니다.",
+          "flows": "KOSPI·KOSDAQ 외국인 및 기관 수급은 KRX 인증 제한으로 모두 missing입니다. 결측을 0으로 대체하지 않았으며, 실제 하락을 외국인·기관 순매도로 설명하지 않습니다.",
+          "intraday_context": "실제 종가와 기준값은 확인되지만 시가·고가·저가·거래대금·상승하락 종목 수·분봉 경로는 제공되지 않았습니다. 따라서 장중 갭 하락, 고점 유지 실패, breadth 축소 여부를 추정하지 않습니다.",
+          "leaders_and_breadth": "Morning 자료에는 반도체 중심의 해외 강세와 국내 일부 종목의 긍정 신호가 있었으나, 실제 하락일의 국내 업종별 리더와 breadth는 확인되지 않았습니다. 지수 하락을 전 종목 약세나 특정 업종 주도로 일반화하지 않습니다.",
+          "macro_and_events": "미국 10년물 금리 4.78% 상승, 브렌트유·WTI 상승, 9월 11일 미국 8월 CPI와 9월 16일 FOMC 예정이라는 부담이 있었습니다. 해당 이벤트가 당일 하락을 직접 유발했다고 단정하지 않으며, 금리·물가 경계가 위험선호를 제한할 수 있는 배경으로만 기록합니다.",
+          "ml_relative_context": "ML은 KOSPI 절대 방향이 아니라 5거래일 후 종목별 KOSPI 대비 상대수익률을 예측합니다. 이번 Morning은 LightGBM·XGBoost·LSTM으로 50종목을 생성했으며, 실제 평가 대상은 아직 성숙하지 않았습니다. pre-step 기준 evaluated_count 0, pending_count 250이며 failure_count 0입니다. 따라서 ML을 이번 KOSPI 하락의 원인이나 실패로 기록하지 않습니다.",
+          "news": "Morning의 뉴스 감성은 삼성전자·SK하이닉스와 일부 금융주에서 긍정적이었지만 자동차·바이오·2차전지 일부에는 부정 또는 중립 신호가 있었습니다. 뉴스가 당일 하락을 직접 설명했다고 단정하지 않습니다.",
+          "overnight_cross_asset": "미국 S&P500·나스닥·다우는 약세였고 VIX는 상승했습니다. 반면 SOX·AMD·MU·인텔·SMH, 일본 니케이225, 항셍은 강했습니다. 해외 신호가 엇갈린 상황에서 반도체·아시아 강세만으로 국내 지수의 절대 상승을 확정한 것이 Morning 판단의 주요 취약점이었습니다.",
+          "technical": "Morning은 강한 전일 상승과 KOSPI의 20일선 대비 +3.98% 이격을 함께 기록했습니다. 실제 종가 하락은 단기 과열 뒤 되돌림 가능성이 현실화된 사례와 일치하지만, 지지선 이탈·MACD 변화·장중 반전 여부는 추가 자료 없이는 확인하지 않습니다."
+        },
+        "failure_analysis": "LLM의 절대 방향 판단은 실패했습니다. Morning은 상승을 예측했으나 실제 방향은 하락이었습니다. 실패의 핵심은 강한 전일 추세와 반도체 중심의 해외 counter-signal을 국내 지수의 당일 절대 방향에 상대적으로 크게 반영하고, 이미 과열된 기준값에서 발생할 수 있는 차익실현·되돌림 위험과 미국 주요 지수 약세를 최종 방향에 충분히 반영하지 못한 데 있습니다. 다만 외국인·기관 수급, breadth, 거래대금과 장중 경로가 없어 실패 원인을 단일하게 확정할 수 없습니다. ML은 5회 관측 세션이 성숙하지 않아 평가하지 않습니다.",
+        "improvement": {
+          "action_detail": "국내 지수의 단기 과열·되돌림 위험과 미국 주요 지수 약세가 반도체·아시아·환율 counter-signal과 충돌할 때, 절대 방향을 결정하기 전에 국내 과열/되돌림 시나리오를 별도 검토하고 상승 판단의 확신을 자동으로 제한합니다. 수급·breadth가 missing이면 이를 방향 근거로 대체하지 않고 불확실성으로 유지합니다.",
+          "action_type": "prompt",
+          "expected_impact": "전일 급등과 반도체 강세가 당일 국내 지수의 절대 상승으로 과대 해석되는 오류를 줄이고, 과열 이후 되돌림 시나리오와 해외 counter-signal의 충돌을 다음 Morning 판단에 명시적으로 반영합니다.",
+          "reason": "llm_absolute_direction_incorrect_and_ml_target_not_mature"
+        },
+        "rationale_vs_actual": "Morning은 전 거래일의 강한 국내 추세, SOX·AMD·MU 등 반도체 강세, 일본·홍콩 상승, 원화 강세를 근거로 KOSPI 상승을 우선 시나리오로 제시했습니다. 동시에 20일선 대비 과도한 이격, 탐욕 71점, 미국 주요 지수 약세, VIX 상승, 수급 미확인을 위험 요인으로 기록했지만 최종 방향은 상승으로 판단했습니다. 실제 KOSPI는 6,954.52로 기준값보다 40.87포인트 하락했고, KOSDAQ도 811.88로 하락했습니다. 따라서 반도체와 일부 아시아 위험선호 신호가 국내 지수 절대 방향을 보장하지 않는다는 점이 확인되었습니다. 다만 수급·breadth가 결측이므로 특정 주체의 매도나 특정 업종의 하락을 사실로 귀속하지 않습니다.",
+        "summary": "Morning의 상승 전망은 실제 장 마감에서 확인되지 않았습니다. KOSPI는 Morning 기준 6,995.39에서 6,954.52로 하락했고, KOSDAQ은 822.19에서 811.88로 하락했습니다. 실제 KOSPI 수익률은 -0.58424163%이며 방향은 하락입니다. Morning이 경고한 과열·변동성·미국 주요 지수 약세는 유효한 하방 신호였지만, 반도체 중심의 해외 강세와 원화 강세를 상승 방향으로 더 크게 반영한 판단은 결과와 어긋났습니다. 수급과 장중 breadth 자료는 확인되지 않아 하락 원인을 단일 요인으로 확정하지 않습니다."
+      },
       "actual_market_result": {
-        "status": "not_available",
-        "reason": "evening_not_started",
-        "kospi_close": null,
-        "kosdaq_close": null,
-        "direction": null,
-        "return_pct": null,
-        "observed_at": null,
-        "llm_success": null
+        "status": "available",
+        "reason": null,
+        "kospi_close": 6954.52001953125,
+        "kosdaq_close": 811.8800048828125,
+        "direction": "하락",
+        "return_pct": -0.58424163,
+        "observed_at": "2026-09-08T17:32:59.460878+09:00",
+        "llm_success": false
       },
       "llm_evaluation": {
-        "status": "pending",
-        "success": null,
-        "failure": null
+        "status": "evaluated",
+        "success": false,
+        "failure": true
       },
       "ml_evaluation": {
         "prediction_count": 50,
         "status": "pending",
         "evaluated_count": 0,
-        "pending_count": 50,
+        "pending_count": 250,
         "correct_count": null,
         "reason": "target_date_unavailable"
       },
       "improvement": {
-        "status": "none",
-        "proposal_id": null,
-        "actual_applied": false,
-        "observation_state": "not_started"
+        "status": "applied",
+        "proposal_id": "proposal-37bec9eaeb103037",
+        "actual_applied": true,
+        "observation_state": "pending"
       },
       "publications": {
         "morning": {
@@ -1876,8 +1899,8 @@
           "path": "reports/2026-09-08/morning/"
         },
         "evening": {
-          "status": "not_started",
-          "path": null
+          "status": "available",
+          "path": "reports/2026-09-08/evening/"
         }
       },
       "evidence_refs": [

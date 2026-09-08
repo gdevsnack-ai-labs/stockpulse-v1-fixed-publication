@@ -2,13 +2,47 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 0,
-    "applied_count": 0,
+    "status": "applied",
+    "reason": null,
+    "proposal_count": 1,
+    "applied_count": 1,
     "pending_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-09-08-morning-01",
+      "run_id": "live-shadow-2026-09-08-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-08-morning-01",
+      "proposal_id": "proposal-37bec9eaeb103037",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "국내 지수의 단기 과열·되돌림 위험과 미국 주요 지수 약세가 반도체·아시아·환율 counter-signal과 충돌할 때, 절대 방향을 결정하기 전에 국내 과열/되돌림 시나리오를 별도 검토하고 상승 판단의 확신을 자동으로 제한합니다. 수급·breadth가 missing이면 이를 방향 근거로 대체하지 않고 불확실성으로 유지합니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "LLM의 절대 방향 판단은 실패했습니다. Morning은 상승을 예측했으나 실제 방향은 하락이었습니다. 실패의 핵심은 강한 전일 추세와 반도체 중심의 해외 counter-signal을 국내 지수의 당일 절대 방향에 상대적으로 크게 반영하고, 이미 과열된 기준값에서 발생할 수 있는 차익실현·되돌림 위험과 미국 주요 지수 약세를 최종 방향에 충분히 반영하지 못한 데 있습니다. 다만 외국인·기관 수급, breadth, 거래대금과 장중 경로가 없어 실패 원인을 단일하게 확정할 수 없습니다. ML은 5회 관측 세션이 성숙하지 않아 평가하지 않습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "전일 급등과 반도체 강세가 당일 국내 지수의 절대 상승으로 과대 해석되는 오류를 줄이고, 과열 이후 되돌림 시나리오와 해외 counter-signal의 충돌을 다음 Morning 판단에 명시적으로 반영합니다."
+      },
+      "status": "applied",
+      "approved": true,
+      "actual_applied": true,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": true,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-08-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-08-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-09-04-morning-01",
       "run_id": "live-shadow-2026-09-04-morning-01",
