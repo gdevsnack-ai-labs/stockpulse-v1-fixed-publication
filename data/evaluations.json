@@ -3,6 +3,48 @@
   "project_id": "stockpulse-v1-fixed",
   "records": [
     {
+      "evaluation_id": "evaluation-live-shadow-day1-2026-09-02-morning-01",
+      "run_id": "live-shadow-day1-2026-09-02-morning-01",
+      "prediction_id": "prediction-live-shadow-day1-2026-09-02-morning-01",
+      "llm_prediction_id": "llm-prediction-2026-09-02",
+      "snapshot_id": "input-snapshot-a9a076f48c68927b",
+      "scope": "v1_fixed_fresh_ml_predictions_and_morning_llm",
+      "status": "pending",
+      "evaluated_count": 0,
+      "pending_count": 50,
+      "correct_count": null,
+      "llm_success": true,
+      "llm_failure": false,
+      "target_maturity": {
+        "status": "not_mature",
+        "reason": "target_date_unavailable"
+      },
+      "fresh_storage": {
+        "lane": "v1_fixed_fresh",
+        "inserted_count": 50,
+        "evaluation_status": "pending",
+        "evaluated_at": null
+      },
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-day1-2026-09-02-morning-01"
+        },
+        {
+          "kind": "input_snapshot",
+          "id": "input-snapshot-a9a076f48c68927b"
+        },
+        {
+          "kind": "prediction",
+          "id": "prediction-live-shadow-day1-2026-09-02-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-day1-2026-09-02-morning-01"
+        }
+      ]
+    },
+    {
       "evaluation_id": "evaluation-live-shadow-2026-09-08-morning-01",
       "run_id": "live-shadow-2026-09-08-morning-01",
       "prediction_id": "prediction-live-shadow-2026-09-08-morning-01",
@@ -41,6 +83,132 @@
         {
           "kind": "evaluation",
           "id": "evaluation-live-shadow-2026-09-08-morning-01"
+        }
+      ]
+    },
+    {
+      "evaluation_id": "evaluation-live-shadow-2026-09-07-morning-01",
+      "run_id": "live-shadow-2026-09-07-morning-01",
+      "prediction_id": "prediction-live-shadow-2026-09-07-morning-01",
+      "llm_prediction_id": "llm-prediction-2026-09-07",
+      "snapshot_id": "input-snapshot-d7131d8aba05c6bd",
+      "scope": "v1_fixed_fresh_ml_predictions_and_morning_llm",
+      "status": "pending",
+      "evaluated_count": 0,
+      "pending_count": 200,
+      "correct_count": null,
+      "llm_success": true,
+      "llm_failure": false,
+      "target_maturity": {
+        "status": "not_mature",
+        "reason": "target_date_unavailable"
+      },
+      "fresh_storage": {
+        "lane": "v1_fixed_fresh",
+        "inserted_count": 50,
+        "evaluation_status": "pending",
+        "evaluated_at": null
+      },
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-07-morning-01"
+        },
+        {
+          "kind": "input_snapshot",
+          "id": "input-snapshot-d7131d8aba05c6bd"
+        },
+        {
+          "kind": "prediction",
+          "id": "prediction-live-shadow-2026-09-07-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-07-morning-01"
+        }
+      ]
+    },
+    {
+      "evaluation_id": "evaluation-live-shadow-2026-09-04-morning-01",
+      "run_id": "live-shadow-2026-09-04-morning-01",
+      "prediction_id": "prediction-live-shadow-2026-09-04-morning-01",
+      "llm_prediction_id": "llm-prediction-2026-09-04",
+      "snapshot_id": "input-snapshot-20d232a6e1bc7e81",
+      "scope": "v1_fixed_fresh_ml_predictions_and_morning_llm",
+      "status": "pending",
+      "evaluated_count": 0,
+      "pending_count": 150,
+      "correct_count": null,
+      "llm_success": false,
+      "llm_failure": true,
+      "target_maturity": {
+        "status": "not_mature",
+        "reason": "target_date_unavailable"
+      },
+      "fresh_storage": {
+        "lane": "v1_fixed_fresh",
+        "inserted_count": 50,
+        "evaluation_status": "pending",
+        "evaluated_at": null
+      },
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-04-morning-01"
+        },
+        {
+          "kind": "input_snapshot",
+          "id": "input-snapshot-20d232a6e1bc7e81"
+        },
+        {
+          "kind": "prediction",
+          "id": "prediction-live-shadow-2026-09-04-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-04-morning-01"
+        }
+      ]
+    },
+    {
+      "evaluation_id": "evaluation-live-shadow-2026-09-03-morning-01",
+      "run_id": "live-shadow-2026-09-03-morning-01",
+      "prediction_id": "prediction-live-shadow-2026-09-03-morning-01",
+      "llm_prediction_id": "llm-prediction-2026-09-03",
+      "snapshot_id": "input-snapshot-b31efaba14c81c01",
+      "scope": "v1_fixed_fresh_ml_predictions_and_morning_llm",
+      "status": "pending",
+      "evaluated_count": 0,
+      "pending_count": 100,
+      "correct_count": null,
+      "llm_success": false,
+      "llm_failure": true,
+      "target_maturity": {
+        "status": "not_mature",
+        "reason": "target_date_unavailable"
+      },
+      "fresh_storage": {
+        "lane": "v1_fixed_fresh",
+        "inserted_count": 50,
+        "evaluation_status": "pending",
+        "evaluated_at": null
+      },
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-03-morning-01"
+        },
+        {
+          "kind": "input_snapshot",
+          "id": "input-snapshot-b31efaba14c81c01"
+        },
+        {
+          "kind": "prediction",
+          "id": "prediction-live-shadow-2026-09-03-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-03-morning-01"
         }
       ]
     }
