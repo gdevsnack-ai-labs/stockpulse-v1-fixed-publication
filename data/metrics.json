@@ -7,7 +7,7 @@
     "run_count": 5,
     "llm_evaluated": 1,
     "llm_correct": false,
-    "ml_prediction_count": 50,
+    "ml_prediction_count": 8,
     "ml_evaluated": 0,
     "ml_correct": null,
     "ml_evaluation_state": "pending",
@@ -37,9 +37,9 @@
   },
   "runs": [
     {
-      "run_id": "live-shadow-2026-09-08-morning-01",
+      "run_id": "live-shadow-2026-09-08-supply-repair-01",
       "trading_date": "2026-09-08",
-      "prediction_count": 50,
+      "prediction_count": 8,
       "ml_evaluated_count": 0,
       "ml_pending_count": 250,
       "ml_correct_count": null,

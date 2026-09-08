@@ -45,11 +45,11 @@
       ]
     },
     {
-      "evaluation_id": "evaluation-live-shadow-2026-09-08-morning-01",
-      "run_id": "live-shadow-2026-09-08-morning-01",
-      "prediction_id": "prediction-live-shadow-2026-09-08-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-08-supply-repair-01",
+      "run_id": "live-shadow-2026-09-08-supply-repair-01",
+      "prediction_id": "prediction-live-shadow-2026-09-08-supply-repair-01",
       "llm_prediction_id": "llm-prediction-2026-09-08",
-      "snapshot_id": "input-snapshot-1259015094b07c3e",
+      "snapshot_id": "input-snapshot-2df019eb6bcd33b4",
       "scope": "v1_fixed_fresh_ml_predictions_and_morning_llm",
       "status": "pending",
       "evaluated_count": 0,
@@ -63,26 +63,26 @@
       },
       "fresh_storage": {
         "lane": "v1_fixed_fresh",
-        "inserted_count": 50,
+        "inserted_count": 0,
         "evaluation_status": "pending",
         "evaluated_at": null
       },
       "evidence_refs": [
         {
           "kind": "run",
-          "id": "live-shadow-2026-09-08-morning-01"
+          "id": "live-shadow-2026-09-08-supply-repair-01"
         },
         {
           "kind": "input_snapshot",
-          "id": "input-snapshot-1259015094b07c3e"
+          "id": "input-snapshot-2df019eb6bcd33b4"
         },
         {
           "kind": "prediction",
-          "id": "prediction-live-shadow-2026-09-08-morning-01"
+          "id": "prediction-live-shadow-2026-09-08-supply-repair-01"
         },
         {
           "kind": "evaluation",
-          "id": "evaluation-live-shadow-2026-09-08-morning-01"
+          "id": "evaluation-live-shadow-2026-09-08-supply-repair-01"
         }
       ]
     },

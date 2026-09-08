@@ -63,23 +63,22 @@ tr:last-child td { border-bottom:0; }
 <div class="eyebrow">morning report · 2026-09-08</div>
 <div class="badges"><span class="badge">V1 Fixed · Live Shadow</span><span class="badge green">available</span></div>
 <article class="report-body"><h1>📊 Morning Brief — 2026-09-08</h1>
-<blockquote>생성 기준: 2026-09-08T07:30:58.866319+09:00 | Morning snapshot 이후의 장중 결과는 포함하지 않습니다.</blockquote>
+<blockquote>생성 기준: 2026-09-08T19:04:09.702435+09:00 | Morning snapshot 이후의 장중 결과는 포함하지 않습니다.</blockquote>
 <h2>1. 오늘 한눈에</h2>
-<p><strong>오늘의 전망: 상승</strong> <strong>Confidence: 62%</strong> (주관적 판단, 보정 확률 아님)</p>
+<p><strong>오늘의 전망: 상승</strong> <strong>Confidence: 58%</strong> (주관적 판단, 보정 확률 아님)</p>
 <h3>상방</h3>
 <ul>
 <li>SOX +3.37%</li>
-<li>달러/원 하락(-0.78%)</li>
+<li>달러/원 하락(-0.19%)</li>
 </ul>
 <h3>하방</h3>
 <ul>
 <li>ML 종목 상대신호는 약세 일괄 편향</li>
-<li>외국인·기관 수급 미확보 — 판단 confidence 제한</li>
 </ul>
 <ul>
-<li>수급 상태: <strong>미확보 — 기존 KRX source 접근이 허용되지 않음</strong></li>
-<li>가장 중요한 uncertainty: <strong>KRX 인증 제한으로 KOSPI·KOSDAQ 외국인 및 기관 수급이 모두 missing입니다.</strong></li>
-<li>판단 한 줄: 국내 증시는 전 거래일 KOSPI 6,995.39, +4.61%의 강한 상승과 20일선 대비 +3.98% 이격으로 상승 추세가 이어지고 있습니다. 미국 지수는 S&amp;P500 -0.38%, 나스닥 -0.29%로 숨을 고른 반면 SOX +3.37%, AMD +4.69%, 메모리 관련주 MU +6.10% 등 반도체 위험선호가 두드러졌고, 일본·홍콩도 각각 +1.26%, +1.74% 상승했습니다. 원/달러는 -0.78%로 우호적이나 VIX는 +5.30%, 유가도 1%대 상승해 변동성과 비용 부담이 남아 있습니다. 국내 심리는 탐욕 71점으로 과열 신호이며 외국인·기관 수급은 인증 제한으로 확인할 수 없습니다.</li>
+<li>수급 상태: <strong>확보됨</strong></li>
+<li>가장 중요한 uncertainty: <strong>수급은 시장 수준으로 복구되었지만 현재 provider는 종목별 watchlist 수급을 제공하지 않아 watchlist 수치는 null입니다.</strong></li>
+<li>판단 한 줄: 직전 확정 세션의 KOSPI는 6,995.39로 4.61% 상승했고 KOSDAQ은 822.19로 1.07% 상승했습니다. KOSPI는 20일선 대비 3.98% 이격과 공포·탐욕 71점으로 과열 신호가 있으나, 외국인과 기관은 각각 25,531.58억원과 26,490.65억원을 순매수해 국내 대형주 수급은 강하게 확인됩니다. 반면 KOSDAQ은 외국인 716.76억원, 기관 1,292.46억원 순매도로 시장 내부의 수급 방향은 엇갈립니다. 미국 주요 지수는 약세였지만 SOX·AMD·마이크론·인텔은 강했고, 원화 강세는 우호적이나 금리와 유가 상승 및 CPI·FOMC 경계가 남아 있습니다.</li>
 </ul>
 <h2>2. 국내 시장 — Morning reference</h2>
 <blockquote>아래 값은 장 시작 전 판단에 사용한 직전 확정 세션 기준값입니다. Evening의 실제 종가와 다른 시점입니다.</blockquote>
@@ -103,9 +102,55 @@ tr:last-child td { border-bottom:0; }
 </tr>
 </tbody></table></div>
 <h3>투자자별 수급</h3>
-<p>상태: <strong>미확보 — 기존 KRX source 접근이 허용되지 않음</strong>. 확보되지 않은 외국인·기관·개인 순매수는 0으로 대체하지 않았습니다.</p>
+<p>상태: <strong>확보됨</strong>. 확보되지 않은 외국인·기관·개인 순매수는 0으로 대체하지 않았습니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>시장</th>
+<th>투자자</th>
+<th>순매수</th>
+<th>단위</th>
+<th>as-of</th>
+<th>provider</th>
+<th>status</th>
+</tr></thead><tbody>
+<tr>
+<td>KOSPI</td>
+<td>외국인</td>
+<td>+25,531.58</td>
+<td>억원</td>
+<td>2026-09-07</td>
+<td>Daum Finance API</td>
+<td>available</td>
+</tr>
+<tr>
+<td>KOSPI</td>
+<td>기관</td>
+<td>+26,490.65</td>
+<td>억원</td>
+<td>2026-09-07</td>
+<td>Daum Finance API</td>
+<td>available</td>
+</tr>
+<tr>
+<td>KOSDAQ</td>
+<td>외국인</td>
+<td>-716.76</td>
+<td>억원</td>
+<td>2026-09-07</td>
+<td>Daum Finance API</td>
+<td>available</td>
+</tr>
+<tr>
+<td>KOSDAQ</td>
+<td>기관</td>
+<td>-1,292.46</td>
+<td>억원</td>
+<td>2026-09-07</td>
+<td>Daum Finance API</td>
+<td>available</td>
+</tr>
+</tbody></table></div>
 <h2>3. 해외·매크로</h2>
-<p>미국 S&amp;P500은 -0.38%, 나스닥은 -0.29%, 다우는 -0.51%로 전반적인 지수는 약세였습니다. 반면 SOX는 +3.37%, AMD는 +4.69%, MU는 +6.10%, 인텔은 +4.51%, SMH는 +2.61%로 반도체가 강했습니다. 일본 니케이225는 +1.26%, 항셍은 +1.74% 상승했습니다. 국내 ADR은 POSCO -0.62%, KB금융 -2.78%, 신한지주 -2.59%로 엇갈려 지수 상승의 폭넓은 확인 신호는 제한적입니다.</p>
+<p>S&amp;P500 -0.38%, Nasdaq -0.29%, Dow -0.51%로 미국 주요 지수는 약세였으나 SOX +3.37%, AMD +4.69%, MU +6.10%, 인텔 +4.51%, SMH +2.61%로 반도체 위험선호는 강했습니다. 니케이225 -1.70%, 항셍 -0.38%, 유로 STOXX50 -0.14%, DAX -0.35%로 아시아·유럽 지수 확인은 일관되지 않았습니다.</p>
 <div class="table-wrap"><table><thead><tr>
 <th>자산</th>
 <th>최근치</th>
@@ -128,13 +173,13 @@ tr:last-child td { border-bottom:0; }
 </tr>
 <tr>
 <td>VIX</td>
-<td>15.30</td>
-<td>+5.30%</td>
+<td>15.58</td>
+<td>+1.83%</td>
 </tr>
 <tr>
 <td>달러/원</td>
-<td>1,344.86</td>
-<td>-0.78%</td>
+<td>1,342.48</td>
+<td>-0.19%</td>
 </tr>
 <tr>
 <td>10Y국채</td>
@@ -142,12 +187,12 @@ tr:last-child td { border-bottom:0; }
 <td>+0.46%</td>
 </tr>
 </tbody></table></div>
-<p>매크로·일정: 미국 CPI는 최신 2026-07-01 기준 전년비 +3.54%, 전월비 +0.07%이고 PPI는 전년비 +8.27%입니다. 실업률은 4.1%입니다. 9월 11일 미국 8월 CPI와 9월 16일 FOMC가 예정되어 있어 단기적으로 금리와 변동성 재평가가 가능합니다. 10년물 금리는 4.78%로 +0.46% 상승했고 브렌트유와 WTI는 각각 +1.07%, +1.28% 올라 비용·인플레이션 부담을 함께 확인해야 합니다. 나머지 cross-asset와 상세 collector 결과는 public projection의 technical detail에 보존합니다.</p>
+<p>매크로·일정: CPI 최신치는 전년비 +3.54%, PPI는 +8.27%, 실업률은 4.1%입니다. 미국 8월 CPI는 9월 11일, FOMC는 9월 16일 예정되어 금리·물가 재평가 위험이 있습니다. 미국 10년물은 4.78%로 +0.46%, 브렌트유와 WTI는 각각 +2.26%, +2.50% 상승해 비용과 금리 부담을 함께 확인해야 합니다. 나머지 cross-asset와 상세 collector 결과는 public projection의 technical detail에 보존합니다.</p>
 <h2>4. ML signals — relative vs realized</h2>
 <ul>
 <li>Model relative-strength score: 종목 간 상대순위 신호이며 KOSPI 절대 방향 확률이 아닙니다.</li>
 <li>Target: 5세션 후 KOSPI 대비 초과수익</li>
-<li>모델 편향: <strong>약세</strong> | 분석 종목: <strong>50개</strong></li>
+<li>모델 편향: <strong>약세</strong> | 분석 종목: <strong>8개</strong></li>
 <li>Recent 5-day realized return: 최근 실제 수익률이며 모델 상대순위와 별도 값입니다.</li>
 </ul>
 <div class="table-wrap"><table><thead><tr>
@@ -157,39 +202,39 @@ tr:last-child td { border-bottom:0; }
 <th>Model bias</th>
 </tr></thead><tbody>
 <tr>
-<td>SK이노베이션</td>
+<td>삼성전자</td>
 <td>+80.00%</td>
-<td>+9.88%</td>
-<td>약세</td>
-</tr>
-<tr>
-<td>삼성SDI</td>
-<td>+71.90%</td>
-<td>-6.24%</td>
-<td>약세</td>
-</tr>
-<tr>
-<td>하나금융지주</td>
-<td>+71.90%</td>
-<td>+1.91%</td>
-<td>약세</td>
-</tr>
-<tr>
-<td>두산</td>
-<td>+20.00%</td>
-<td>+0.63%</td>
-<td>약세</td>
-</tr>
-<tr>
-<td>유안타증권우</td>
-<td>+21.60%</td>
-<td>+1.52%</td>
+<td>+3.26%</td>
 <td>약세</td>
 </tr>
 <tr>
 <td>티엠씨</td>
-<td>+23.20%</td>
-<td>-4.79%</td>
+<td>+66.60%</td>
+<td>-4.55%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>퀄리타스반도체</td>
+<td>+61.70%</td>
+<td>-2.70%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>엔투텍</td>
+<td>+20.00%</td>
+<td>+1.07%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>나우IB</td>
+<td>+27.40%</td>
+<td>-3.70%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>유안타증권우</td>
+<td>+42.40%</td>
+<td>+0.35%</td>
 <td>약세</td>
 </tr>
 </tbody></table></div>
@@ -202,32 +247,32 @@ tr:last-child td { border-bottom:0; }
 </tr></thead><tbody>
 <tr>
 <td>HPSP</td>
-<td>매우긍정</td>
-<td>호재: 상승, 성장, 기대감 / 악재: 급락, 경고</td>
-</tr>
-<tr>
-<td>신한지주</td>
 <td>긍정</td>
-<td>호재: 기대, 상승, 매수 / 악재: 주의</td>
+<td>호재: 상승, 매수, 순매수 / 악재: 급락, 경고</td>
 </tr>
 <tr>
-<td>리노공업</td>
+<td>삼성전자</td>
+<td>긍정</td>
+<td>호재: 반등, 상승, 호황 / 악재: 리스크</td>
+</tr>
+<tr>
+<td>기아</td>
 <td>부정</td>
-<td>호재: 매수, 순매수, 성장 / 악재: 하락, 블록딜, 우려</td>
+<td>호재: 성장, 기대, 상승 / 악재: 하락, 급락, 영업이익 감소</td>
 </tr>
 <tr>
-<td>삼성바이오로직스</td>
+<td>LG에너지솔루션</td>
 <td>중립</td>
-<td>호재: 상승 / 악재: 유상증자, 하락</td>
+<td>악재: 하락, 약세, 부진</td>
 </tr>
 </tbody></table></div>
 <p>주요 예정 이벤트: 2026-09-11 US 8월 CPI, 2026-09-16 FOMC, 2026-10-10 US 9월 CPI</p>
 <h2>6. 오늘 확인할 것</h2>
 <ul>
 <li>KOSPI 6,995.39 및 20일선 이격 +3.98%</li>
-<li>SOX·AMD·MU 등 반도체의 강세 지속 여부</li>
-<li>미국 S&amp;P500·나스닥의 약세 지속과 VIX 15.30의 변동성 변화</li>
-<li>원/달러 1,344.86과 10년물 금리 4.78%</li>
+<li>KOSPI foreign +25,531.58억원 / institution +26,490.65억원</li>
+<li>KOSDAQ foreign -716.76억원 / institution -1,292.46억원</li>
+<li>SOX·AMD·MU·인텔의 반도체 강세 지속 여부</li>
 </ul>
 <h2>7. 실험·데이터 경계</h2>
 <ul>
@@ -235,7 +280,7 @@ tr:last-child td { border-bottom:0; }
 <li>Current runtime improvement: <strong>Applied from previous cycle (prompt context read-back verified)</strong></li>
 <li>Today's new proposal: <strong>None (Morning stage)</strong></li>
 <li>Today's applied change: <strong>None (Evening stage에서만 판정)</strong></li>
-<li>데이터 제약: 외국인·기관 수급 원자료 (미확보)</li>
+<li>데이터 제약: 없음</li>
 <li>Daily Lab Note slug는 생성하지 않습니다.</li>
 </ul>
 <blockquote>⚠️ 본 문서는 투자 권유가 아니라 StockPulse V1 Fixed의 시장 관찰·예측 성능 측정 자료입니다. 실제 매매는 본인의 판단과 책임으로 결정해야 합니다.</blockquote></article>
