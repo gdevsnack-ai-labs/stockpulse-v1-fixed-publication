@@ -2,13 +2,47 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 0,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 1,
     "applied_count": 0,
-    "pending_count": 0
+    "pending_count": 1
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-09-09-morning-01",
+      "run_id": "live-shadow-2026-09-09-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-09-morning-01",
+      "proposal_id": "proposal-7c0bba9fbb0fe77c",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "절대 방향 판단에서 국내 추세 약세와 해외 위험선호·반도체·환율 반등이 충돌할 때, 해외 counter-signal을 별도 평가한 뒤 최종 방향을 결정합니다. 장중 breadth·외국인/기관 수급이 없으면 이를 불확실성으로 표시하고 국내 약세 근거로 대체하지 않습니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "LLM 절대 방향 판단에서 국내 과열·되돌림 위험과 해외 broad market 약세를 과대 반영하고, 반도체 섹터의 독립적인 상승 counter-signal과 국내 대형 반도체의 지지 가능성을 최종 방향에 충분히 반영하지 못했습니다. 당일 breadth와 수급이 없다는 데이터 제약 때문에 상승 확산 여부를 확인할 수 없었지만, 이를 곧바로 보합 근거로 사용하는 대신 상승·보합 양쪽 시나리오의 조건으로 분리했어야 합니다.",
+          "is_correct": false
+        },
+        "expected_impact": "국내 추세 신호와 반대되는 해외·환율 counter-signal의 누락을 줄이고 다음 Morning의 방향 판단 근거를 균형화합니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-09-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-09-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-09-08-supply-repair-01",
       "run_id": "live-shadow-2026-09-08-supply-repair-01",
