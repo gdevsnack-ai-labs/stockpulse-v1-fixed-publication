@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 8,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 9,
     "applied_count": 8,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-09-16-morning-01",
+      "run_id": "live-shadow-2026-09-16-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-16-morning-01",
+      "proposal_id": "proposal-4e55512c10389feb",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "국내 추세·수급 약세와 해외 broad market 약세가 반도체·대형주 반등과 충돌할 때, counter-signal을 별도 조건부 시나리오로 평가한 뒤 절대 방향을 결정합니다. 장중 breadth·개별 수급이 없으면 이를 방향 근거로 대체하지 않고 불확실성으로 표시합니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "LLM은 하락을 예측했지만 실제 KOSPI 방향은 상승이므로 평가 결과는 실패입니다. 실패 원인은 국내 약세 신호와 미국 broad market 약세를 지수 전체의 지속 하락으로 확장한 데 있습니다. 반도체 섹터의 반등은 이미 Morning 스냅샷에 있었으므로 국내 대형 기술주가 하방을 완충하거나 지수 방향을 전환할 조건부 시나리오를 더 명확히 분리했어야 합니다. 장중 breadth와 종목별 수급이 없으므로 특정 업종이나 투자 주체가 상승을 만들었다고 단정하지 않습니다. ML은 50개 예측을 생성했지만 5회 관측 전이라 evaluated가 아니며, 이번 LLM 방향 실패의 원인이나 성과 개선 근거로 사용하지 않습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "다음 Morning에서 국내 약세 신호와 반도체·대형주 반등 신호의 충돌을 균형 있게 반영하고, 확인되지 않은 장중 기여도를 과잉 추론하지 않도록 합니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-16-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-16-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-09-15-morning-01",
       "run_id": "live-shadow-2026-09-15-morning-01",

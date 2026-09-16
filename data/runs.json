@@ -9,7 +9,7 @@
       "source_experiment_id": "stockpulse-v1-fixed-phase8b",
       "run_mode": "live_shadow",
       "stage": "morning",
-      "overall_status": "in_progress_evening_not_started",
+      "overall_status": "complete",
       "lane": "v1_fixed_fresh",
       "trading_date": "2026-09-16",
       "run_status": "success",
@@ -30,9 +30,9 @@
       "morning_llm_prediction": {
         "llm_prediction_id": "llm-prediction-2026-09-16",
         "generation_status": "generated",
-        "evaluation_status": "pending",
-        "success": null,
-        "failure": null,
+        "evaluation_status": "evaluated",
+        "success": false,
+        "failure": true,
         "market": "KOSPI",
         "direction": "하락",
         "confidence": 0.74,
@@ -1856,35 +1856,59 @@
         ],
         "data_gaps": []
       },
-      "evening_analysis": {},
+      "evening_analysis": {
+        "actual_driver_analysis": "실제 상승을 설명할 수 있는 자료는 제한적입니다. KOSPI는 6,627.26에서 6,657.15로 29.89포인트 상승했고 KOSDAQ은 806.76으로 마감했습니다. Morning 직전 해외 broad market은 S&P500 -0.45%, Nasdaq -0.78%, Dow -0.63%로 약했지만 SOX +0.40%, NVIDIA +0.57%, AMD +2.19%, QCOM +4.25% 등 반도체 counter-signal은 강했습니다. 이 반도체 반등이 국내 대형 기술주 하방을 일부 완충했을 가능성이 있으나, 장중 종목별 기여도는 확인할 수 없습니다. 원/달러 1,362.68원과 미국 10년물 5.00%, 브렌트 108.35달러·WTI 105.49달러는 부담 요인으로 남았습니다. 실제 장중 breadth, 시가·고가·저가, 거래대금, watchlist 개별 수급은 보존된 자료에 없어 상승 원인을 단일 요인으로 확정하지 않습니다.",
+        "data_synthesis": {
+          "data_limits": [
+            "장중 breadth와 상승·하락 종목 수가 없어 상승의 시장 확산 정도를 확인할 수 없습니다.",
+            "watchlist 개별 외국인·기관 수급이 없어 종목별 수급 기여도를 확인할 수 없습니다.",
+            "해외·ADR 자료의 기준일이 일부 달라 국내 장 마감과 완전한 동시 비교에는 한계가 있습니다.",
+            "FOMC 당일 결과와 그 이후 반응은 Morning 판단에 반영하지 않았습니다."
+          ],
+          "domestic_market": "Morning 기준 KOSPI 6,627.26, 실제 KOSPI 6,657.15, KOSDAQ 실제 806.76입니다. 실제 KOSPI 방향은 상승이며 기준값 대비 수익률은 0.45101596%입니다.",
+          "flows_and_sentiment": "Morning 자료상 KOSPI 외국인 1조5,521억원·기관합계 9,522억원 순매도, KOSDAQ 외국인 272억원·기관 1,214억원 순매수입니다. 공포·탐욕 지수는 51 중립입니다. watchlist 개별 수급과 장중 breadth는 missing입니다.",
+          "ml_context": "LightGBM·XGBoost·LSTM이 73개 feature로 50개 상대성과 예측을 생성했습니다. 5-session maturity 전이므로 evaluated 2, pending 459이며, ML은 KOSPI 절대 방향과 독립적인 상대성과 참고 신호입니다.",
+          "morning_judgment": "Morning 판단은 하락, confidence 0.74입니다. 국내 추세·수급·환율·유가·금리 부담을 중심에 두고 반도체 반등은 하락폭을 제한하는 counter-signal로 보았습니다.",
+          "overseas_and_cross_asset": "S&P500 -0.45%, Nasdaq -0.78%, Dow -0.63%, SOX +0.40%, NVIDIA +0.57%, AMD +2.19%, QCOM +4.25%, 원/달러 1,362.68원, 미국 10년물 5.00%, 브렌트 108.35달러, WTI 105.49달러입니다."
+        },
+        "failure_analysis": "LLM은 하락을 예측했지만 실제 KOSPI 방향은 상승이므로 평가 결과는 실패입니다. 실패 원인은 국내 약세 신호와 미국 broad market 약세를 지수 전체의 지속 하락으로 확장한 데 있습니다. 반도체 섹터의 반등은 이미 Morning 스냅샷에 있었으므로 국내 대형 기술주가 하방을 완충하거나 지수 방향을 전환할 조건부 시나리오를 더 명확히 분리했어야 합니다. 장중 breadth와 종목별 수급이 없으므로 특정 업종이나 투자 주체가 상승을 만들었다고 단정하지 않습니다. ML은 50개 예측을 생성했지만 5회 관측 전이라 evaluated가 아니며, 이번 LLM 방향 실패의 원인이나 성과 개선 근거로 사용하지 않습니다.",
+        "improvement": {
+          "action_detail": "국내 추세·수급 약세와 해외 broad market 약세가 반도체·대형주 반등과 충돌할 때, counter-signal을 별도 조건부 시나리오로 평가한 뒤 절대 방향을 결정합니다. 장중 breadth·개별 수급이 없으면 이를 방향 근거로 대체하지 않고 불확실성으로 표시합니다.",
+          "action_type": "prompt",
+          "expected_impact": "다음 Morning에서 국내 약세 신호와 반도체·대형주 반등 신호의 충돌을 균형 있게 반영하고, 확인되지 않은 장중 기여도를 과잉 추론하지 않도록 합니다.",
+          "status": "proposed"
+        },
+        "rationale_vs_actual": "Morning의 하락 판단은 KOSPI의 전일 약세와 20일선 하회, 외국인·기관 순매도, 원화 약세·고금리·고유가, 미국 주요 지수 약세를 종합한 결과였습니다. 이 신호들은 하방 위험을 설명했지만 당일 절대 방향을 맞히지는 못했습니다. 반면 SOX와 주요 반도체 종목의 반등을 국내 지수에 영향을 줄 수 있는 counter-signal로 기록하면서도 최종 방향 판단에서는 충분히 상향 반영하지 못했습니다. 또한 KOSDAQ이 기준 세션보다 낮았다는 점을 고려하면 실제 상승을 전면적 위험선호 회복으로 해석할 수 없습니다. 이번 오차의 핵심은 국내 추세·수급 약세 신호를 다음 거래일 방향으로 확장한 반면, 반도체 중심의 반대 신호가 지수 구성 종목에 미치는 조건부 영향을 낮게 본 데 있습니다.",
+        "summary": "Morning은 KOSPI 절대 방향을 하락으로 전망했으나 실제 KOSPI는 6,657.15로 상승 마감했습니다. Morning 기준값 6,627.26 대비 0.45101596% 상승하여 LLM 방향 판단은 실패했습니다. KOSDAQ은 806.76으로 기준 세션의 812.41보다 낮아, 시장 전체가 동일하게 강해진 장세라기보다 KOSPI 대형주와 일부 업종의 반등이 지수 방향을 바꾼 혼조 흐름으로 봅니다. ML 5일 상대성과 평가는 아직 pending이며 LLM 절대 방향 실패와 섞어 해석하지 않습니다."
+      },
       "actual_market_result": {
-        "status": "not_available",
-        "reason": "evening_not_started",
-        "kospi_close": null,
-        "kosdaq_close": null,
-        "direction": null,
-        "return_pct": null,
-        "observed_at": null,
-        "llm_success": null
+        "status": "available",
+        "reason": null,
+        "kospi_close": 6657.15,
+        "kosdaq_close": 806.76,
+        "direction": "상승",
+        "return_pct": 0.45101596,
+        "observed_at": "2026-09-16T16:30:15.744640+09:00",
+        "llm_success": false
       },
       "llm_evaluation": {
-        "status": "pending",
-        "success": null,
-        "failure": null
+        "status": "evaluated",
+        "success": false,
+        "failure": true
       },
       "ml_evaluation": {
         "prediction_count": 50,
         "status": "pending",
-        "evaluated_count": 0,
-        "pending_count": 50,
+        "evaluated_count": 2,
+        "pending_count": 459,
         "correct_count": null,
         "reason": "target_date_unavailable"
       },
       "improvement": {
-        "status": "none",
-        "proposal_id": null,
+        "status": "approved",
+        "proposal_id": "proposal-4e55512c10389feb",
         "actual_applied": false,
-        "observation_state": "not_started"
+        "observation_state": "pending"
       },
       "publications": {
         "morning": {
@@ -1892,8 +1916,8 @@
           "path": "reports/2026-09-16/morning/"
         },
         "evening": {
-          "status": "not_started",
-          "path": null
+          "status": "available",
+          "path": "reports/2026-09-16/evening/"
         }
       },
       "evidence_refs": [
