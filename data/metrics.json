@@ -13,9 +13,9 @@
     "ml_evaluation_state": "pending",
     "improvement_cycles": 8,
     "improvement_status": "none",
-    "applied_count": 3,
+    "applied_count": 8,
     "rejected_count": 0,
-    "pending_count": 5,
+    "pending_count": 0,
     "current_effective_config": {
       "lgb": {
         "learning_rate": 0.03,
