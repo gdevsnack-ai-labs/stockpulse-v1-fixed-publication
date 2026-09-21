@@ -2,11 +2,11 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "approved",
-    "reason": null,
+    "status": "none",
+    "reason": "no_evaluated_failure_observed",
     "proposal_count": 12,
-    "applied_count": 11,
-    "pending_count": 1,
+    "applied_count": 12,
+    "pending_count": 0,
     "rejected_count": 0
   },
   "records": [
@@ -26,12 +26,12 @@
         },
         "expected_impact": "국내 약세 신호가 해외 반도체·위험선호 반등을 과도하게 압도하는 오판을 줄이고, 다음 Morning의 절대 방향 판단에서 상쇄 시나리오를 균형 있게 반영합니다."
       },
-      "status": "approved",
+      "status": "applied",
       "approved": true,
-      "actual_applied": false,
+      "actual_applied": true,
       "effective_runtime_readback": null,
       "application_kind": "prompt",
-      "readback_verified": null,
+      "readback_verified": true,
       "observation_state": "pending",
       "evidence_refs": [
         {
