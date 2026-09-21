@@ -9,7 +9,7 @@
       "source_experiment_id": "stockpulse-v1-fixed-phase8b",
       "run_mode": "live_shadow",
       "stage": "morning",
-      "overall_status": "in_progress_evening_not_started",
+      "overall_status": "complete",
       "lane": "v1_fixed_fresh",
       "trading_date": "2026-09-21",
       "run_status": "success",
@@ -30,9 +30,9 @@
       "morning_llm_prediction": {
         "llm_prediction_id": "llm-prediction-2026-09-21",
         "generation_status": "generated",
-        "evaluation_status": "pending",
-        "success": null,
-        "failure": null,
+        "evaluation_status": "evaluated",
+        "success": false,
+        "failure": true,
         "market": "KOSPI",
         "direction": "하락",
         "confidence": 0.68,
@@ -1840,35 +1840,56 @@
         ],
         "data_gaps": []
       },
-      "evening_analysis": {},
+      "evening_analysis": {
+        "actual_driver_analysis": "실제 상승을 설명하는 핵심 단서는 Morning snapshot의 해외 반도체·성장주 강세와 국내 반도체 대형주의 상쇄 가능성이었습니다. SOX는 +2.78%, SMH는 +2.21%, 엔비디아는 +1.34%, AMD는 +2.70%, MU는 +3.92%였고, SK하이닉스도 직전 기준 +4.70%였습니다. 국내 전체 breadth와 당일 수급은 Morning snapshot에 없었으므로 상승의 세부 확산 경로와 투자자별 기여는 단정하지 않습니다. 장 마감 outcome은 read-only yfinance 결과로 확인했으며, Morning의 국내 약세 지표보다 반도체·위험선호 counter-signal의 실현 강도가 컸던 날로 판단합니다.",
+        "data_synthesis": {
+          "actual_result": "KOSPI actual direction 상승, actual return +4.21424578%, outcome observed at 2026-09-21T16:30:13.918671+09:00 via read-only yfinance pre-step.",
+          "breadth_and_leaders": "Morning snapshot은 상승 13개·하락 36개와 역배열 17개를 기록했습니다. 당일 장중 breadth 및 당일 외국인·기관 수급은 제공되지 않아 실제 상승 확산의 폭과 주도주 기여는 미확인입니다. 직전 기준 SK하이닉스 +4.70%, 삼성전자 +1.56%였고, 삼성전자 기술 지표는 약세였으므로 종목별 신호가 혼재했습니다.",
+          "domestic_market": "Morning reference KOSPI 6,724.34(+0.09%), KOSDAQ 821.67(+0.70%), KOSPI 20일 이격도 -1.15%, KOSDAQ 20일 이격도 +0.28%. Actual close KOSPI 7,007.72, KOSDAQ 836.27.",
+          "fear_greed": "공포·탐욕 54(중립), KOSPI 20일 이격도 -1.15%, 거래량 5일/20일 0.79배로 보수적 신호였습니다. 그러나 중립 지표는 상승을 배제하지 않으며, 실제 결과는 상방으로 나타났습니다.",
+          "flows_and_news": "시장 단위 수급은 2026-09-17 기준으로만 available하며 당일 수급은 없습니다. 종목별 뉴스와 당일 신규 뉴스의 인과는 확인하지 않았고, 확인되지 않은 원인은 추가하지 않습니다.",
+          "macro_events": "미국 CPI 전년비 3.71%, PPI 전년비 9.85%, 실업률 4.1%이며 다음 주요 일정은 미국 9월 CPI 10월 10일, FOMC 11월 5일, 한국은행 금통위 10월 16일로 기록되어 있습니다. 당일 방향을 직접 설명하는 신규 이벤트는 확인되지 않았습니다.",
+          "ml_relative_context": "ML은 50개 예측을 생성했으나 five-session maturity 전이라 evaluated_count 0, pending_count 609입니다. ML은 KOSPI 절대 방향 평가가 아니며 이번 LLM 실패의 근거로 사용하지 않습니다.",
+          "morning_judgment": "Morning frozen prediction: 하락, confidence 0.68, snapshot cutoff 2026-09-21T07:31:04.993226+09:00. 이 값은 변경하지 않았습니다.",
+          "overnight_cross_asset": "S&P500 +0.17%, Nasdaq +0.39%, Dow -0.18%, SOX +2.78%, SMH +2.21%, NVDA +1.34%, AMD +2.70%, MU +3.92%였습니다. 유럽 STOXX50 -1.37%, DAX -1.60%, 원/달러 +0.42%는 혼조·부담 신호였지만, 반도체 counter-signal은 실제 국내 상승과 같은 방향으로 실현되었습니다."
+        },
+        "failure_analysis": "절대 방향 판단에서 국내 breadth 약세와 해외 반도체·성장주 counter-signal이 충돌했을 때, 국내 약세 신호의 설명력이 과대평가되고 해외 신호의 지수 전이 가능성이 과소평가되었습니다. 특히 당일 breadth·외국인/기관 수급이 부재한 상태에서 이를 하락 확신의 보조 근거처럼 사용한 것이 문제였습니다. 수급과 breadth가 없는 경우에는 방향을 확정하는 근거가 아니라 불확실성으로 유지하고, 반도체·환율·해외 지수 신호가 국내 대형주를 통해 전체 지수로 확산될 가능성을 별도 시나리오로 평가해야 합니다.",
+        "improvement": {
+          "action_detail": "절대 방향 판단에서 국내 추세·breadth 약세와 해외 위험선호·반도체·환율 counter-signal이 충돌할 때 counter-signal의 국내 지수 전이 가능성을 별도 시나리오로 평가합니다. 당일 breadth·외국인/기관 수급이 없으면 이를 방향 확정 근거로 사용하지 않고 불확실성으로 표시합니다.",
+          "action_type": "prompt",
+          "expected_impact": "국내 약세 신호가 해외 반도체·위험선호 반등을 과도하게 압도하는 오판을 줄이고, 다음 Morning의 절대 방향 판단에서 상쇄 시나리오를 균형 있게 반영합니다."
+        },
+        "rationale_vs_actual": "Morning은 KOSPI 직전 종가 6,724.34, 20일 이격도 -1.15%, 분석 종목 상승 13개·하락 36개, 역배열 17개를 중심으로 하락을 판단했습니다. 이 근거들은 2026-09-18 기준 스냅샷에서는 유효했지만, SOX·SMH와 주요 반도체 종목의 강세를 하락 폭 제한 요인에 머물게 하고 최종 방향을 하락으로 고정한 점이 실패 원인입니다. 실제 종가는 7,007.72로 상승했으므로 LLM 평가는 실패입니다. KOSDAQ도 821.67에서 836.27로 상승했지만, 이는 보조 관찰값으로만 사용합니다.",
+        "summary": "Morning은 KOSPI 국내 breadth 약세와 추세 부담을 근거로 하락을 전망했으나, 실제 KOSPI는 6,724.34에서 7,007.72로 상승하며 방향이 틀렸습니다. 실제 수익률은 +4.21424578%였고, 해외 반도체 강세가 국내 지수 전반으로 확산되는 상방 전개를 Morning 판단이 충분히 반영하지 못했습니다."
+      },
       "actual_market_result": {
-        "status": "not_available",
-        "reason": "evening_not_started",
-        "kospi_close": null,
-        "kosdaq_close": null,
-        "direction": null,
-        "return_pct": null,
-        "observed_at": null,
-        "llm_success": null
+        "status": "available",
+        "reason": null,
+        "kospi_close": 7007.72021484375,
+        "kosdaq_close": 836.27001953125,
+        "direction": "상승",
+        "return_pct": 4.21424578,
+        "observed_at": "2026-09-21T16:30:13.918671+09:00",
+        "llm_success": false
       },
       "llm_evaluation": {
-        "status": "pending",
-        "success": null,
-        "failure": null
+        "status": "evaluated",
+        "success": false,
+        "failure": true
       },
       "ml_evaluation": {
         "prediction_count": 50,
         "status": "pending",
         "evaluated_count": 0,
-        "pending_count": 50,
+        "pending_count": 609,
         "correct_count": null,
         "reason": "target_date_unavailable"
       },
       "improvement": {
-        "status": "none",
-        "proposal_id": null,
+        "status": "approved",
+        "proposal_id": "proposal-d137cccb03ab715c",
         "actual_applied": false,
-        "observation_state": "not_started"
+        "observation_state": "pending"
       },
       "publications": {
         "morning": {
@@ -1876,8 +1897,8 @@
           "path": "reports/2026-09-21/morning/"
         },
         "evening": {
-          "status": "not_started",
-          "path": null
+          "status": "available",
+          "path": "reports/2026-09-21/evening/"
         }
       },
       "evidence_refs": [

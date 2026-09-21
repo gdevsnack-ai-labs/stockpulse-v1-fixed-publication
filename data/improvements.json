@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 11,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 12,
     "applied_count": 11,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-09-21-morning-01",
+      "run_id": "live-shadow-2026-09-21-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-21-morning-01",
+      "proposal_id": "proposal-d137cccb03ab715c",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "절대 방향 판단에서 국내 추세·breadth 약세와 해외 위험선호·반도체·환율 counter-signal이 충돌할 때 counter-signal의 국내 지수 전이 가능성을 별도 시나리오로 평가합니다. 당일 breadth·외국인/기관 수급이 없으면 이를 방향 확정 근거로 사용하지 않고 불확실성으로 표시합니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "절대 방향 판단에서 국내 breadth 약세와 해외 반도체·성장주 counter-signal이 충돌했을 때, 국내 약세 신호의 설명력이 과대평가되고 해외 신호의 지수 전이 가능성이 과소평가되었습니다. 특히 당일 breadth·외국인/기관 수급이 부재한 상태에서 이를 하락 확신의 보조 근거처럼 사용한 것이 문제였습니다. 수급과 breadth가 없는 경우에는 방향을 확정하는 근거가 아니라 불확실성으로 유지하고, 반도체·환율·해외 지수 신호가 국내 대형주를 통해 전체 지수로 확산될 가능성을 별도 시나리오로 평가해야 합니다.",
+          "is_correct": false
+        },
+        "expected_impact": "국내 약세 신호가 해외 반도체·위험선호 반등을 과도하게 압도하는 오판을 줄이고, 다음 Morning의 절대 방향 판단에서 상쇄 시나리오를 균형 있게 반영합니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-21-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-21-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-09-18-morning-01",
       "run_id": "live-shadow-2026-09-18-morning-01",
