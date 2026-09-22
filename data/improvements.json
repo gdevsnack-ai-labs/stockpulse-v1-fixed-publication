@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 12,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 13,
     "applied_count": 12,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-09-22-morning-01",
+      "run_id": "live-shadow-2026-09-22-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-22-morning-01",
+      "proposal_id": "proposal-af484cf486defa43",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "절대 방향 판단에서 국내 추세 약세와 해외 위험선호·반도체·환율 반등이 충돌할 때, 해외 counter-signal을 별도 평가한 뒤 최종 방향을 결정합니다. 장중 breadth·외국인/기관 수급이 없으면 이를 불확실성으로 표시하고 국내 약세 근거로 대체하지 않습니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "{'llm_direction_match': False, 'morning_direction': '보합', 'actual_direction': '상승', 'morning_confidence': 0.56, 'primary_failure': '해외 반도체·위험선호의 국내 대형 기술주 전이 강도를 과소평가하여 국내 약세 신호에 과도한 가중치를 부여했습니다.', 'contributing_factors': ['KOSPI 20일선 하회와 유럽 약세를 당일 상승 촉매보다 우선했습니다.', '장중 breadth와 당일 수급이 없다는 이유로 상승 확산 가능성을 충분히 평가하지 못했습니다.', '수급 자료 기준일이 2026-09-17이고 일부 해외 지수가 2026-09-18 기준이어서 최신성 제약이 있었습니다.', '단일 거래일 결과이므로 이번 상승을 일반적인 규칙이나 지속 가능한 추세 전환으로 확대 해석할 수 없습니다.'], 'ml_context': 'ML은 5일 KOSPI 대비 상대성과가 아직 성숙하지 않아 evaluated_count 0, pending_count 659이며 실패 분석이나 개선 제안의 근거로 사용할 수 없습니다. ML의 상대성과 pending 상태는 KOSPI 절대 방향의 오판을 확인하거나 보정하는 근거가 아닙니다.'}",
+          "is_correct": false
+        },
+        "expected_impact": "국내 추세 신호와 반대되는 해외·환율 counter-signal의 누락을 줄이고 다음 Morning의 방향 판단 근거를 균형화합니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-22-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-22-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-09-21-morning-01",
       "run_id": "live-shadow-2026-09-21-morning-01",
