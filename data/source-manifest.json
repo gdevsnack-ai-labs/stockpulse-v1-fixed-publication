@@ -1,23 +1,36 @@
 {
   "source_kind": "read_only_v1_fixed_run_artifact_set",
-  "run_id": "live-shadow-2026-09-23-morning-01",
-  "snapshot_id": "input-snapshot-3205529cd70dcd0b",
-  "trading_date": "2026-09-23",
+  "run_id": "live-shadow-2026-09-29-morning-01",
+  "snapshot_id": "input-snapshot-597ec0eb77291777",
+  "trading_date": "2026-09-29",
   "artifact_count": 7,
   "artifact_hashes": {
-    "run.json": "4854a45b7d2581f22c07713c7568dac9d912ac8b6ea84f627027a7f17246494b",
-    "input_manifest.json": "387096c0b2ec4e92511580c17350d6fdf682f8a7be7b46ed68bcc6522fd22b79",
-    "quality.json": "495702699856b5cd8044afc40c66a595c8d3572c7ac2b5cb07a240e12a2d1396",
-    "ml_prediction.json": "12d013768f5b5b43d80954d707774653d68c0fba5e2e483349f164a700f0031c",
-    "llm_prediction.json": "937ebf96fbd3828015904f8190474f0f8f8b366c2a7e1be0106cfb35ee5b626d",
+    "run.json": "077717e016f35c0c9bd893a49b19591ba8f5bf30f970a3c1bea0eefe31a8e85a",
+    "input_manifest.json": "a73d1ca7b1ff7dfc06044b1692286b3fa7ee31384e3b40d4b622cf73b76bee5c",
+    "quality.json": "7af282dafd0a6216d106625a2cb91ed6afd8d9d2d025c0f8b913fe52cf198e98",
+    "ml_prediction.json": "19d72d0c822eff1e8128a41ddcbcd70ab9ef21f48de20a4030e4197dc469bda5",
+    "llm_prediction.json": "c438ff12e4a6ab537399ba9a94b88a0766bfec2546d394044fd19838f47f1193",
     "improvement.json": "00f34e244a8473e1e55fa11989981bb5e9474f8fcd3bcc04a4466c15713e4d13",
-    "day1-morning-verification.json": "a988cabcdfefd1b396815bc34953e05c04fe9307c939d6fa444d25b6260b542c"
+    "day1-morning-verification.json": "06d1b0642a4eda4e3fc63c8bdb35a95422fc49a2272ed69b904ddf2d681d8049"
   },
   "generator_version": "stockpulse-v1-fixed-projector-1.2.0",
   "generator_command_template": "python3 scripts/project_publication.py --source-run <private-run-dir> --output-dir <output-dir> [--projected-at <iso>]",
   "source_path_projected": false,
-  "history_count": 16,
+  "history_count": 17,
   "history": [
+    {
+      "run_id": "live-shadow-2026-09-29-morning-01",
+      "trading_date": "2026-09-29",
+      "artifact_hashes": {
+        "run.json": "077717e016f35c0c9bd893a49b19591ba8f5bf30f970a3c1bea0eefe31a8e85a",
+        "input_manifest.json": "a73d1ca7b1ff7dfc06044b1692286b3fa7ee31384e3b40d4b622cf73b76bee5c",
+        "quality.json": "7af282dafd0a6216d106625a2cb91ed6afd8d9d2d025c0f8b913fe52cf198e98",
+        "ml_prediction.json": "19d72d0c822eff1e8128a41ddcbcd70ab9ef21f48de20a4030e4197dc469bda5",
+        "llm_prediction.json": "c438ff12e4a6ab537399ba9a94b88a0766bfec2546d394044fd19838f47f1193",
+        "improvement.json": "00f34e244a8473e1e55fa11989981bb5e9474f8fcd3bcc04a4466c15713e4d13",
+        "day1-morning-verification.json": "06d1b0642a4eda4e3fc63c8bdb35a95422fc49a2272ed69b904ddf2d681d8049"
+      }
+    },
     {
       "run_id": "live-shadow-2026-09-23-morning-01",
       "trading_date": "2026-09-23",
