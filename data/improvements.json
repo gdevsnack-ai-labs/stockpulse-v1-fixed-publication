@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 13,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 14,
     "applied_count": 13,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-09-29-morning-01",
+      "run_id": "live-shadow-2026-09-29-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-29-morning-01",
+      "proposal_id": "proposal-dca1c01b767c11f5",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "절대 방향을 결정할 때 국내 추세·해외 위험회피 신호와 함께 KOSDAQ 상승, 국내 업종·대형주 counter-signal, 반등 확산 가능성을 별도 평가하고 서로 충돌하면 하방 신호를 자동 우세로 두지 않습니다. 장중 breadth·당일 수급이 없으면 그 부재를 불확실성으로 명시합니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "국내 추세 약세와 해외 위험회피를 절대 방향의 우세 신호로 해석하면서, KOSDAQ 상승과 배터리·금융·조선·에너지 등 국내 개별 강세가 KOSPI를 끌어올릴 수 있는 반대 경로를 충분히 비교하지 못했습니다. 다만 장중 breadth와 실시간 수급이 없으므로 어떤 세부 요인이 실제 상승을 주도했는지는 확정할 수 없습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "국내 반등 counter-signal을 과소평가해 절대 방향을 잘못 결정하는 오류를 줄입니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-29-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-29-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-09-22-morning-01",
       "run_id": "live-shadow-2026-09-22-morning-01",
