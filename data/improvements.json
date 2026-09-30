@@ -2,11 +2,11 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "approved",
-    "reason": null,
+    "status": "none",
+    "reason": "no_evaluated_failure_observed",
     "proposal_count": 15,
-    "applied_count": 14,
-    "pending_count": 1,
+    "applied_count": 15,
+    "pending_count": 0,
     "rejected_count": 0
   },
   "records": [
@@ -26,12 +26,12 @@
         },
         "expected_impact": "국내 추세 약세에 과도하게 고정되어 반도체·성장주 반등과 KOSDAQ 상승의 국내 확산 가능성을 과소평가하는 절대 방향 판단 오류를 줄입니다."
       },
-      "status": "approved",
+      "status": "applied",
       "approved": true,
-      "actual_applied": false,
+      "actual_applied": true,
       "effective_runtime_readback": null,
       "application_kind": "prompt",
-      "readback_verified": null,
+      "readback_verified": true,
       "observation_state": "pending",
       "evidence_refs": [
         {
