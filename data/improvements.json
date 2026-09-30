@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 14,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 15,
     "applied_count": 14,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-09-30-morning-01",
+      "run_id": "live-shadow-2026-09-30-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-09-30-morning-01",
+      "proposal_id": "proposal-b51ef8408d1a105e",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "절대 방향을 결정할 때 국내 추세·수급·breadth 약세와 해외 반도체·성장주 반등, KOSDAQ 상승, 국내 대형주·리더 반등의 counter-signal을 별도 평가하고, 두 신호가 충돌하면 해외 counter-signal의 국내 확산 조건을 명시한 뒤 방향을 결정합니다. 장중 breadth 또는 종목별 수급이 없으면 이를 방향 근거로 대체하지 않고 불확실성으로 표시합니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "절대 방향 판단에서 국내 추세 약세와 해외 위험선호·반도체 반등 및 국내 counter-signal이 충돌했습니다. Morning은 하방 신호를 주된 방향 근거로 채택하면서 SOX·SMH 반등, KOSDAQ 상승, 삼성전자·SK하이닉스 및 일부 성장주의 기술적 반등 가능성을 충분히 가중하지 못했습니다. 장중 breadth는 사후적으로도 제공되지 않았으므로 이를 상승의 직접 증거로 만들지는 않습니다. 이번 실패는 LLM 절대 방향 판단의 실패이며, ML 5일 상대성과 평가 실패가 아닙니다.",
+          "is_correct": false
+        },
+        "expected_impact": "국내 추세 약세에 과도하게 고정되어 반도체·성장주 반등과 KOSDAQ 상승의 국내 확산 가능성을 과소평가하는 절대 방향 판단 오류를 줄입니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-09-30-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-09-30-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-09-29-morning-01",
       "run_id": "live-shadow-2026-09-29-morning-01",
