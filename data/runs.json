@@ -9,7 +9,7 @@
       "source_experiment_id": "stockpulse-v1-fixed-phase8b",
       "run_mode": "live_shadow",
       "stage": "morning",
-      "overall_status": "in_progress_evening_not_started",
+      "overall_status": "complete",
       "lane": "v1_fixed_fresh",
       "trading_date": "2026-10-01",
       "run_status": "success",
@@ -30,9 +30,9 @@
       "morning_llm_prediction": {
         "llm_prediction_id": "llm-prediction-2026-10-01",
         "generation_status": "generated",
-        "evaluation_status": "pending",
-        "success": null,
-        "failure": null,
+        "evaluation_status": "evaluated",
+        "success": false,
+        "failure": true,
         "market": "KOSPI",
         "direction": "하락",
         "confidence": 0.58,
@@ -1847,35 +1847,111 @@
         ],
         "data_gaps": []
       },
-      "evening_analysis": {},
+      "evening_analysis": {
+        "actual_driver_analysis": {
+          "breadth_and_leaders": "Morning 스냅샷에서는 기술 스캔 49개 중 상승 16개, 하락 33개였고 삼성전자·SK하이닉스는 정배열이었습니다. 실제 장중 breadth와 종목별 수급은 없어 리더 확산 여부는 미확인입니다.",
+          "domestic_index_and_intraday_context": "보존된 장 마감 결과는 강한 상승을 보여주지만 장중 breadth와 시간대별 전개는 수집되지 않았습니다. 따라서 상승이 장중 전반 확산이었는지 특정 대형주 중심이었는지는 판별하지 않습니다.",
+          "fear_greed_and_flows": "공포·탐욕 지수는 54로 중립이었고 KOSPI 외국인 -20,645.6억원, 기관 -7,992.5억원 순매도라는 전일 수급 신호가 있었습니다. 이 신호만으로 당일 상승을 설명할 수 없으며, 당일 종목별 수급은 미확인입니다.",
+          "macro_and_events": "미국 10년물 금리 5.29% 상승과 VIX 16.34 상승은 위험요인이었지만, 달러/원은 1,356.54원으로 0.22% 하락했고 브렌트유는 97.74달러로 4.73% 하락했습니다. 최신 CPI·PPI·실업률은 2026-08 관측치여서 당일 반등의 직접 원인으로 사용하지 않습니다.",
+          "ml_relative_strength": "ML은 50개 예측을 생성했지만 5거래일 결과가 성숙하지 않아 859건이 pending이고 평가된 건수와 실패 건수는 0건입니다. ML의 상대성과 신호는 KOSPI 절대 방향의 사후 설명이나 성공·실패 판정에 사용하지 않습니다.",
+          "news": "주요 종목 뉴스 감성은 긍정 6개, 부정 1개, 중립 12개로 전체적으로 중립이었습니다. 뉴스만으로 상승 원인을 특정하지 않습니다.",
+          "observed_market_result": "KOSPI 6,971.35, KOSDAQ 894.29, 실제 방향 상승, 기준 KOSPI 6,724.34 대비 수익률 3.67337311%입니다.",
+          "overnight_cross_asset": "미국 시장은 혼조였으나 Nasdaq 0.24%, NVDA 0.51%, AMD 0.69%, SMH 0.35%로 성장·반도체 반등 신호가 있었습니다. 이는 Morning의 하락 근거와 충돌한 counter-signal이며, 국내 반도체·성장주 반등을 통해 상승에 기여했을 가능성은 있으나 인과로 확정할 수 없습니다."
+        },
+        "data_synthesis": {
+          "data_limits": [
+            "장중 breadth와 시간대별 가격 경로가 없습니다.",
+            "당일 개별 종목 외국인·기관 수급이 없습니다.",
+            "일부 해외·아시아 지수는 2026-09-29 기준이라 동시점 비교에 시차가 있습니다.",
+            "최신 물가·고용 관측치는 2026-08 기준입니다."
+          ],
+          "domestic_market": {
+            "actual_direction": "상승",
+            "actual_kosdaq_close": 894.2899780273438,
+            "actual_kospi_close": 6971.35009765625,
+            "actual_return_pct": 3.67337311,
+            "reference_context": "Morning 기준일 2026-09-30 KOSPI 6,724.34, KOSDAQ 821.67",
+            "reference_kospi_close": 6724.34
+          },
+          "flows": {
+            "as_of": "2026-09-30",
+            "intraday_stock_level_flow_available": false,
+            "kosdaq_foreign_display_krw_100m": -713.07565598,
+            "kosdaq_institution_display_krw_100m": 481.63015794,
+            "kospi_foreign_display_krw_100m": -20645.56519605,
+            "kospi_institution_display_krw_100m": -7992.51376553,
+            "provider": "Daum Finance API"
+          },
+          "macro_events": {
+            "cpi_latest_date": "2026-08-01",
+            "ppi_latest_date": "2026-08-01",
+            "unemployment_latest_date": "2026-08-01",
+            "upcoming_bank_of_korea": "2026-10-16",
+            "upcoming_us_cpi": "2026-10-10"
+          },
+          "ml_relative_performance": {
+            "evaluated_count": 0,
+            "failure_count": 0,
+            "interpretation": "5거래일 상대성과 평가 pending; 절대 KOSPI 방향 판정과 분리",
+            "lane": "v1_fixed_fresh",
+            "pending_count": 859
+          },
+          "overnight": {
+            "amd_change_pct": 0.69,
+            "dow_change_pct": -0.86,
+            "hang_seng_change_pct": -0.48,
+            "nasdaq_change_pct": 0.24,
+            "nikkei_change_pct": -0.6,
+            "nvda_change_pct": 0.51,
+            "smh_change_pct": 0.35,
+            "sp500_change_pct": -0.25,
+            "ten_year_change_pct": 0.72,
+            "vix_change_pct": 1.87
+          },
+          "technical_context": {
+            "fear_greed_label": "중립",
+            "fear_greed_score": 54,
+            "kospi_sma20": 6802.33,
+            "technical_scan": "상승 16, 하락 33, 정배열 12, 혼조 20, 역배열 17"
+          }
+        },
+        "failure_analysis": "절대 방향 판단에서 국내 추세 약세와 해외 위험선호·반도체·성장주 반등이 충돌했습니다. Morning은 counter-signal을 명시했지만 국내 약세 신호를 최종 방향에 더 강하게 반영했고, 장중 breadth와 종목별 외국인·기관 수급 부재를 충분한 방향 불확실성으로 처리하지 못했습니다. 실제 상승과의 불일치는 확인되지만, 보존된 자료만으로 상승의 단일 원인이나 모델 성능 개선 효과를 주장할 수는 없습니다.",
+        "improvement": {
+          "action_detail": "이번 Evening에서는 별도의 새 개선안을 직접 제안하지 않습니다. 확인된 실패 원인과 자료 경계를 다음 Morning 컨텍스트에 보존합니다.",
+          "action_type": "none",
+          "expected_impact": "none"
+        },
+        "rationale_vs_actual": "Morning의 하락 판단은 KOSPI가 20일선 아래에 있고, 기술 스캔의 하락 종목 수가 상승 종목 수보다 많으며, KOSPI 외국인·기관 순매도와 VIX·금리 상승이 겹쳤다는 근거에 기반했습니다. 그러나 실제로는 KOSPI가 6,971.35까지 상승했습니다. Morning에도 KOSDAQ 상승, Nasdaq·NVDA·AMD·SMH 반등, 삼성전자·SK하이닉스의 정배열을 counter-signal로 기록했지만 최종 방향에 충분히 반영하지 못했습니다. 특히 국내 약세 신호와 해외 반도체·성장주 반등 신호가 충돌한 상태에서 전자를 과대평가한 것이 핵심 오판으로 보입니다. 다만 장중 breadth와 종목별 수급이 없으므로 특정 주체나 단일 이벤트를 실제 상승 원인으로 단정하지 않습니다.",
+        "summary": "Morning은 KOSPI 하락을 기본 시나리오로 판단했으나, 실제 KOSPI는 6,971.35로 상승하고 기준 종가 6,724.34 대비 3.67337311% 올랐습니다. KOSDAQ도 894.29로 상승했습니다. 따라서 절대 방향 판단은 실패했습니다. Morning이 반영한 국내 추세 약세·순매도·위험회피 신호보다 당일 반등을 이끈 국내 대형주와 성장·반도체 counter-signal의 영향이 크게 나타난 것으로 보입니다. 다만 장중 breadth와 종목별 수급은 보존된 자료에 없어 단일 원인으로 확정하지 않습니다."
+      },
       "actual_market_result": {
-        "status": "not_available",
-        "reason": "evening_not_started",
-        "kospi_close": null,
-        "kosdaq_close": null,
-        "direction": null,
-        "return_pct": null,
-        "observed_at": null,
-        "llm_success": null
+        "status": "available",
+        "reason": null,
+        "kospi_close": 6971.35009765625,
+        "kosdaq_close": 894.2899780273438,
+        "direction": "상승",
+        "return_pct": 3.67337311,
+        "observed_at": "2026-10-01T16:30:30.023218+09:00",
+        "llm_success": false
       },
       "llm_evaluation": {
-        "status": "pending",
-        "success": null,
-        "failure": null
+        "status": "evaluated",
+        "success": false,
+        "failure": true
       },
       "ml_evaluation": {
         "prediction_count": 50,
         "status": "pending",
         "evaluated_count": 0,
-        "pending_count": 50,
+        "pending_count": 859,
         "correct_count": null,
         "reason": "target_date_unavailable"
       },
       "improvement": {
-        "status": "none",
-        "proposal_id": null,
+        "status": "approved",
+        "proposal_id": "proposal-330b5a81a5345010",
         "actual_applied": false,
-        "observation_state": "not_started"
+        "observation_state": "pending"
       },
       "publications": {
         "morning": {
@@ -1883,8 +1959,8 @@
           "path": "reports/2026-10-01/morning/"
         },
         "evening": {
-          "status": "not_started",
-          "path": null
+          "status": "available",
+          "path": "reports/2026-10-01/evening/"
         }
       },
       "evidence_refs": [
