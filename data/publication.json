@@ -3,13 +3,13 @@
   "status": "projection_only_not_published",
   "morning": {
     "status": "available",
-    "path": "reports/2026-10-05/morning/",
-    "run_id": "live-shadow-2026-10-05-morning-01"
+    "path": "reports/2026-10-06/morning/",
+    "run_id": "live-shadow-2026-10-06-morning-01"
   },
   "evening": {
     "status": "not_started",
     "path": null,
-    "run_id": "live-shadow-2026-10-05-morning-01"
+    "run_id": "live-shadow-2026-10-06-morning-01"
   },
   "daily_lab_slug_policy": "disabled",
   "schema_version": 1,
