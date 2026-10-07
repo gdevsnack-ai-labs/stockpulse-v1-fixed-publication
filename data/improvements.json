@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 16,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 17,
     "applied_count": 16,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-10-07-morning-01",
+      "run_id": "live-shadow-2026-10-07-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-10-07-morning-01",
+      "proposal_id": "proposal-38e1179db5c26db9",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "절대 방향 판단에서 국내 추세 약세와 해외 위험선호·반도체·환율 반등이 충돌할 때, 해외 counter-signal을 별도 평가한 뒤 최종 방향을 결정합니다. 장중 breadth·외국인/기관 수급이 없으면 이를 불확실성으로 표시하고 국내 약세 근거로 대체하지 않습니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "평가 기준은 Morning의 KOSPI 방향 보합과 실제 상승의 불일치입니다. 실패 원인은 국내 추세·KOSPI 시장 수급·반도체 내부 약세를 강조한 반면, KOSDAQ 외국인·기관 순매수와 2차전지·소재 종목의 동시 강세가 지수 방향에 미치는 영향을 정량적으로 분리하지 못한 데 있습니다. 다만 장중 breadth 전체와 장중 수급 시계열은 보존된 입력에 없으므로 상승의 모든 원인을 단정할 수 없습니다. ML은 KOSPI 절대 방향이 아닌 5거래일 상대성과 신호이고 1,000건 모두 pending이므로 이번 LLM 방향 실패와 ML 성숙도 미달을 혼동하지 않습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "국내 추세 신호와 반대되는 해외·환율 counter-signal의 누락을 줄이고 다음 Morning의 방향 판단 근거를 균형화합니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-10-07-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-10-07-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-10-01-morning-01",
       "run_id": "live-shadow-2026-10-01-morning-01",
