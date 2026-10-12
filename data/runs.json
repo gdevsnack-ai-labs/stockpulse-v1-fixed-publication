@@ -3,6 +3,1923 @@
   "project_id": "stockpulse-v1-fixed",
   "records": [
     {
+      "run_id": "live-shadow-2026-10-13-morning-01",
+      "project_id": "stockpulse-v1-fixed",
+      "experiment_id": "stockpulse-v1-fixed",
+      "source_experiment_id": "stockpulse-v1-fixed-phase8b",
+      "run_mode": "live_shadow",
+      "stage": "morning",
+      "overall_status": "in_progress_evening_not_started",
+      "lane": "v1_fixed_fresh",
+      "trading_date": "2026-10-13",
+      "run_status": "success",
+      "quality_status": "ok",
+      "input_snapshot_id": "input-snapshot-517dc7da91996607",
+      "input_snapshot_readback_verified": true,
+      "requested_model_set": [
+        "LightGBM",
+        "XGBoost",
+        "LSTM"
+      ],
+      "actual_model_set": [
+        "LightGBM",
+        "XGBoost",
+        "LSTM"
+      ],
+      "skipped_models": [],
+      "morning_llm_prediction": {
+        "llm_prediction_id": "llm-prediction-2026-10-13",
+        "generation_status": "generated",
+        "evaluation_status": "pending",
+        "success": null,
+        "failure": null,
+        "market": "KOSPI",
+        "direction": "하락",
+        "confidence": 0.78,
+        "confidence_label": null,
+        "confidence_type": "subjective_assessment_not_calibrated_probability",
+        "runtime_improvement": {
+          "status": "applied",
+          "source": "previous_cycle",
+          "readback_verified": true,
+          "sha256": "1c68a0e2f36286ac97b7cca1a5e944ae3bce1e4504885c5ab24d7965da217f93",
+          "used": true,
+          "used_fields": [
+            "summary",
+            "forecast",
+            "rationale",
+            "uncertainties_and_missing_sources"
+          ],
+          "application_note": "국내 약세와 해외 반도체 약세가 충돌하는지 별도 확인하고, 장중 breadth와 종목별 수급 부재를 불확실성으로 유지하여 하락 판단의 확신을 제한했습니다."
+        },
+        "snapshot_cutoff": "2026-10-13T07:31:42.425178+09:00",
+        "generated_at": "2026-10-13T07:34:01.843835+09:00",
+        "summary": "KOSPI는 전일 6,724.34로 0.09% 강보합이었지만 20일선 6,802.33 대비 1.15% 낮고, 52주 저점 근접 종목이 50개 중 12개인 약한 국내 레짐입니다. 외국인과 기관이 각각 약 2조 109억 원, 1,338억 원 순매도했고 SOX는 2.67%, SMH는 2.05% 하락해 반도체·대형주에 하방 압력이 이어졌습니다. KOSDAQ 0.70% 상승과 일부 배터리·금융주 반등은 완충 요인이지만, 전체적으로는 반등보다 추가 약세 위험을 우세하게 봅니다.",
+        "market_summary": "국내 시장은 KOSPI 6,724.34, 전일 대비 +0.09%로 지수만 보합권을 유지했으나 20일선 6,802.33 대비 -1.15%, 변동성 2.00%, 거래량 5일/20일 비율 0.79배로 내부 체력은 약합니다. KOSDAQ은 821.67로 +0.70%여서 시장 전체가 일방적으로 무너진 상태는 아니지만, KOSPI의 대형주 중심 약세가 더 중요합니다.",
+        "overseas_market_and_overnight": "미국은 S&P500 -0.06%, 나스닥 -0.44%, 다우 +0.38%로 혼조였고, SOX -2.67%, SMH -2.05% 및 NVDA -1.29%, AMD -2.28%, MU -3.88%로 반도체 신호가 뚜렷하게 약했습니다. 달러/원은 1,334.12로 -0.66%여서 환율은 일부 완충 요인이지만, 해외 반도체 약세와 국내 ADR 하락이 이를 상쇄합니다. 항셍 +1.79%, 유로 STOXX50 +0.76% 등 일부 해외 위험선호 신호는 국내 하락 전망을 완화하는 반대 요인입니다.",
+        "macro": "미국 CPI는 2026년 8월 기준 전년 대비 +3.71%, PPI는 +9.85%, 실업률은 4.2%이며 최신 자료 시점이 8~9월로 현재 장세를 즉시 설명하는 데 한계가 있습니다. 브렌트유 106.04달러와 WTI 93.27달러가 각각 +1.26%, +1.55% 올라 비용·인플레이션 부담이 있습니다. 10월 16일 한은 금통위가 3일 앞으로 다가와 금리 민감도가 높습니다.",
+        "sentiment_and_supply": "공포·탐욕 점수는 53점 중립으로 관망 또는 선별 매수 구간입니다. 모멘텀 점수 44, 이격도 -1.15%, 거래량 추세 점수 19, 52주 저점 근접 12개/50개가 약세를 보강합니다. KOSPI 외국인은 약 -2조 109억 원, 기관은 약 -1,338억 원 순매도였고 KOSDAQ도 외국인 약 -130억 원, 기관 약 -2,196억 원 순매도였습니다. 다만 종목별 수급은 제공 범위 밖이라 개별 확산 여부는 확인할 수 없습니다.",
+        "ml_summary": "ML은 73개 특성, LightGBM·XGBoost·LSTM을 모두 사용했으며 예측 종목 수는 50개입니다. 검증 평균 정확도는 0.7102, AUC는 0.7626이고 5일 상대성과 모델의 market_bias는 약세입니다. 상위 상대강도에는 S-Oil 5일 +5.62%, SK이노베이션 +8.22%, 삼성SDI +8.51%, LG에너지솔루션 +10.14%가 있으나, 이는 KOSPI 절대 방향이 아닌 종목 간 상대성과 신호입니다. 삼성전자 5일 -8.56%, SK하이닉스 -12.20% 등 핵심 대형주의 상대 약세도 확인됩니다.",
+        "forecast": "기본 시나리오는 KOSPI 하락입니다. 국내 추세·수급 약세와 해외 반도체 하락이 이어지면 대형주 중심으로 지수 압력이 지속될 가능성이 큽니다. 다만 KOSDAQ 상승, 일부 배터리·금융주 반등, 원화 강세가 동반되면 장 초반 반등 또는 보합 전환이 가능합니다.",
+        "rationale": [
+          "KOSPI는 6,724.34로 20일선 6,802.33보다 1.15% 낮아 추세 회복이 확인되지 않았습니다.",
+          "KOSPI 외국인 약 2조 109억 원, 기관 약 1,338억 원 순매도로 수급이 모두 약했습니다.",
+          "SOX -2.67%, SMH -2.05%, MU -3.88%로 국내 핵심 반도체 업종에 불리한 해외 선행 신호가 나왔습니다.",
+          "삼성전자 5일 상대성과는 -8.56%, SK하이닉스는 -12.20%로 대형 반도체주의 상대 약세가 두드러졌습니다.",
+          "52주 저점 근접 종목이 50개 중 12개이고 공포·탐욕 점수의 거래량 추세 점수도 19점으로 내부 확산력이 약합니다.",
+          "KOSDAQ +0.70%, LG에너지솔루션·삼성SDI의 뉴스 및 상대성과 개선은 하락을 완충하는 반대 신호입니다.",
+          "ML은 시장 자체의 방향이 아니라 5일 상대성과를 약세로 분류하므로 절대 방향 판단을 보조하는 신호로만 반영했습니다."
+        ],
+        "observation_points": [
+          "KOSPI가 20일선 6,802.33을 회복하는지 여부",
+          "외국인·기관의 KOSPI 순매도 지속 여부",
+          "SOX·SMH와 삼성전자·SK하이닉스의 반도체 동조화 여부",
+          "KOSDAQ 상승과 배터리·금융주 반등의 시장 확산 여부",
+          "10월 16일 한은 금통위 전후 금리·환율 변동",
+          "52주 저점 근접 종목 수와 장중 breadth 변화"
+        ],
+        "uncertainties": [
+          "장중 breadth와 종목별 외국인·기관 수급은 스냅샷에 없어 하락 신호의 시장 전체 확산 여부를 확인할 수 없습니다.",
+          "최신 거시 지표는 CPI·PPI 8월, 실업률 9월 자료여서 금일 장세에 대한 시차가 있습니다.",
+          "야간 자료 중 일부 아시아 지수는 10월 9일 기준으로 최신성이 제한됩니다.",
+          "중립적인 공포·탐욕 점수와 KOSDAQ 상승 때문에 일방적 급락보다는 장중 반등·보합 전환 가능성이 남아 있습니다."
+        ],
+        "freeze": {
+          "evaluation_session": "day1_evening",
+          "post_cutoff_edit_allowed": false,
+          "frozen_for_comparison": true
+        },
+        "evaluation_reference": {
+          "evaluation_session": "day1_evening",
+          "frozen": true,
+          "post_cutoff_edit_allowed": false
+        },
+        "publication_path": "reports/2026-10-13/morning/"
+      },
+      "human_briefing": {
+        "schema_version": 1,
+        "source_layer": "immutable_snapshot",
+        "source_datasets": [
+          {
+            "dataset": "overnight",
+            "layer": "immutable_snapshot"
+          },
+          {
+            "dataset": "macro",
+            "layer": "immutable_snapshot"
+          },
+          {
+            "dataset": "fear_greed",
+            "layer": "immutable_snapshot"
+          },
+          {
+            "dataset": "sentiment",
+            "layer": "immutable_snapshot"
+          },
+          {
+            "dataset": "market",
+            "layer": "immutable_snapshot"
+          }
+        ],
+        "domestic": {
+          "kospi": {
+            "close": 6724.34,
+            "change_pct": 0.09,
+            "sma20": 6802.33,
+            "disparity_20_pct": null,
+            "sentiment": null,
+            "sentiment_signal": null
+          },
+          "kosdaq": {
+            "close": 821.67,
+            "change_pct": 0.7,
+            "sma20": null,
+            "disparity_20_pct": 0.28,
+            "sentiment": null,
+            "sentiment_signal": null
+          },
+          "fear_greed_score": 53,
+          "fear_greed_label": "중립",
+          "fear_greed_advice": "관망 또는 선별 매수",
+          "components": [
+            {
+              "key": "momentum",
+              "name": "모멘텀",
+              "score": 44,
+              "value": -1.15,
+              "description": "KOSPI 20일선 대비 -1.15%"
+            },
+            {
+              "key": "volatility",
+              "name": "변동성",
+              "score": 100,
+              "value": 2.0,
+              "description": "KOSPI 20일 변동성 2.00%"
+            },
+            {
+              "key": "sentiment",
+              "name": "투자심리",
+              "score": 50,
+              "value": 5,
+              "description": "최근 10일 중 5일 상승"
+            },
+            {
+              "key": "disparity",
+              "name": "이격도",
+              "score": 43,
+              "value": -1.15,
+              "description": "20일 이격도 -1.15%"
+            },
+            {
+              "key": "volume_trend",
+              "name": "거래량",
+              "score": 19,
+              "value": 0.79,
+              "description": "거래량 5일/20일 비율 0.79x"
+            },
+            {
+              "key": "high_low",
+              "name": "고저비율",
+              "score": 38,
+              "value": null,
+              "description": "52주高 근접 0개, 低 근접 12개 (/50)"
+            }
+          ],
+          "supply": {
+            "status": "available",
+            "available": true,
+            "source": "Daum Finance API",
+            "reason": null,
+            "as_of": "2026-10-12",
+            "collected_at": "2026-10-12T22:31:09.412414+00:00",
+            "hash": "0129c64297a4295ef17ec5e5d42ff992511dd510dc27c10c192374ff1429a8fc",
+            "market_scope": [
+              "KOSPI",
+              "KOSDAQ"
+            ],
+            "market_statuses": [
+              {
+                "market": "KOSPI",
+                "investor": "외국인",
+                "status": "available",
+                "reason": null,
+                "as_of": "2026-10-12"
+              },
+              {
+                "market": "KOSPI",
+                "investor": "기관",
+                "status": "available",
+                "reason": null,
+                "as_of": "2026-10-12"
+              },
+              {
+                "market": "KOSDAQ",
+                "investor": "외국인",
+                "status": "available",
+                "reason": null,
+                "as_of": "2026-10-12"
+              },
+              {
+                "market": "KOSDAQ",
+                "investor": "기관",
+                "status": "available",
+                "reason": null,
+                "as_of": "2026-10-12"
+              }
+            ],
+            "market_flows": [
+              {
+                "market": "KOSPI",
+                "investor": "외국인",
+                "status": "available",
+                "reason": null,
+                "net_value": -2010973384703,
+                "unit": "KRW",
+                "display_value": -20109.73384703,
+                "display_unit": "KRW_100M",
+                "as_of": "2026-10-12",
+                "provider": "Daum Finance API",
+                "reference": "https://finance.daum.net/domestic/investors/KOSPI",
+                "api": "https://finance.daum.net/api/investor/KOSPI/days"
+              },
+              {
+                "market": "KOSPI",
+                "investor": "기관",
+                "status": "available",
+                "reason": null,
+                "net_value": -133803264759,
+                "unit": "KRW",
+                "display_value": -1338.03264759,
+                "display_unit": "KRW_100M",
+                "as_of": "2026-10-12",
+                "provider": "Daum Finance API",
+                "reference": "https://finance.daum.net/domestic/investors/KOSPI",
+                "api": "https://finance.daum.net/api/investor/KOSPI/days"
+              },
+              {
+                "market": "KOSDAQ",
+                "investor": "외국인",
+                "status": "available",
+                "reason": null,
+                "net_value": -13008427056,
+                "unit": "KRW",
+                "display_value": -130.08427056,
+                "display_unit": "KRW_100M",
+                "as_of": "2026-10-12",
+                "provider": "Daum Finance API",
+                "reference": "https://finance.daum.net/domestic/investors/KOSDAQ",
+                "api": "https://finance.daum.net/api/investor/KOSDAQ/days"
+              },
+              {
+                "market": "KOSDAQ",
+                "investor": "기관",
+                "status": "available",
+                "reason": null,
+                "net_value": -219646543171,
+                "unit": "KRW",
+                "display_value": -2196.46543171,
+                "display_unit": "KRW_100M",
+                "as_of": "2026-10-12",
+                "provider": "Daum Finance API",
+                "reference": "https://finance.daum.net/domestic/investors/KOSDAQ",
+                "api": "https://finance.daum.net/api/investor/KOSDAQ/days"
+              }
+            ],
+            "investors": [],
+            "watchlist": [
+              {
+                "ticker": "005930",
+                "name": "삼성전자",
+                "status": "missing",
+                "foreign_net": null,
+                "institution_net": null,
+                "total_net": null
+              },
+              {
+                "ticker": "000660",
+                "name": "SK하이닉스",
+                "status": "missing",
+                "foreign_net": null,
+                "institution_net": null,
+                "total_net": null
+              },
+              {
+                "ticker": "217590",
+                "name": "티엠씨",
+                "status": "missing",
+                "foreign_net": null,
+                "institution_net": null,
+                "total_net": null
+              },
+              {
+                "ticker": "293580",
+                "name": "나우IB",
+                "status": "missing",
+                "foreign_net": null,
+                "institution_net": null,
+                "total_net": null
+              },
+              {
+                "ticker": "227950",
+                "name": "엔투텍",
+                "status": "missing",
+                "foreign_net": null,
+                "institution_net": null,
+                "total_net": null
+              },
+              {
+                "ticker": "432720",
+                "name": "퀄리타스반도체",
+                "status": "missing",
+                "foreign_net": null,
+                "institution_net": null,
+                "total_net": null
+              },
+              {
+                "ticker": "003470",
+                "name": "유안타증권",
+                "status": "missing",
+                "foreign_net": null,
+                "institution_net": null,
+                "total_net": null
+              },
+              {
+                "ticker": "003475",
+                "name": "유안타증권우",
+                "status": "missing",
+                "foreign_net": null,
+                "institution_net": null,
+                "total_net": null
+              }
+            ]
+          },
+          "market_scan": {
+            "status": "available",
+            "trade_date": "2026-10-12",
+            "analyzed_count": 49,
+            "scores": [
+              {
+                "ticker": "066570",
+                "name": "LG전자",
+                "score": 78,
+                "close": 185300,
+                "change_pct": -7.81,
+                "rsi": 39.7,
+                "macd_hist": -2203.164,
+                "bb_pband": -0.04,
+                "vol_ratio": 1.7,
+                "pct_52w_high": -57.7,
+                "alignment": "정배열",
+                "reasons": [
+                  "RSI저점(40)",
+                  "BB하단(-0.04)",
+                  "정배열"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "012330",
+                "name": "현대모비스",
+                "score": 70,
+                "close": 352000,
+                "change_pct": -2.22,
+                "rsi": 27.6,
+                "macd_hist": 1184.797,
+                "bb_pband": 0.05,
+                "vol_ratio": 1,
+                "pct_52w_high": -57.2,
+                "alignment": "역배열",
+                "reasons": [
+                  "RSI과매도(28)",
+                  "BB하단(0.05)",
+                  "역배열"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "000660",
+                "name": "SK하이닉스",
+                "score": 68,
+                "close": 1605000,
+                "change_pct": -4.8,
+                "rsi": 39.2,
+                "macd_hist": -21900.107,
+                "bb_pband": -0.12,
+                "vol_ratio": 1,
+                "pct_52w_high": -46.3,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(39)",
+                  "BB하단(-0.12)"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "105560",
+                "name": "KB금융",
+                "score": 68,
+                "close": 162200,
+                "change_pct": -0.73,
+                "rsi": 36.1,
+                "macd_hist": -1557.681,
+                "bb_pband": -0.01,
+                "vol_ratio": 1.2,
+                "pct_52w_high": -16.6,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(36)",
+                  "BB하단(-0.01)"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "055550",
+                "name": "신한지주",
+                "score": 68,
+                "close": 100100,
+                "change_pct": 0.1,
+                "rsi": 34.2,
+                "macd_hist": -1454.934,
+                "bb_pband": 0.01,
+                "vol_ratio": 1,
+                "pct_52w_high": -14.1,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(34)",
+                  "BB하단(0.01)"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "000810",
+                "name": "삼성화재",
+                "score": 68,
+                "close": 615000,
+                "change_pct": 0.82,
+                "rsi": 39.6,
+                "macd_hist": -5057.208,
+                "bb_pband": 0.08,
+                "vol_ratio": 1.2,
+                "pct_52w_high": -18.8,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(40)",
+                  "BB하단(0.08)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "003550",
+                "name": "LG",
+                "score": 68,
+                "close": 106500,
+                "change_pct": -1.75,
+                "rsi": 39.7,
+                "macd_hist": -819.615,
+                "bb_pband": -0.02,
+                "vol_ratio": 0.9,
+                "pct_52w_high": -42.7,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(40)",
+                  "BB하단(-0.02)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "316140",
+                "name": "우리금융지주",
+                "score": 68,
+                "close": 32150,
+                "change_pct": -0.77,
+                "rsi": 35.2,
+                "macd_hist": -497.67,
+                "bb_pband": 0.02,
+                "vol_ratio": 0.7,
+                "pct_52w_high": -22.5,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(35)",
+                  "BB하단(0.02)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "086790",
+                "name": "하나금융지주",
+                "score": 68,
+                "close": 123600,
+                "change_pct": -0.72,
+                "rsi": 33.7,
+                "macd_hist": -1414.23,
+                "bb_pband": -0.03,
+                "vol_ratio": 1.2,
+                "pct_52w_high": -13.3,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(34)",
+                  "BB하단(-0.03)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "034020",
+                "name": "두산에너빌리티",
+                "score": 68,
+                "close": 71100,
+                "change_pct": -7.3,
+                "rsi": 31.7,
+                "macd_hist": -1455.872,
+                "bb_pband": -0.16,
+                "vol_ratio": 1.2,
+                "pct_52w_high": -48.9,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(32)",
+                  "BB하단(-0.16)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "090430",
+                "name": "아모레퍼시픽",
+                "score": 68,
+                "close": 130700,
+                "change_pct": -2.39,
+                "rsi": 37.9,
+                "macd_hist": -1426.72,
+                "bb_pband": -0.02,
+                "vol_ratio": 0.9,
+                "pct_52w_high": -22.7,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(38)",
+                  "BB하단(-0.02)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "000720",
+                "name": "현대건설",
+                "score": 68,
+                "close": 98900,
+                "change_pct": -6.96,
+                "rsi": 31,
+                "macd_hist": -3018.216,
+                "bb_pband": -0.11,
+                "vol_ratio": 1.2,
+                "pct_52w_high": -50.2,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(31)",
+                  "BB하단(-0.11)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "005380",
+                "name": "현대차",
+                "score": 65,
+                "close": 318500,
+                "change_pct": -1.85,
+                "rsi": 21.8,
+                "macd_hist": -2179.465,
+                "bb_pband": -0.04,
+                "vol_ratio": 1.4,
+                "pct_52w_high": -59.3,
+                "alignment": "역배열",
+                "reasons": [
+                  "RSI과매도(22)",
+                  "BB하단(-0.04)",
+                  "역배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "000270",
+                "name": "기아",
+                "score": 65,
+                "close": 107500,
+                "change_pct": 0.47,
+                "rsi": 23.8,
+                "macd_hist": -733.464,
+                "bb_pband": 0.07,
+                "vol_ratio": 1.7,
+                "pct_52w_high": -49.4,
+                "alignment": "역배열",
+                "reasons": [
+                  "RSI과매도(24)",
+                  "BB하단(0.07)",
+                  "역배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "051910",
+                "name": "LG화학",
+                "score": 65,
+                "close": 260500,
+                "change_pct": -7.46,
+                "rsi": 46.5,
+                "macd_hist": 1178.084,
+                "bb_pband": 0.35,
+                "vol_ratio": 1.6,
+                "pct_52w_high": -40.5,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "006400",
+                "name": "삼성SDI",
+                "score": 65,
+                "close": 561000,
+                "change_pct": -1.06,
+                "rsi": 57.2,
+                "macd_hist": 1667.208,
+                "bb_pband": 0.75,
+                "vol_ratio": 1.5,
+                "pct_52w_high": -22.4,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "247540",
+                "name": "에코프로비엠",
+                "score": 65,
+                "close": 115800,
+                "change_pct": -8.46,
+                "rsi": 52.2,
+                "macd_hist": 1802.953,
+                "bb_pband": 0.63,
+                "vol_ratio": 1.4,
+                "pct_52w_high": -54.7,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "403870",
+                "name": "HPSP",
+                "score": 65,
+                "close": 60200,
+                "change_pct": -5.94,
+                "rsi": 54.6,
+                "macd_hist": 99.283,
+                "bb_pband": 0.57,
+                "vol_ratio": 0.7,
+                "pct_52w_high": -34.6,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "058470",
+                "name": "리노공업",
+                "score": 65,
+                "close": 77300,
+                "change_pct": -11.96,
+                "rsi": 53.2,
+                "macd_hist": 1117.063,
+                "bb_pband": 0.61,
+                "vol_ratio": 1.9,
+                "pct_52w_high": -40.1,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "009150",
+                "name": "삼성전기",
+                "score": 65,
+                "close": 1493000,
+                "change_pct": -4.23,
+                "rsi": 51.2,
+                "macd_hist": 6743.117,
+                "bb_pband": 0.56,
+                "vol_ratio": 1.1,
+                "pct_52w_high": -38.2,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": false
+              }
+            ],
+            "gainers": [
+              {
+                "ticker": "011200",
+                "name": "HMM",
+                "score": 50,
+                "close": 21850,
+                "change_pct": 4.8,
+                "rsi": 57.9,
+                "macd_hist": 58.355,
+                "bb_pband": 1.18,
+                "vol_ratio": 3.6,
+                "pct_52w_high": -12.4,
+                "alignment": "혼조",
+                "reasons": [
+                  "BB상단(1.18)",
+                  "거래량x3.6"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "138040",
+                "name": "메리츠금융지주",
+                "score": 60,
+                "close": 128800,
+                "change_pct": 1.66,
+                "rsi": 52.4,
+                "macd_hist": -407.247,
+                "bb_pband": 0.56,
+                "vol_ratio": 1.4,
+                "pct_52w_high": -14,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "323410",
+                "name": "카카오뱅크",
+                "score": 43,
+                "close": 19780,
+                "change_pct": 1.33,
+                "rsi": 36.1,
+                "macd_hist": -42.993,
+                "bb_pband": 0.24,
+                "vol_ratio": 1.1,
+                "pct_52w_high": -32.9,
+                "alignment": "역배열",
+                "reasons": [
+                  "RSI저점(36)",
+                  "52w低근접",
+                  "역배열"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "003490",
+                "name": "대한항공",
+                "score": 60,
+                "close": 30900,
+                "change_pct": 1.31,
+                "rsi": 57.6,
+                "macd_hist": -123.234,
+                "bb_pband": 0.63,
+                "vol_ratio": 1,
+                "pct_52w_high": -4.9,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "035250",
+                "name": "강원랜드",
+                "score": 35,
+                "close": 14380,
+                "change_pct": 1.13,
+                "rsi": 46.3,
+                "macd_hist": -17.145,
+                "bb_pband": 0.37,
+                "vol_ratio": 1.5,
+                "pct_52w_high": -26.6,
+                "alignment": "역배열",
+                "reasons": [
+                  "52w低근접",
+                  "역배열"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "033780",
+                "name": "KT&G",
+                "score": 45,
+                "close": 179100,
+                "change_pct": 1.02,
+                "rsi": 59.3,
+                "macd_hist": 661.116,
+                "bb_pband": 0.92,
+                "vol_ratio": 1,
+                "pct_52w_high": -6.9,
+                "alignment": "혼조",
+                "reasons": [
+                  "BB상단(0.92)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "000810",
+                "name": "삼성화재",
+                "score": 68,
+                "close": 615000,
+                "change_pct": 0.82,
+                "rsi": 39.6,
+                "macd_hist": -5057.208,
+                "bb_pband": 0.08,
+                "vol_ratio": 1.2,
+                "pct_52w_high": -18.8,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(40)",
+                  "BB하단(0.08)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "068270",
+                "name": "셀트리온",
+                "score": 55,
+                "close": 180300,
+                "change_pct": 0.73,
+                "rsi": 46.1,
+                "macd_hist": 429.047,
+                "bb_pband": 0.54,
+                "vol_ratio": 1,
+                "pct_52w_high": -24.6,
+                "alignment": "혼조",
+                "reasons": [],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "259960",
+                "name": "크래프톤",
+                "score": 65,
+                "close": 187700,
+                "change_pct": 0.59,
+                "rsi": 29.4,
+                "macd_hist": -432.704,
+                "bb_pband": -0.02,
+                "vol_ratio": 2.2,
+                "pct_52w_high": -38.2,
+                "alignment": "역배열",
+                "reasons": [
+                  "RSI과매도(29)",
+                  "BB하단(-0.02)",
+                  "거래량x2.2",
+                  "52w低근접"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "000270",
+                "name": "기아",
+                "score": 65,
+                "close": 107500,
+                "change_pct": 0.47,
+                "rsi": 23.8,
+                "macd_hist": -733.464,
+                "bb_pband": 0.07,
+                "vol_ratio": 1.7,
+                "pct_52w_high": -49.4,
+                "alignment": "역배열",
+                "reasons": [
+                  "RSI과매도(24)",
+                  "BB하단(0.07)",
+                  "역배열"
+                ],
+                "is_watchlist": true
+              }
+            ],
+            "losers": [
+              {
+                "ticker": "058470",
+                "name": "리노공업",
+                "score": 65,
+                "close": 77300,
+                "change_pct": -11.96,
+                "rsi": 53.2,
+                "macd_hist": 1117.063,
+                "bb_pband": 0.61,
+                "vol_ratio": 1.9,
+                "pct_52w_high": -40.1,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "247540",
+                "name": "에코프로비엠",
+                "score": 65,
+                "close": 115800,
+                "change_pct": -8.46,
+                "rsi": 52.2,
+                "macd_hist": 1802.953,
+                "bb_pband": 0.63,
+                "vol_ratio": 1.4,
+                "pct_52w_high": -54.7,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "066570",
+                "name": "LG전자",
+                "score": 78,
+                "close": 185300,
+                "change_pct": -7.81,
+                "rsi": 39.7,
+                "macd_hist": -2203.164,
+                "bb_pband": -0.04,
+                "vol_ratio": 1.7,
+                "pct_52w_high": -57.7,
+                "alignment": "정배열",
+                "reasons": [
+                  "RSI저점(40)",
+                  "BB하단(-0.04)",
+                  "정배열"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "003670",
+                "name": "포스코퓨처엠",
+                "score": 48,
+                "close": 177000,
+                "change_pct": -7.48,
+                "rsi": 47,
+                "macd_hist": -648.207,
+                "bb_pband": 0.2,
+                "vol_ratio": 1.5,
+                "pct_52w_high": -40.9,
+                "alignment": "정배열",
+                "reasons": [
+                  "MACD데드",
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "051910",
+                "name": "LG화학",
+                "score": 65,
+                "close": 260500,
+                "change_pct": -7.46,
+                "rsi": 46.5,
+                "macd_hist": 1178.084,
+                "bb_pband": 0.35,
+                "vol_ratio": 1.6,
+                "pct_52w_high": -40.5,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "034020",
+                "name": "두산에너빌리티",
+                "score": 68,
+                "close": 71100,
+                "change_pct": -7.3,
+                "rsi": 31.7,
+                "macd_hist": -1455.872,
+                "bb_pband": -0.16,
+                "vol_ratio": 1.2,
+                "pct_52w_high": -48.9,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(32)",
+                  "BB하단(-0.16)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "000720",
+                "name": "현대건설",
+                "score": 68,
+                "close": 98900,
+                "change_pct": -6.96,
+                "rsi": 31,
+                "macd_hist": -3018.216,
+                "bb_pband": -0.11,
+                "vol_ratio": 1.2,
+                "pct_52w_high": -50.2,
+                "alignment": "혼조",
+                "reasons": [
+                  "RSI저점(31)",
+                  "BB하단(-0.11)"
+                ],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "036570",
+                "name": "엔씨소프트",
+                "score": 55,
+                "close": 209000,
+                "change_pct": -6.28,
+                "rsi": 44.5,
+                "macd_hist": 1326.612,
+                "bb_pband": 0.37,
+                "vol_ratio": 1.4,
+                "pct_52w_high": -39.2,
+                "alignment": "혼조",
+                "reasons": [],
+                "is_watchlist": false
+              },
+              {
+                "ticker": "403870",
+                "name": "HPSP",
+                "score": 65,
+                "close": 60200,
+                "change_pct": -5.94,
+                "rsi": 54.6,
+                "macd_hist": 99.283,
+                "bb_pband": 0.57,
+                "vol_ratio": 0.7,
+                "pct_52w_high": -34.6,
+                "alignment": "정배열",
+                "reasons": [
+                  "정배열"
+                ],
+                "is_watchlist": true
+              },
+              {
+                "ticker": "017670",
+                "name": "SK텔레콤",
+                "score": 65,
+                "close": 79300,
+                "change_pct": -5.82,
+                "rsi": 29.5,
+                "macd_hist": -502.718,
+                "bb_pband": -0.31,
+                "vol_ratio": 1.6,
+                "pct_52w_high": -43.2,
+                "alignment": "역배열",
+                "reasons": [
+                  "RSI과매도(30)",
+                  "BB하단(-0.31)",
+                  "역배열"
+                ],
+                "is_watchlist": false
+              }
+            ],
+            "highs_52w": []
+          }
+        },
+        "overnight": [
+          {
+            "symbol": "^GSPC",
+            "name": "S&P 500",
+            "category": "index",
+            "close": 7807.24,
+            "change_pct": -0.06,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "^IXIC",
+            "name": "Nasdaq",
+            "category": "index",
+            "close": 27245.9,
+            "change_pct": -0.44,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "^DJI",
+            "name": "Dow",
+            "category": "index",
+            "close": 51850.55,
+            "change_pct": 0.38,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "^SOX",
+            "name": "SOX",
+            "category": "semiconductor",
+            "close": 12236.79,
+            "change_pct": -2.67,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "NVDA",
+            "name": "NVDA",
+            "category": "semiconductor",
+            "close": 226.32,
+            "change_pct": -1.29,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "AMD",
+            "name": "AMD",
+            "category": "semiconductor",
+            "close": 594.24,
+            "change_pct": -2.28,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "MU",
+            "name": "MU",
+            "category": "semiconductor",
+            "close": 989.04,
+            "change_pct": -3.88,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "QCOM",
+            "name": "퀄컴",
+            "category": "semiconductor",
+            "close": 174.43,
+            "change_pct": -0.61,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "INTC",
+            "name": "인텔",
+            "category": "semiconductor",
+            "close": 101.35,
+            "change_pct": -3.2,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "^VIX",
+            "name": "VIX",
+            "category": "volatility",
+            "close": 15.21,
+            "change_pct": 2.49,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "^VXN",
+            "name": "VXN",
+            "category": "volatility",
+            "close": 20.55,
+            "change_pct": -6.51,
+            "date": "2026-10-09"
+          },
+          {
+            "symbol": "^TNX",
+            "name": "10Y국채",
+            "category": "rate",
+            "close": 5.24,
+            "change_pct": -0.08,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "KRW=X",
+            "name": "달러/원",
+            "category": "fx",
+            "close": 1334.12,
+            "change_pct": -0.66,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "JPY=X",
+            "name": "USD/JPY",
+            "category": "fx",
+            "close": 158.59,
+            "change_pct": 0.33,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "DX-Y.NYB",
+            "name": "DXY",
+            "category": "fx",
+            "close": 102.57,
+            "change_pct": 0.35,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "BZ=F",
+            "name": "브렌트유",
+            "category": "commodity",
+            "close": 106.04,
+            "change_pct": 1.26,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "CL=F",
+            "name": "WTI 원유",
+            "category": "commodity",
+            "close": 93.27,
+            "change_pct": 1.55,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "GC=F",
+            "name": "금 선물",
+            "category": "commodity",
+            "close": 4196.8,
+            "change_pct": -0.46,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "^N225",
+            "name": "니케이225",
+            "category": "asia",
+            "close": 69030.92,
+            "change_pct": -0.02,
+            "date": "2026-10-09"
+          },
+          {
+            "symbol": "^HSI",
+            "name": "항셍",
+            "category": "asia",
+            "close": 24211.35,
+            "change_pct": 1.79,
+            "date": "2026-10-09"
+          },
+          {
+            "symbol": "^STOXX50E",
+            "name": "유로 STOXX 50",
+            "category": "europe",
+            "close": 6173.37,
+            "change_pct": 0.76,
+            "date": "2026-10-09"
+          },
+          {
+            "symbol": "^GDAXI",
+            "name": "DAX",
+            "category": "europe",
+            "close": 25087.27,
+            "change_pct": 1.13,
+            "date": "2026-10-09"
+          },
+          {
+            "symbol": "QQQ",
+            "name": "QQQ",
+            "category": "sector_etf",
+            "close": 746.04,
+            "change_pct": -0.7,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "SMH",
+            "name": "SMH(반도체ETF)",
+            "category": "sector_etf",
+            "close": 590.99,
+            "change_pct": -2.05,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "PKX",
+            "name": "POSCOADR",
+            "category": "adr",
+            "close": 55.64,
+            "change_pct": -3.2,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "KB",
+            "name": "KB금융ADR",
+            "category": "adr",
+            "close": 121.98,
+            "change_pct": -0.89,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "SHG",
+            "name": "신한지주ADR",
+            "category": "adr",
+            "close": 75.21,
+            "change_pct": -0.41,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "KEP",
+            "name": "한전ADR",
+            "category": "adr",
+            "close": 10.6,
+            "change_pct": -3.9,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "KT",
+            "name": "KTADR",
+            "category": "adr",
+            "close": 18.2,
+            "change_pct": -0.55,
+            "date": "2026-10-12"
+          },
+          {
+            "symbol": "SKM",
+            "name": "SK텔레콤ADR",
+            "category": "adr",
+            "close": 33.45,
+            "change_pct": -2.31,
+            "date": "2026-10-12"
+          }
+        ],
+        "macro": {
+          "status": "available",
+          "indicators": [
+            {
+              "id": "CPIAUCSL",
+              "name": "CPI(All)",
+              "latest_value": 334.131,
+              "latest_date": "2026-08-01",
+              "yoy_pct": 3.71,
+              "mom_pct": 0.4
+            },
+            {
+              "id": "PPIACO",
+              "name": "PPI(All)",
+              "latest_value": 287.928,
+              "latest_date": "2026-08-01",
+              "yoy_pct": 9.85,
+              "mom_pct": 0.96
+            },
+            {
+              "id": "UNRATE",
+              "name": "실업률",
+              "latest_value": 4.2,
+              "latest_date": "2026-09-01",
+              "yoy_pct": -2.33,
+              "mom_pct": 2.44
+            }
+          ],
+          "upcoming_events": [
+            {
+              "category": "korea_rate",
+              "date": "2026-10-16",
+              "name": "한은 금통위",
+              "days_until": 3
+            },
+            {
+              "category": "fomc",
+              "date": "2026-11-05",
+              "name": "FOMC",
+              "days_until": 23
+            },
+            {
+              "category": "cpi",
+              "date": "2026-11-13",
+              "name": "US 10월 CPI",
+              "days_until": 31
+            },
+            {
+              "category": "korea_rate",
+              "date": "2026-11-27",
+              "name": "한은 금통위",
+              "days_until": 45
+            },
+            {
+              "category": "cpi",
+              "date": "2026-12-11",
+              "name": "US 11월 CPI",
+              "days_until": 59
+            },
+            {
+              "category": "fomc",
+              "date": "2026-12-16",
+              "name": "FOMC",
+              "days_until": 64
+            }
+          ]
+        },
+        "sentiment": {
+          "status": "available",
+          "positive": [
+            {
+              "ticker": "373220",
+              "name": "LG에너지솔루션",
+              "score": 34,
+              "label": "긍정",
+              "summary": "호재: 확대, 급등, 호실적 | 악재: 약세",
+              "articles": [
+                "유진투자 \"LG에너지솔루션 목표주가 상향, ESS용 배터리 생산 확대로 흑자기조 지속\" - 비즈니스포스트",
+                "LG에너지솔루션 주가, 오늘 급등하는 이유? - Investing.com 한국어"
+              ]
+            },
+            {
+              "ticker": "006400",
+              "name": "삼성SDI",
+              "score": 28,
+              "label": "긍정",
+              "summary": "호재: 기대감, 기대, 상승 | 악재: 하락",
+              "articles": [
+                "LG엔솔 '병목 해소' 삼성SDI '미국 증산', 대형 배터리주 ESS 기대감 4분기도 이어진다 - 비즈니스포스트",
+                "LG엔솔·삼성SDI 주가 동반 하락 마감 : 한국증시 - 재경일보"
+              ]
+            },
+            {
+              "ticker": "058470",
+              "name": "리노공업",
+              "score": 21,
+              "label": "긍정",
+              "summary": "호재: 확대, 기대, 성장 | 악재: 하락, 급락, 하회",
+              "articles": [
+                "리노공업, 반도체 테스트 소켓 수요 확대에 주목...주가는 양호한 흐름 - 증권일보",
+                "리노공업 주가 8.53% 급락…SK증권 \"3분기 기대 하회, 4분기 상회 전망\" - CBC뉴스"
+              ]
+            },
+            {
+              "ticker": "068270",
+              "name": "셀트리온",
+              "score": 18,
+              "label": "긍정",
+              "summary": "호재: 반등, 성장, 상승 | 악재: 급락",
+              "articles": [
+                "연초 대비 '원점' 셀트리온 주가…신제품 성장세에 반등 맞이할까 - 연합인포맥스",
+                "셀트리온, 3분기 역대 최대 실적에 상승 마감(종합) - 연합뉴스"
+              ]
+            },
+            {
+              "ticker": "055550",
+              "name": "신한지주",
+              "score": 18,
+              "label": "긍정",
+              "summary": "호재: 상승, 반등, 자사주 매입 | 악재: 하락",
+              "articles": [
+                "신한지주, 3분기 실적 숨 고르기에도 증권가 NIM 반등에 주목 - 뉴스포스트",
+                "[모닝 리포트] KB증권 \"신한지주, 3분기 NIM 하락 일시적…내년 상승 흐름 지속\" - 뉴스핌"
+              ]
+            },
+            {
+              "ticker": "403870",
+              "name": "HPSP",
+              "score": 18,
+              "label": "긍정",
+              "summary": "호재: 매수, 추천, 반등 | 악재: 하락, 급락, 경고",
+              "articles": [
+                "KB증권, 10월 둘째주 HPSP 등 17종목 매수 추천 - 빅터뉴스",
+                "HPSP | 300단이상 NAND 선단 공정 확대, 향후 실적 반등의 핵심 - 네이버 프리미엄콘텐츠"
+              ]
+            },
+            {
+              "ticker": "000270",
+              "name": "기아",
+              "score": 15,
+              "label": "긍정",
+              "summary": "호재: 성장, 상승, 매수",
+              "articles": [
+                "팔아도 못 팔아도 비명…주가 반토막난 현대차·기아 딜레마 - 중앙일보",
+                "KB 증권, 기아 목표주가 하향…성장 기간 단축 영향 - Investing.com 한국어"
+              ]
+            },
+            {
+              "ticker": "005930",
+              "name": "삼성전자",
+              "score": 12,
+              "label": "중립",
+              "summary": "호재: 상승, 주주환원, 기대 | 악재: 하락",
+              "articles": [
+                "100조원 영업이익에도 삼성전자 주가 왜 안올라? “감동이 없어서” [반도체 투자 리포트] - 세계일보",
+                "삼성전자 주식, 오늘 하락하는 이유는? - Investing.com 한국어"
+              ]
+            }
+          ],
+          "negative": [
+            {
+              "ticker": "207940",
+              "name": "삼성바이오로직스",
+              "score": -21,
+              "label": "부정",
+              "summary": "악재: 하락, 유상증자, 희석",
+              "articles": [
+                "‘바이오 황제주’ 삼성바이오로직스, 1년새 70만원↓…파업 예고에 전망 먹구름 - 매일일보",
+                "IBK투자 \"삼성바이오로직스 목표주가 하향, 유상증자로 주당 가치 희석 반영\" - 비즈니스포스트"
+              ]
+            },
+            {
+              "ticker": "105560",
+              "name": "KB금융",
+              "score": -15,
+              "label": "부정",
+              "summary": "호재: 호실적 | 악재: 오버행, 불확실, 조정",
+              "articles": [
+                "우리금융, 오버행 불확실성 주가 할인요인으로 작용 - 알파경제",
+                "[밸류업 2년, 금융회장 성적표]① 양종희 취임 뒤 KB금융 주가 211% 뛰었다 - 파이낸셜포스트"
+              ]
+            },
+            {
+              "ticker": "247540",
+              "name": "에코프로비엠",
+              "score": -15,
+              "label": "부정",
+              "summary": "호재: 확대 | 악재: 하락, 급락, 약세",
+              "articles": [
+                "에코프로비엠 주가 10% 급락…에코프로 그룹주 일제히 약세, 낙폭 확대 - CBC뉴스",
+                "1.2조 유증에 ‘급락’ 에코프로비엠…긍정론 나온 이유는? [종목콬!] - 쿠키뉴스"
+              ]
+            },
+            {
+              "ticker": "028260",
+              "name": "삼성물산",
+              "score": -6,
+              "label": "중립",
+              "summary": "악재: 하락, 물량",
+              "articles": [
+                "삼성물산 투자분석 2026. 10. 11 - 주달",
+                "하나증권 \"삼성물산, 주가 여전히 저평가…목표가↑\" - 연합뉴스"
+              ]
+            },
+            {
+              "ticker": "000660",
+              "name": "SK하이닉스",
+              "score": -3,
+              "label": "중립",
+              "summary": "호재: 간다 | 악재: 하락",
+              "articles": [
+                "SK하이닉스 주가, 오늘 왜 하락했나? - Investing.com 한국어",
+                "\"SK하닉 너마저\" 주가 이런데 쪼개기 상장?…솔리다임 IPO 진짜 셈법 - 머니투데이 - 머니투데이"
+              ]
+            },
+            {
+              "ticker": "035420",
+              "name": "NAVER",
+              "score": -3,
+              "label": "중립",
+              "summary": "호재: 간다, 매수, 성장 | 악재: 급락, 하락, 우려",
+              "articles": [
+                "힘스앤허즈, 급락 전 주가를 되찾았습니다 - 네이버 프리미엄콘텐츠",
+                "“40만원 간다” vs ”시간 필요”…NAVER AI팩토리 두고 엇갈린 시선 - 쿠키뉴스"
+              ]
+            },
+            {
+              "ticker": "035720",
+              "name": "카카오",
+              "score": -3,
+              "label": "중립",
+              "summary": "호재: 상승, 반등 | 악재: 하락, 불확실",
+              "articles": [
+                "카카오 주가 최저가 경신… AI 지연·스팸 논란까지 ‘설상가상’ - 조선일보",
+                "'바닥 뚫린 주가, 만회할까' 카카오, 오늘 새 AI 청사진 밝힌다 - 뉴시스"
+              ]
+            },
+            {
+              "ticker": "196170",
+              "name": "알테오젠",
+              "score": -3,
+              "label": "중립",
+              "summary": "악재: 하락",
+              "articles": [
+                "[단독] 박순재 알테오젠 회장 \"네덜란드 판결, 키트루다 SC 수익구조 영향 미미\" - 한국경제",
+                "[제약공시 책갈피] 10월 2주차 - 한미약품·알테오젠·종근당 外 - 메디파나뉴스"
+              ]
+            }
+          ],
+          "neutral": []
+        },
+        "ml": {
+          "status": "available",
+          "model_version": "daily_v2_lstm",
+          "actual_models": [
+            "LightGBM",
+            "XGBoost",
+            "LSTM"
+          ],
+          "prediction_count": 50,
+          "target_horizon": 5,
+          "market_bias": "약세",
+          "market_average": 0.1985,
+          "tree_metrics": {
+            "avg_auc": 0.7626,
+            "avg_accuracy": 0.7102
+          },
+          "lstm_metrics": {
+            "status": "available",
+            "auc": 0.7743,
+            "accuracy": 0.6995
+          },
+          "relative_strength": [
+            {
+              "ticker": "227950",
+              "name": "엔투텍",
+              "price": 1305,
+              "relative_rank_pct": 80,
+              "return_5d_pct": 1.71,
+              "return_20d_pct": -1.29,
+              "rsi": 51.4,
+              "position_52w_pct": 13.1,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "010950",
+              "name": "S-Oil",
+              "price": 159800,
+              "relative_rank_pct": 77.8,
+              "return_5d_pct": 5.62,
+              "return_20d_pct": 0.25,
+              "rsi": 60.3,
+              "position_52w_pct": 85.4,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "096770",
+              "name": "SK이노베이션",
+              "price": 152700,
+              "relative_rank_pct": 73.8,
+              "return_5d_pct": 8.22,
+              "return_20d_pct": 10.65,
+              "rsi": 60.3,
+              "position_52w_pct": 83.7,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "293580",
+              "name": "나우IB",
+              "price": 1263,
+              "relative_rank_pct": 71.5,
+              "return_5d_pct": -0.79,
+              "return_20d_pct": -11.68,
+              "rsi": 55.4,
+              "position_52w_pct": 11.8,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "006400",
+              "name": "삼성SDI",
+              "price": 561000,
+              "relative_rank_pct": 68.5,
+              "return_5d_pct": 8.51,
+              "return_20d_pct": 5.85,
+              "rsi": 55.1,
+              "position_52w_pct": 68.9,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "373220",
+              "name": "LG에너지솔루션",
+              "price": 396500,
+              "relative_rank_pct": 65.8,
+              "return_5d_pct": 10.14,
+              "return_20d_pct": 13.77,
+              "rsi": 66.7,
+              "position_52w_pct": 44.8,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "011200",
+              "name": "HMM",
+              "price": 21850,
+              "relative_rank_pct": 62.9,
+              "return_5d_pct": 3.55,
+              "return_20d_pct": 3.31,
+              "rsi": 66.3,
+              "position_52w_pct": 56,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "042700",
+              "name": "한미반도체",
+              "price": 248000,
+              "relative_rank_pct": 62.6,
+              "return_5d_pct": -7.46,
+              "return_20d_pct": 1.43,
+              "rsi": 60.4,
+              "position_52w_pct": 47.1,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "138040",
+              "name": "메리츠금융지주",
+              "price": 128800,
+              "relative_rank_pct": 61,
+              "return_5d_pct": 1.02,
+              "return_20d_pct": -1.53,
+              "rsi": 55.1,
+              "position_52w_pct": 59.5,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "009150",
+              "name": "삼성전기",
+              "price": 1493000,
+              "relative_rank_pct": 59.3,
+              "return_5d_pct": -3.93,
+              "return_20d_pct": 8.98,
+              "rsi": 59.5,
+              "position_52w_pct": 58.5,
+              "confidence": "높음",
+              "market_bias": "약세"
+            }
+          ],
+          "relative_weakness": [
+            {
+              "ticker": "298040",
+              "name": "효성중공업",
+              "price": 2240000,
+              "relative_rank_pct": 20,
+              "return_5d_pct": -20.14,
+              "return_20d_pct": -20.96,
+              "rsi": 20.2,
+              "position_52w_pct": 27,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "086790",
+              "name": "하나금융지주",
+              "price": 123600,
+              "relative_rank_pct": 20.9,
+              "return_5d_pct": -4.11,
+              "return_20d_pct": -9.65,
+              "rsi": 20.9,
+              "position_52w_pct": 67.7,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "005380",
+              "name": "현대차",
+              "price": 318500,
+              "relative_rank_pct": 21.2,
+              "return_5d_pct": -8.74,
+              "return_20d_pct": -17.27,
+              "rsi": 13.3,
+              "position_52w_pct": 18.5,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "042660",
+              "name": "한화오션",
+              "price": 66700,
+              "relative_rank_pct": 22.4,
+              "return_5d_pct": -15.14,
+              "return_20d_pct": -22.53,
+              "rsi": 12.4,
+              "position_52w_pct": 0.5,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "066570",
+              "name": "LG전자",
+              "price": 185300,
+              "relative_rank_pct": 22.5,
+              "return_5d_pct": -12.59,
+              "return_20d_pct": -9.61,
+              "rsi": 42.8,
+              "position_52w_pct": 30.4,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "000270",
+              "name": "기아",
+              "price": 107500,
+              "relative_rank_pct": 22.7,
+              "return_5d_pct": -5.12,
+              "return_20d_pct": -14.27,
+              "rsi": 11.9,
+              "position_52w_pct": 6.7,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "015760",
+              "name": "한국전력",
+              "price": 28450,
+              "relative_rank_pct": 22.8,
+              "return_5d_pct": -5.32,
+              "return_20d_pct": -16.57,
+              "rsi": 13.9,
+              "position_52w_pct": 1,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "010120",
+              "name": "LS ELECTRIC",
+              "price": 181900,
+              "relative_rank_pct": 23.2,
+              "return_5d_pct": -11.7,
+              "return_20d_pct": -9.28,
+              "rsi": 38.1,
+              "position_52w_pct": 45.6,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "035420",
+              "name": "NAVER",
+              "price": 179700,
+              "relative_rank_pct": 23.3,
+              "return_5d_pct": -6.36,
+              "return_20d_pct": -16.22,
+              "rsi": 13.4,
+              "position_52w_pct": 0.2,
+              "confidence": "높음",
+              "market_bias": "약세"
+            },
+            {
+              "ticker": "267260",
+              "name": "HD현대일렉트릭",
+              "price": 574000,
+              "relative_rank_pct": 23.5,
+              "return_5d_pct": -14.84,
+              "return_20d_pct": -21.15,
+              "rsi": 17.7,
+              "position_52w_pct": 4,
+              "confidence": "높음",
+              "market_bias": "약세"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "name": "V1 Fixed overnight collector",
+            "status": "available"
+          },
+          {
+            "name": "V1 Fixed macro collector",
+            "status": "available"
+          },
+          {
+            "name": "V1 Fixed fear/greed + investor-flow collector",
+            "status": "available"
+          },
+          {
+            "name": "V1 Fixed news sentiment collector",
+            "status": "available"
+          },
+          {
+            "name": "V1 Fixed daily market technical scan",
+            "status": "available"
+          }
+        ],
+        "data_gaps": []
+      },
+      "evening_analysis": {},
+      "actual_market_result": {
+        "status": "not_available",
+        "reason": "evening_not_started",
+        "kospi_close": null,
+        "kosdaq_close": null,
+        "direction": null,
+        "return_pct": null,
+        "observed_at": null,
+        "llm_success": null
+      },
+      "llm_evaluation": {
+        "status": "pending",
+        "success": null,
+        "failure": null
+      },
+      "ml_evaluation": {
+        "prediction_count": 50,
+        "status": "pending",
+        "evaluated_count": 0,
+        "pending_count": 50,
+        "correct_count": null,
+        "reason": "target_date_unavailable"
+      },
+      "improvement": {
+        "status": "none",
+        "proposal_id": null,
+        "actual_applied": false,
+        "observation_state": "not_started"
+      },
+      "publications": {
+        "morning": {
+          "status": "available",
+          "path": "reports/2026-10-13/morning/"
+        },
+        "evening": {
+          "status": "not_started",
+          "path": null
+        }
+      },
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-10-13-morning-01"
+        },
+        {
+          "kind": "input_snapshot",
+          "id": "input-snapshot-517dc7da91996607"
+        },
+        {
+          "kind": "prediction",
+          "id": "prediction-live-shadow-2026-10-13-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-10-13-morning-01"
+        }
+      ]
+    },
+    {
       "run_id": "live-shadow-2026-10-12-morning-01",
       "project_id": "stockpulse-v1-fixed",
       "experiment_id": "stockpulse-v1-fixed",
