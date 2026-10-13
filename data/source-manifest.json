@@ -5,13 +5,13 @@
   "trading_date": "2026-10-13",
   "artifact_count": 7,
   "artifact_hashes": {
-    "run.json": "15f86d928e7268a10f539fe5c8221d536b06ebd8eb3f9372e68614dcc63cc015",
+    "run.json": "4df70a867a72b1b20a91319d01274d2d04cab3c5810442e4a1dd3883c6f6a86b",
     "input_manifest.json": "a3c416612ee09caa04099943ad426b4d518b8ca0a732b389ae1d77e130256473",
     "quality.json": "d8662ad74ba05fd79393d53d91d3b6ec6c66c8b61410dd20819777de8ec0e779",
     "ml_prediction.json": "7c8114071cade41001d11b72842d441caa4753c516fcb3e922b76db38149f722",
-    "llm_prediction.json": "1cd7c72684736a88bb4dc37b3b0e74c7c035eff1ed5d06811e469b6d1c92e2fb",
+    "llm_prediction.json": "328f2131e4c49fe8124a3e67b439048b34882d080f3cd7d29375f0629c30b3b1",
     "improvement.json": "00f34e244a8473e1e55fa11989981bb5e9474f8fcd3bcc04a4466c15713e4d13",
-    "day1-morning-verification.json": "7fa6a689214217f1f07ce6151003fdfc65f45c13e5ccddcd67c8f3ba960e7c6c"
+    "day1-morning-verification.json": "77f8d9198e7878a34096c05c0941bb68962f0725f9f74f562144de76bc8ac14a"
   },
   "generator_version": "stockpulse-v1-fixed-projector-1.2.0",
   "generator_command_template": "python3 scripts/project_publication.py --source-run <private-run-dir> --output-dir <output-dir> [--projected-at <iso>]",
@@ -22,13 +22,13 @@
       "run_id": "live-shadow-2026-10-13-morning-01",
       "trading_date": "2026-10-13",
       "artifact_hashes": {
-        "run.json": "15f86d928e7268a10f539fe5c8221d536b06ebd8eb3f9372e68614dcc63cc015",
+        "run.json": "4df70a867a72b1b20a91319d01274d2d04cab3c5810442e4a1dd3883c6f6a86b",
         "input_manifest.json": "a3c416612ee09caa04099943ad426b4d518b8ca0a732b389ae1d77e130256473",
         "quality.json": "d8662ad74ba05fd79393d53d91d3b6ec6c66c8b61410dd20819777de8ec0e779",
         "ml_prediction.json": "7c8114071cade41001d11b72842d441caa4753c516fcb3e922b76db38149f722",
-        "llm_prediction.json": "1cd7c72684736a88bb4dc37b3b0e74c7c035eff1ed5d06811e469b6d1c92e2fb",
+        "llm_prediction.json": "328f2131e4c49fe8124a3e67b439048b34882d080f3cd7d29375f0629c30b3b1",
         "improvement.json": "00f34e244a8473e1e55fa11989981bb5e9474f8fcd3bcc04a4466c15713e4d13",
-        "day1-morning-verification.json": "7fa6a689214217f1f07ce6151003fdfc65f45c13e5ccddcd67c8f3ba960e7c6c"
+        "day1-morning-verification.json": "77f8d9198e7878a34096c05c0941bb68962f0725f9f74f562144de76bc8ac14a"
       }
     },
     {
