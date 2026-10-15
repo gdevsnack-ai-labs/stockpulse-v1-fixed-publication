@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning report · 2026-10-16 · StockPulse V1 Fixed</title>
+<style>
+:root { color-scheme: light; --ink:#142033; --muted:#617086; --line:#dbe3ed; --soft:#f4f7fb; --blue:#2563eb; --green:#087f5b; --amber:#9a6700; }
+* { box-sizing:border-box; }
+body { margin:0; background:#f7f9fc; color:var(--ink); font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.65; }
+a { color:var(--blue); text-decoration:none; }
+a:hover { text-decoration:underline; }
+.site-header { border-bottom:1px solid var(--line); background:rgba(255,255,255,.94); }
+.nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; max-width:1120px; margin:0 auto; padding:1rem 1.25rem; }
+.brand { color:var(--ink); font-weight:800; letter-spacing:-.02em; }
+.nav-links { display:flex; flex-wrap:wrap; gap:.75rem; font-size:.82rem; }
+.container { max-width:1120px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+.eyebrow { color:var(--blue); font-size:.75rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+h1,h2,h3 { line-height:1.18; letter-spacing:-.03em; }
+h1 { margin:.6rem 0 1rem; font-size:clamp(2rem, 5vw, 4rem); }
+h2 { margin:0 0 .7rem; font-size:1.45rem; }
+h3 { margin:0; font-size:1.05rem; }
+.lede { max-width:720px; color:var(--muted); font-size:1.02rem; }
+.hero { border:1px solid #cfe0ff; border-radius:24px; background:linear-gradient(135deg,#eaf2ff 0%,#fff 72%); padding:clamp(1.25rem, 4vw, 2.5rem); }
+.badges { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem; }
+.badge { display:inline-flex; align-items:center; border-radius:999px; background:#e8eef7; color:#43526a; padding:.25rem .7rem; font-size:.75rem; font-weight:700; }
+.badge.green { background:#d9f7eb; color:var(--green); }
+.badge.amber { background:#fff2cc; color:var(--amber); }
+.grid { display:grid; gap:1rem; }
+.metrics { grid-template-columns:repeat(5,minmax(0,1fr)); margin-top:1.5rem; }
+.card { border:1px solid var(--line); border-radius:16px; background:#fff; padding:1rem; }
+.metric-label { color:var(--muted); font-size:.75rem; }
+.metric-value { margin-top:.35rem; font-size:1.35rem; font-weight:800; letter-spacing:-.03em; }
+.metric-note { color:var(--muted); font-size:.72rem; }
+.section { margin-top:3rem; }
+.section-header { display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
+.section-header p { margin:.2rem 0 0; color:var(--muted); font-size:.9rem; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; background:#fff; }
+table { width:100%; min-width:860px; border-collapse:collapse; font-size:.88rem; }
+th,td { padding:.9rem 1rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+th { background:var(--soft); color:var(--muted); font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+tr:last-child td { border-bottom:0; }
+.report-links { display:flex; flex-direction:column; gap:.35rem; }
+.empty { border:1px dashed #b9c5d4; border-radius:16px; background:var(--soft); padding:1.4rem; }
+.empty p { margin:.35rem 0 0; color:var(--muted); }
+.report { max-width:820px; margin:0 auto; }
+.report-body { margin-top:2rem; border:1px solid var(--line); border-radius:18px; background:#fff; padding:clamp(1.2rem,4vw,2.4rem); overflow-wrap:anywhere; word-break:break-word; }
+.report-body h1 { margin-top:0; font-size:clamp(1.8rem,4vw,3rem); }
+.report-body h2 { margin-top:2.2rem; }
+.report-body h3 { margin-top:1.6rem; }
+.report-body p { color:#35445a; }
+.report-body li { margin:.35rem 0; color:#35445a; }
+.report-body blockquote { margin:1rem 0; border-left:3px solid #9ebeff; background:#f3f7ff; padding:.8rem 1rem; color:#52627a; }
+.report-body code { border-radius:5px; background:#eef2f7; padding:.1rem .3rem; font-size:.9em; }
+.footer { margin-top:2rem; color:var(--muted); font-size:.78rem; }
+@media (max-width:800px) { .metrics { grid-template-columns:repeat(2,minmax(0,1fr)); } .metrics .card:last-child { grid-column:span 2; } }
+@media (max-width:520px) { .container { padding-top:1.5rem; } .nav { align-items:flex-start; flex-direction:column; } .nav-links { gap:.5rem .8rem; } .metrics { grid-template-columns:1fr 1fr; } .hero { border-radius:18px; } .section-header { align-items:flex-start; flex-direction:column; } }
+</style>
+</head>
+<body>
+<header class="site-header"><nav class="nav"><a class="brand" href="../../../index.html">StockPulse V1 Fixed</a><div class="nav-links"><a href="../../../index.html">Publication home</a><a href="../../../index.html#archive">Archive</a><a href="../../../data/projection.json">Projection JSON</a></div></nav></header>
+<main class="container report">
+<div class="eyebrow">morning report · 2026-10-16</div>
+<div class="badges"><span class="badge">V1 Fixed · Live Shadow</span><span class="badge green">available</span></div>
+<article class="report-body"><h1>📊 Morning Brief — 2026-10-16</h1>
+<blockquote>생성 기준: 2026-10-16T07:31:21.505399+09:00 | Morning snapshot 이후의 장중 결과는 포함하지 않습니다.</blockquote>
+<h2>1. 오늘 한눈에</h2>
+<p><strong>오늘의 전망: 하락</strong> <strong>Confidence: 82%</strong> (주관적 판단, 보정 확률 아님)</p>
+<h3>상방</h3>
+<ul>
+<li>S&amp;P 500 +0.33%</li>
+<li>Nasdaq +0.08%</li>
+<li>VIX 하락(-2.43%)</li>
+</ul>
+<h3>하방</h3>
+<ul>
+<li>KOSPI 20일선 하회(5,554.22 &lt; 6,683.67)</li>
+<li>KOSDAQ -7.65%</li>
+<li>ML 종목 상대신호는 약세 일괄 편향</li>
+</ul>
+<ul>
+<li>수급 상태: <strong>확보됨</strong></li>
+<li>가장 중요한 uncertainty: <strong>장중 breadth와 종목별 외국인·기관 수급은 아직 제공되지 않아 반등 확산 여부를 확인할 수 없습니다.</strong></li>
+<li>판단 한 줄: 전일 KOSPI는 5,554.22로 7.57% 급락했고 20일선 대비 이격도는 -16.90%로 과매도 상태입니다. 기술적 반등 여지는 있으나 삼성전자와 SK하이닉스가 각각 11.51%, 13.12% 하락했고 외국인 순매도 3조7,582억원, 해외 반도체 약세가 겹쳐 다음 세션의 절대 방향은 하락을 기본 시나리오로 판단합니다.</li>
+</ul>
+<h2>2. 국내 시장 — Morning reference</h2>
+<blockquote>아래 값은 장 시작 전 판단에 사용한 직전 확정 세션 기준값입니다. Evening의 실제 종가와 다른 시점입니다.</blockquote>
+<div class="table-wrap"><table><thead><tr>
+<th>시장</th>
+<th>Morning reference</th>
+<th>직전 등락</th>
+<th>기술 위치</th>
+</tr></thead><tbody>
+<tr>
+<td>KOSPI</td>
+<td>5,554.22</td>
+<td>-7.57%</td>
+<td>20일선 6,683.67 / 이격 확인하지 못함</td>
+</tr>
+<tr>
+<td>KOSDAQ</td>
+<td>760.82</td>
+<td>-7.65%</td>
+<td>20일선 확인하지 못함 / 이격 -10.07%</td>
+</tr>
+</tbody></table></div>
+<h3>투자자별 수급</h3>
+<p>상태: <strong>확보됨</strong>. 확보되지 않은 외국인·기관·개인 순매수는 0으로 대체하지 않았습니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>시장</th>
+<th>투자자</th>
+<th>순매수</th>
+<th>단위</th>
+<th>as-of</th>
+<th>provider</th>
+<th>status</th>
+</tr></thead><tbody>
+<tr>
+<td>KOSPI</td>
+<td>외국인</td>
+<td>-37,582.24</td>
+<td>억원</td>
+<td>2026-10-15</td>
+<td>Daum Finance API</td>
+<td>available</td>
+</tr>
+<tr>
+<td>KOSPI</td>
+<td>기관</td>
+<td>+17,120.53</td>
+<td>억원</td>
+<td>2026-10-15</td>
+<td>Daum Finance API</td>
+<td>available</td>
+</tr>
+<tr>
+<td>KOSDAQ</td>
+<td>외국인</td>
+<td>+2,223.04</td>
+<td>억원</td>
+<td>2026-10-15</td>
+<td>Daum Finance API</td>
+<td>available</td>
+</tr>
+<tr>
+<td>KOSDAQ</td>
+<td>기관</td>
+<td>-1,608.97</td>
+<td>억원</td>
+<td>2026-10-15</td>
+<td>Daum Finance API</td>
+<td>available</td>
+</tr>
+</tbody></table></div>
+<h2>3. 해외·매크로</h2>
+<p>미국은 다우 +1.08%, S&amp;P500 +0.33%, 나스닥 +0.08%로 지수는 강보합이었지만 SOX -0.88%, SMH -1.04%, NVDA -1.84%, AMD -1.50%로 핵심 반도체는 약했습니다. MU +1.87%, QCOM +3.35%와 일부 ADR 반등은 counter-signal이지만 PKX -2.66%, SKM -3.13% 등 한국 관련 ADR은 혼조·약세입니다.</p>
+<div class="table-wrap"><table><thead><tr>
+<th>자산</th>
+<th>최근치</th>
+<th>변동률</th>
+</tr></thead><tbody>
+<tr>
+<td>S&amp;P 500</td>
+<td>7,744.06</td>
+<td>+0.33%</td>
+</tr>
+<tr>
+<td>Nasdaq</td>
+<td>26,713.03</td>
+<td>+0.08%</td>
+</tr>
+<tr>
+<td>SOX</td>
+<td>11,581.21</td>
+<td>-0.88%</td>
+</tr>
+<tr>
+<td>VIX</td>
+<td>16.46</td>
+<td>-2.43%</td>
+</tr>
+<tr>
+<td>달러/원</td>
+<td>1,341.21</td>
+<td>+0.07%</td>
+</tr>
+<tr>
+<td>10Y국채</td>
+<td>5.09</td>
+<td>-1.95%</td>
+</tr>
+</tbody></table></div>
+<p>매크로·일정: 미국 CPI는 전년 대비 4.02%, PPI는 9.85%, 실업률은 4.2%로 물가 부담이 남아 있습니다. 달러인덱스는 102.0으로 -0.53%, 원달러는 1,341.21원으로 +0.07%였고, 금은 +2.01%로 안전선호를 보였습니다. 오늘 한은 금통위가 예정되어 정책 불확실성이 추가됩니다. 나머지 cross-asset와 상세 collector 결과는 public projection의 technical detail에 보존합니다.</p>
+<h2>4. ML signals — relative vs realized</h2>
+<ul>
+<li>Model relative-strength score: 종목 간 상대순위 신호이며 KOSPI 절대 방향 확률이 아닙니다.</li>
+<li>Target: 5세션 후 KOSPI 대비 초과수익</li>
+<li>모델 편향: <strong>약세</strong> | 분석 종목: <strong>50개</strong></li>
+<li>Recent 5-day realized return: 최근 실제 수익률이며 모델 상대순위와 별도 값입니다.</li>
+</ul>
+<div class="table-wrap"><table><thead><tr>
+<th>종목</th>
+<th>Model relative-strength score</th>
+<th>Recent 5-day realized return</th>
+<th>Model bias</th>
+</tr></thead><tbody>
+<tr>
+<td>두산</td>
+<td>+80.00%</td>
+<td>-30.39%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>삼성전기</td>
+<td>+54.80%</td>
+<td>-30.18%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>LG에너지솔루션</td>
+<td>+54.10%</td>
+<td>+1.55%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>유안타증권우</td>
+<td>+20.00%</td>
+<td>-6.75%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>하나금융지주</td>
+<td>+25.40%</td>
+<td>-3.28%</td>
+<td>약세</td>
+</tr>
+<tr>
+<td>기업은행</td>
+<td>+26.10%</td>
+<td>-1.09%</td>
+<td>약세</td>
+</tr>
+</tbody></table></div>
+<h2>5. 뉴스·이벤트</h2>
+<p>공포·탐욕: <strong>28/100 (공포)</strong></p>
+<div class="table-wrap"><table><thead><tr>
+<th>핵심 종목</th>
+<th>신호</th>
+<th>판단 관련 요약</th>
+</tr></thead><tbody>
+<tr>
+<td>LG에너지솔루션</td>
+<td>긍정</td>
+<td>호재: 턴어라운드, 급등, 성장 / 악재: 하락</td>
+</tr>
+<tr>
+<td>삼성SDI</td>
+<td>긍정</td>
+<td>호재: 수혜, 실적 개선, 강세 / 악재: 하락</td>
+</tr>
+<tr>
+<td>SK하이닉스</td>
+<td>부정</td>
+<td>호재: 반등, 간다 / 악재: 급락, 폭락, 하락</td>
+</tr>
+<tr>
+<td>삼성전자</td>
+<td>부정</td>
+<td>호재: 반등, 기대 / 악재: 폭락, 급락, 매도</td>
+</tr>
+</tbody></table></div>
+<p>주요 예정 이벤트: 2026-10-16 한은 금통위, 2026-11-05 FOMC, 2026-11-13 US 10월 CPI</p>
+<h2>6. 오늘 확인할 것</h2>
+<ul>
+<li>KOSPI 5,554.22와 20일선 6,683.67의 이격도 -16.90%</li>
+<li>삼성전자·SK하이닉스의 반도체 급락 지속 여부</li>
+<li>외국인 순매도 -3조7,582억원과 기관 순매수 +1조7,121억원의 변화</li>
+<li>SOX -0.88% 및 SMH -1.04%의 추가 약세 여부</li>
+</ul>
+<h2>7. 실험·데이터 경계</h2>
+<ul>
+<li>ML evaluation: <strong>pending</strong> (0 evaluated / 50 pending)</li>
+<li>Current runtime improvement: <strong>Applied from previous cycle (prompt context read-back verified)</strong></li>
+<li>Today's new proposal: <strong>None (Morning stage)</strong></li>
+<li>Today's applied change: <strong>None (Evening stage에서만 판정)</strong></li>
+<li>데이터 제약: 없음</li>
+<li>Daily Lab Note slug는 생성하지 않습니다.</li>
+</ul>
+<blockquote>⚠️ 본 문서는 투자 권유가 아니라 StockPulse V1 Fixed의 시장 관찰·예측 성능 측정 자료입니다. 실제 매매는 본인의 판단과 책임으로 결정해야 합니다.</blockquote></article>
+<p class="footer"><a href="../../../index.html">← Publication home</a> · <span>Evening report pending</span></p>
+</main>
+</body>
+</html>

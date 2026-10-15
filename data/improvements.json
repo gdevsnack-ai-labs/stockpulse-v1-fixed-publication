@@ -4,12 +4,43 @@
   "summary": {
     "status": "none",
     "reason": "no_evaluated_failure_observed",
-    "proposal_count": 18,
+    "proposal_count": 19,
     "applied_count": 18,
     "pending_count": 0,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-10-15-morning-01",
+      "run_id": "live-shadow-2026-10-15-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-10-15-morning-01",
+      "proposal_id": null,
+      "trigger": {},
+      "requested_change": {
+        "analysis_scope": "yura_evening_full_context",
+        "failure_observed": {
+          "llm": false,
+          "ml_failure_count": 1
+        }
+      },
+      "status": "failed",
+      "approved": false,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": null,
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-10-15-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-10-15-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-10-14-morning-01",
       "run_id": "live-shadow-2026-10-14-morning-01",
