@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 19,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 20,
     "applied_count": 18,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-10-16-morning-01",
+      "run_id": "live-shadow-2026-10-16-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-10-16-morning-01",
+      "proposal_id": "proposal-4c224679acd1de80",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "절대 방향 판단에서 국내 추세 약세와 해외 위험선호·반도체·환율 반등이 충돌할 때, 해외 counter-signal을 별도 평가한 뒤 최종 방향을 결정합니다. 장중 breadth·외국인/기관 수급이 없으면 이를 불확실성으로 표시하고 국내 약세 근거로 대체하지 않습니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "절대 방향 평가에서 추세·수급·반도체 약세 신호와 과매도 반등 신호가 충돌했을 때, 전일 급락 직후의 반발 매수 가능성과 해외·환율 counter-signal을 독립적인 시나리오로 충분히 반영하지 못했습니다. 특히 장중 breadth와 종목별 수급이 없는 상황을 약세 근거의 보강으로 사용하기보다 판단 불확실성으로 분리했어야 합니다. 다음 Morning에서는 국내 추세 약세와 단기 반등 가능성을 동시에 유지하고, 어느 조건에서 방향을 선택했는지 명시해야 합니다.",
+          "is_correct": false
+        },
+        "expected_impact": "국내 추세 신호와 반대되는 해외·환율 counter-signal의 누락을 줄이고 다음 Morning의 방향 판단 근거를 균형화합니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-10-16-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-10-16-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-10-15-morning-01",
       "run_id": "live-shadow-2026-10-15-morning-01",

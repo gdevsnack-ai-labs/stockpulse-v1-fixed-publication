@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "projection_type": "stockpulse_v1_fixed_public_projection",
-  "projected_at": "2026-10-15T22:35:27+00:00",
+  "projected_at": "2026-10-16T07:32:54+00:00",
   "project": {
     "id": "stockpulse-v1-fixed",
     "title": "StockPulse V1 Fixed",
@@ -20,13 +20,13 @@
     "trading_date": "2026-10-16",
     "artifact_count": 7,
     "artifact_hashes": {
-      "run.json": "4da4a0ccf87735f5ff08f5d2ed5a6033828d04714b74caae6db4e26464ccdf99",
+      "run.json": "779d7a042cdf640774795626292a18c9ac8f38257fb0eeef9e7c25cf1baebfb3",
       "input_manifest.json": "052cab4089925b46e82b15ba3b13de14d12258ca4f20195ebe5d73570da6df53",
       "quality.json": "fb5847364103c7a525ac020e068b5a5a33f0826f69ffd8c814a2a12bc66037ea",
       "ml_prediction.json": "a937df20eaa6d8976279bd35d3f7493ad7d18e76a636b0826438ae1a99c8c28f",
-      "llm_prediction.json": "bf40c4ca64a497e0e557463aaeee4938d00f876ce0de373416c64887143f885b",
-      "improvement.json": "00f34e244a8473e1e55fa11989981bb5e9474f8fcd3bcc04a4466c15713e4d13",
-      "day1-morning-verification.json": "a17509d36acee8c6c6c5e7c86c3098363bf9fa4240181886652bf7d8efeb76d6"
+      "llm_prediction.json": "847e51951652eacde8b99d5521b1574e2b551fdda072c054d9c5f80bbfa3f21b",
+      "improvement.json": "25689d82bda640eae509ac94d063ec0a580ac4764a0f0710ad9ae87f6f655de7",
+      "day1-morning-verification.json": "b896512a2dc4a07ca2a9971b3a68bfe6416f51922afae7e2e63ec25d48e17152"
     },
     "generator_version": "stockpulse-v1-fixed-projector-1.2.0",
     "generator_command_template": "python3 scripts/project_publication.py --source-run <private-run-dir> --output-dir <output-dir> [--projected-at <iso>]",
@@ -37,13 +37,13 @@
         "run_id": "live-shadow-2026-10-16-morning-01",
         "trading_date": "2026-10-16",
         "artifact_hashes": {
-          "run.json": "4da4a0ccf87735f5ff08f5d2ed5a6033828d04714b74caae6db4e26464ccdf99",
+          "run.json": "779d7a042cdf640774795626292a18c9ac8f38257fb0eeef9e7c25cf1baebfb3",
           "input_manifest.json": "052cab4089925b46e82b15ba3b13de14d12258ca4f20195ebe5d73570da6df53",
           "quality.json": "fb5847364103c7a525ac020e068b5a5a33f0826f69ffd8c814a2a12bc66037ea",
           "ml_prediction.json": "a937df20eaa6d8976279bd35d3f7493ad7d18e76a636b0826438ae1a99c8c28f",
-          "llm_prediction.json": "bf40c4ca64a497e0e557463aaeee4938d00f876ce0de373416c64887143f885b",
-          "improvement.json": "00f34e244a8473e1e55fa11989981bb5e9474f8fcd3bcc04a4466c15713e4d13",
-          "day1-morning-verification.json": "a17509d36acee8c6c6c5e7c86c3098363bf9fa4240181886652bf7d8efeb76d6"
+          "llm_prediction.json": "847e51951652eacde8b99d5521b1574e2b551fdda072c054d9c5f80bbfa3f21b",
+          "improvement.json": "25689d82bda640eae509ac94d063ec0a580ac4764a0f0710ad9ae87f6f655de7",
+          "day1-morning-verification.json": "b896512a2dc4a07ca2a9971b3a68bfe6416f51922afae7e2e63ec25d48e17152"
         }
       },
       {
@@ -414,19 +414,19 @@
   },
   "snapshot": {
     "live_shadow_day": "Latest run · 2026-10-16",
-    "current_state": "morning_complete_evening_not_started",
+    "current_state": "evening_complete",
     "run_count": 29,
-    "llm_evaluated": 0,
-    "llm_correct": null,
+    "llm_evaluated": 1,
+    "llm_correct": false,
     "ml_prediction_count": 50,
     "ml_evaluated": 0,
     "ml_correct": null,
     "ml_evaluation_state": "pending",
-    "improvement_cycles": 19,
-    "improvement_status": "none",
+    "improvement_cycles": 20,
+    "improvement_status": "approved",
     "applied_count": 18,
     "rejected_count": 0,
-    "pending_count": 0,
+    "pending_count": 1,
     "current_effective_config": {
       "lgb": {
         "learning_rate": 0.03,
@@ -457,7 +457,7 @@
         "source_experiment_id": "stockpulse-v1-fixed-phase8b",
         "run_mode": "live_shadow",
         "stage": "morning",
-        "overall_status": "in_progress_evening_not_started",
+        "overall_status": "complete",
         "lane": "v1_fixed_fresh",
         "trading_date": "2026-10-16",
         "run_status": "success",
@@ -478,9 +478,9 @@
         "morning_llm_prediction": {
           "llm_prediction_id": "llm-prediction-2026-10-16",
           "generation_status": "generated",
-          "evaluation_status": "pending",
-          "success": null,
-          "failure": null,
+          "evaluation_status": "evaluated",
+          "success": false,
+          "failure": true,
           "market": "KOSPI",
           "direction": "하락",
           "confidence": 0.82,
@@ -2357,35 +2357,55 @@
           ],
           "data_gaps": []
         },
-        "evening_analysis": {},
+        "evening_analysis": {
+          "actual_driver_analysis": "오늘의 핵심 동인은 전일 급락 뒤의 반발 매수와 과매도 해소로 판단합니다. KOSPI와 KOSDAQ이 함께 상승하면서 단일 종목 반등이 아닌 시장 전반의 위험선호 회복이 나타났습니다. 전일 기준 공포탐욕 28점, 삼성전자·SK하이닉스의 낮은 RSI, 광범위한 저점 근접 종목은 반등 여지를 제공했습니다. 반면 Morning 스냅샷에서 확인된 SOX·SMH 약세, 한국 관련 ADR 혼조, 외국인 순매도 우위와 정책 이벤트 불확실성은 방향을 단정하기 어렵게 만든 반대 신호였습니다. 장중 breadth와 종목별 외국인·기관 수급은 run-owned 자료에서 확인되지 않아 반등의 질과 지속성은 평가하지 않습니다.",
+          "data_synthesis": {
+            "breadth_and_leaders": "Morning 자료에는 50개 점검 종목 중 52주 고점 근접 1개, 저점 근접 11개가 기록되어 있었으나 Evening 장중 breadth와 종목별 수급은 제공되지 않았습니다. 따라서 반등 확산과 주도주 교체는 미확인입니다.",
+            "domestic_close": "KOSPI 5,727.32, KOSDAQ 793.14. 기준 KOSPI 5,554.22 대비 실제 KOSPI 수익률은 3.1165% 상승입니다. FinanceDataReader read-only close입니다.",
+            "fear_greed": "공포탐욕 점수 28점, 최근 10일 상승일 2일, 20일 변동성 2.57%로 과매도·공포 국면이었습니다. 이는 하락 지속뿐 아니라 단기 반등 위험도 함께 높이는 신호입니다.",
+            "flows_news": "Morning 자료에는 KOSPI 외국인 -3조7,582억원, 기관 +1조7,121억원, 삼성전자 뉴스 감성 -18, SK하이닉스 -21, LG에너지솔루션·삼성SDI 각 28점이 기록되었습니다. Evening 신규 수급·뉴스 데이터는 확인되지 않았습니다.",
+            "macro_events": "Morning 자료에는 CPI 4.02%, PPI 9.85%, 실업률 4.2%, 한은 금통위 예정 등 물가·정책 불확실성이 기록되었습니다. 금통위의 실제 결과와 시장 반응은 현재 run-owned 자료에 없습니다.",
+            "ml_relative_context": "ML은 LightGBM·XGBoost·LSTM으로 50개 예측을 생성했지만 5세션 성숙 전이라 evaluated_count 0, pending_count 1000입니다. ML은 KOSPI 절대 방향 판단에 사용하지 않으며 이번 Evening에서 성능 실패나 개선 적용을 주장하지 않습니다.",
+            "morning_judgment": "방향 하락, confidence 0.82. 핵심 근거는 전일 급락, 반도체 약세, 외국인 매도, 약세 레짐이었으며 실제 방향은 상승으로 비교되었습니다.",
+            "overnight_cross_asset": "Morning 스냅샷의 미국 주요 지수는 다우 +1.08%, S&P500 +0.33%, 나스닥 +0.08%였고 SOX -0.88%, SMH -1.04%, NVDA -1.84%, AMD -1.50%였습니다. 지수 강보합과 반도체 약세가 충돌한 상태였습니다."
+          },
+          "failure_analysis": "절대 방향 평가에서 추세·수급·반도체 약세 신호와 과매도 반등 신호가 충돌했을 때, 전일 급락 직후의 반발 매수 가능성과 해외·환율 counter-signal을 독립적인 시나리오로 충분히 반영하지 못했습니다. 특히 장중 breadth와 종목별 수급이 없는 상황을 약세 근거의 보강으로 사용하기보다 판단 불확실성으로 분리했어야 합니다. 다음 Morning에서는 국내 추세 약세와 단기 반등 가능성을 동시에 유지하고, 어느 조건에서 방향을 선택했는지 명시해야 합니다.",
+          "improvement": {
+            "action_detail": "LLM 절대 방향 오판에 대한 bounded prompt proposal은 helper가 failure_analysis를 근거로 기존 lifecycle에 기록합니다. ML 파라미터·feature 변경은 제안하지 않습니다.",
+            "action_type": "none",
+            "expected_impact": "다음 Morning에서 과매도 뒤 기술적 반등과 해외·환율 counter-signal을 별도 평가하여 추세 약세 신호와 균형 있게 비교합니다."
+          },
+          "rationale_vs_actual": "Morning은 KOSPI의 전일 -7.57% 급락, 20일선 대비 -16.90% 이격, 핵심 반도체 급락, 외국인 순매도, 해외 반도체 약세를 근거로 하락을 기본 시나리오로 두었습니다. 이 근거들은 하방 위험을 설명했지만, 과매도 뒤 기술적 반등 가능성에 부여한 가중치가 충분하지 않았고 실제 다음 세션의 절대 방향을 맞히지 못했습니다. 미국 주요 지수 강보합과 달러 약세, 일부 성장주·반도체 종목의 counter-signal을 국내 약세 확인 신호보다 낮게 평가한 점도 오차 요인입니다. 이번 비교는 LLM의 KOSPI 절대 방향 판단이며 ML의 5거래일 상대성과 평가와는 별개입니다.",
+          "summary": "KOSPI는 5,727.32로 마감하여 기준 종가 5,554.22 대비 3.1165% 상승했고, KOSDAQ은 793.14로 마감했습니다. 전일 급락과 과매도 상태에서 기술적 반등이 실제로 나타나 Morning의 절대 방향 하락 판단은 빗나갔습니다. 다만 반도체와 한국 관련 ADR의 약세, 외국인 매도 우위 등 하방 위험 신호가 모두 해소되었다고 볼 수는 없어 추세 전환으로 확대 해석하지 않습니다."
+        },
         "actual_market_result": {
-          "status": "not_available",
-          "reason": "evening_not_started",
-          "kospi_close": null,
-          "kosdaq_close": null,
-          "direction": null,
-          "return_pct": null,
-          "observed_at": null,
-          "llm_success": null
+          "status": "available",
+          "reason": null,
+          "kospi_close": 5727.32,
+          "kosdaq_close": 793.14,
+          "direction": "상승",
+          "return_pct": 3.11654922,
+          "observed_at": "2026-10-16T16:30:22.605252+09:00",
+          "llm_success": false
         },
         "llm_evaluation": {
-          "status": "pending",
-          "success": null,
-          "failure": null
+          "status": "evaluated",
+          "success": false,
+          "failure": true
         },
         "ml_evaluation": {
           "prediction_count": 50,
           "status": "pending",
           "evaluated_count": 0,
-          "pending_count": 50,
+          "pending_count": 1000,
           "correct_count": null,
           "reason": "target_date_unavailable"
         },
         "improvement": {
-          "status": "none",
-          "proposal_id": null,
+          "status": "approved",
+          "proposal_id": "proposal-4c224679acd1de80",
           "actual_applied": false,
-          "observation_state": "not_started"
+          "observation_state": "pending"
         },
         "publications": {
           "morning": {
@@ -2393,8 +2413,8 @@
             "path": "reports/2026-10-16/morning/"
           },
           "evening": {
-            "status": "not_started",
-            "path": null
+            "status": "available",
+            "path": "reports/2026-10-16/evening/"
           }
         },
         "evidence_refs": [
@@ -55658,10 +55678,10 @@
         "scope": "v1_fixed_fresh_ml_predictions_and_morning_llm",
         "status": "pending",
         "evaluated_count": 0,
-        "pending_count": 50,
+        "pending_count": 1000,
         "correct_count": null,
-        "llm_success": null,
-        "llm_failure": null,
+        "llm_success": false,
+        "llm_failure": true,
         "target_maturity": {
           "status": "not_mature",
           "reason": "target_date_unavailable"
@@ -56831,14 +56851,48 @@
     "schema_version": 1,
     "project_id": "stockpulse-v1-fixed",
     "summary": {
-      "status": "none",
-      "reason": "no_evaluated_failure_observed",
-      "proposal_count": 19,
+      "status": "approved",
+      "reason": null,
+      "proposal_count": 20,
       "applied_count": 18,
-      "pending_count": 0,
+      "pending_count": 1,
       "rejected_count": 0
     },
     "records": [
+      {
+        "cycle_id": "improvement-cycle-live-shadow-2026-10-16-morning-01",
+        "run_id": "live-shadow-2026-10-16-morning-01",
+        "evaluation_id": "evaluation-live-shadow-2026-10-16-morning-01",
+        "proposal_id": "proposal-4c224679acd1de80",
+        "trigger": {},
+        "requested_change": {
+          "action_detail": "절대 방향 판단에서 국내 추세 약세와 해외 위험선호·반도체·환율 반등이 충돌할 때, 해외 counter-signal을 별도 평가한 뒤 최종 방향을 결정합니다. 장중 breadth·외국인/기관 수급이 없으면 이를 불확실성으로 표시하고 국내 약세 근거로 대체하지 않습니다.",
+          "action_type": "prompt",
+          "analysis_scope": "yura_evening_full_context",
+          "evaluation": {
+            "fail_reason": "절대 방향 평가에서 추세·수급·반도체 약세 신호와 과매도 반등 신호가 충돌했을 때, 전일 급락 직후의 반발 매수 가능성과 해외·환율 counter-signal을 독립적인 시나리오로 충분히 반영하지 못했습니다. 특히 장중 breadth와 종목별 수급이 없는 상황을 약세 근거의 보강으로 사용하기보다 판단 불확실성으로 분리했어야 합니다. 다음 Morning에서는 국내 추세 약세와 단기 반등 가능성을 동시에 유지하고, 어느 조건에서 방향을 선택했는지 명시해야 합니다.",
+            "is_correct": false
+          },
+          "expected_impact": "국내 추세 신호와 반대되는 해외·환율 counter-signal의 누락을 줄이고 다음 Morning의 방향 판단 근거를 균형화합니다."
+        },
+        "status": "approved",
+        "approved": true,
+        "actual_applied": false,
+        "effective_runtime_readback": null,
+        "application_kind": "prompt",
+        "readback_verified": null,
+        "observation_state": "pending",
+        "evidence_refs": [
+          {
+            "kind": "run",
+            "id": "live-shadow-2026-10-16-morning-01"
+          },
+          {
+            "kind": "evaluation",
+            "id": "evaluation-live-shadow-2026-10-16-morning-01"
+          }
+        ]
+      },
       {
         "cycle_id": "improvement-cycle-live-shadow-2026-10-15-morning-01",
         "run_id": "live-shadow-2026-10-15-morning-01",
@@ -57495,19 +57549,19 @@
     "project_id": "stockpulse-v1-fixed",
     "snapshot": {
       "live_shadow_day": "Latest run · 2026-10-16",
-      "current_state": "morning_complete_evening_not_started",
+      "current_state": "evening_complete",
       "run_count": 29,
-      "llm_evaluated": 0,
-      "llm_correct": null,
+      "llm_evaluated": 1,
+      "llm_correct": false,
       "ml_prediction_count": 50,
       "ml_evaluated": 0,
       "ml_correct": null,
       "ml_evaluation_state": "pending",
-      "improvement_cycles": 19,
-      "improvement_status": "none",
+      "improvement_cycles": 20,
+      "improvement_status": "approved",
       "applied_count": 18,
       "rejected_count": 0,
-      "pending_count": 0,
+      "pending_count": 1,
       "current_effective_config": {
         "lgb": {
           "learning_rate": 0.03,
@@ -57533,11 +57587,11 @@
         "trading_date": "2026-10-16",
         "prediction_count": 50,
         "ml_evaluated_count": 0,
-        "ml_pending_count": 50,
+        "ml_pending_count": 1000,
         "ml_correct_count": null,
-        "llm_evaluated": false,
-        "llm_correct": null,
-        "improvement_cycles": 0,
+        "llm_evaluated": true,
+        "llm_correct": false,
+        "improvement_cycles": 1,
         "actual_applied_count": 0,
         "evaluation_status": "pending"
       },
@@ -57916,8 +57970,8 @@
       "run_id": "live-shadow-2026-10-16-morning-01"
     },
     "evening": {
-      "status": "not_started",
-      "path": null,
+      "status": "available",
+      "path": "reports/2026-10-16/evening/",
       "run_id": "live-shadow-2026-10-16-morning-01"
     },
     "daily_lab_slug_policy": "disabled"
