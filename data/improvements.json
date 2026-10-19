@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 20,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 21,
     "applied_count": 19,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-10-19-morning-01",
+      "run_id": "live-shadow-2026-10-19-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-10-19-morning-01",
+      "proposal_id": "proposal-ca61070523e10dc1",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "당일 시가 갭 방향과 종가 방향을 분리하여 판단합니다. 전일 해외 위험회피 신호가 이미 큰 폭의 갭으로 반영된 경우(예: KOSPI 시가 -3% 내외), 그 신호를 종가 방향의 독립 근거로 다시 사용하지 않고 국내 장중 확인 신호를 요구합니다. 20일선 이격도 -10% 이하이거나 공포탐욕이 35 이하인 과매도 국면에서는 갭 하락 후 종가 반등을 기본 시나리오 중 하나로 명시하고 확신도를 제한합니다. 전일 수급은 당일 수급 근거로 사용하지 않으며, 사용할 경우 기준일을 함께 표시합니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "과대평가한 신호는 해외 위험회피였습니다. 나스닥 -2.15%, SOX -3.83%, VIX +21.45%는 분명한 약세 신호였으나 시가 갭으로 이미 가격에 반영되었고, 종가 방향의 독립 근거로 다시 계산되었습니다. 과소평가한 신호는 세 가지입니다. 첫째, 20일선 이격도 -13.83%와 공포탐욕 31점이 만드는 되돌림 압력입니다. 둘째, 전일 수급을 당일 근거로 쓴 시점 오류입니다. 셋째, 반도체 중심으로 서술된 Morning 판단이 2차전지·바이오·소재로의 업종 교체 가능성을 담지 못한 점입니다. 뉴스 감성도 방향성에 기여하지 못했습니다. 부정 감성이던 삼성전자(-21)·SK하이닉스(-28)는 상승 마감했고, 긍정 감성이던 HPSP(+18)와 리노공업(-21 부정)은 각각 -1.11%, -1.13%로 하락했습니다. 다음 Morning에서 필요한 변경은 해외 신호의 강도가 아니라 적용 시점입니다. 큰 갭이 예상되는 날에는 시가 방향과 종가 방향을 분리해 판단하고, 갭이 해외 충격을 흡수한 뒤에는 국내 장중 확인 신호를 요구해야 합니다. 이 분석은 LLM 절대 방향 실패에 대한 것이며, ML five-session 평가는 pending이므로 ML 실패로 합산하지 않습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "해외 충격이 시가에 선반영된 날의 종가 방향 오판과, 과매도 국면에서 하방 신호를 중복 가중하는 오류를 줄입니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-10-19-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-10-19-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-10-16-morning-01",
       "run_id": "live-shadow-2026-10-16-morning-01",

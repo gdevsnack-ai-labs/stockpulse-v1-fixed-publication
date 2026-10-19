@@ -5,13 +5,13 @@
   "trading_date": "2026-10-19",
   "artifact_count": 7,
   "artifact_hashes": {
-    "run.json": "b749dab59c93d1ff4bab36b956d59da14e9f97a369612efdbfaa7f9f99fd73e5",
+    "run.json": "c03109de74c751da10a196a992550d2c64162ade32d646abff90eeb07682d2de",
     "input_manifest.json": "349687648ada510d4518274ed4249b606d6333efc01d33563d108ca8c5acbe02",
     "quality.json": "3b1d188ec5f05117c603c688c27b52b623c88241c4517b675c6b50d484f22e24",
     "ml_prediction.json": "3fd72a79aeea87806510720161e14381f1e2f0a3bd28f0a702ac3d2a687cf339",
-    "llm_prediction.json": "0e134444ed7f2b479ca89b196ff62dfedfdf46120bd57551bea0a3b8d19a9443",
-    "improvement.json": "00f34e244a8473e1e55fa11989981bb5e9474f8fcd3bcc04a4466c15713e4d13",
-    "day1-morning-verification.json": "bfebcd5c89268c1cce1a82e9e292beffa9de852add6eb4c877d4bea56c973664"
+    "llm_prediction.json": "e3273f062e573c2df9cf6bbc2d5329821d3568035de3424503f4ec40399c45ec",
+    "improvement.json": "55d1a2a115b930e89146d5781de09ee275a7897a815e8e1b0a76d869de301444",
+    "day1-morning-verification.json": "3a7d074175fc518aebab74aaf2514385db050e2110bcbe61f0b8510ffca452fc"
   },
   "generator_version": "stockpulse-v1-fixed-projector-1.2.0",
   "generator_command_template": "python3 scripts/project_publication.py --source-run <private-run-dir> --output-dir <output-dir> [--projected-at <iso>]",
@@ -22,13 +22,13 @@
       "run_id": "live-shadow-2026-10-19-morning-01",
       "trading_date": "2026-10-19",
       "artifact_hashes": {
-        "run.json": "b749dab59c93d1ff4bab36b956d59da14e9f97a369612efdbfaa7f9f99fd73e5",
+        "run.json": "c03109de74c751da10a196a992550d2c64162ade32d646abff90eeb07682d2de",
         "input_manifest.json": "349687648ada510d4518274ed4249b606d6333efc01d33563d108ca8c5acbe02",
         "quality.json": "3b1d188ec5f05117c603c688c27b52b623c88241c4517b675c6b50d484f22e24",
         "ml_prediction.json": "3fd72a79aeea87806510720161e14381f1e2f0a3bd28f0a702ac3d2a687cf339",
-        "llm_prediction.json": "0e134444ed7f2b479ca89b196ff62dfedfdf46120bd57551bea0a3b8d19a9443",
-        "improvement.json": "00f34e244a8473e1e55fa11989981bb5e9474f8fcd3bcc04a4466c15713e4d13",
-        "day1-morning-verification.json": "bfebcd5c89268c1cce1a82e9e292beffa9de852add6eb4c877d4bea56c973664"
+        "llm_prediction.json": "e3273f062e573c2df9cf6bbc2d5329821d3568035de3424503f4ec40399c45ec",
+        "improvement.json": "55d1a2a115b930e89146d5781de09ee275a7897a815e8e1b0a76d869de301444",
+        "day1-morning-verification.json": "3a7d074175fc518aebab74aaf2514385db050e2110bcbe61f0b8510ffca452fc"
       }
     },
     {
