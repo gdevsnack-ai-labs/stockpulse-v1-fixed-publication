@@ -11,7 +11,7 @@
     "ml_prediction.json": "3fd72a79aeea87806510720161e14381f1e2f0a3bd28f0a702ac3d2a687cf339",
     "llm_prediction.json": "e3273f062e573c2df9cf6bbc2d5329821d3568035de3424503f4ec40399c45ec",
     "improvement.json": "55d1a2a115b930e89146d5781de09ee275a7897a815e8e1b0a76d869de301444",
-    "day1-morning-verification.json": "3a7d074175fc518aebab74aaf2514385db050e2110bcbe61f0b8510ffca452fc"
+    "day1-morning-verification.json": "eb41fcc8732713ecebf3d83a960561574ae9f666c03f1a8049ed2a2590890090"
   },
   "generator_version": "stockpulse-v1-fixed-projector-1.2.0",
   "generator_command_template": "python3 scripts/project_publication.py --source-run <private-run-dir> --output-dir <output-dir> [--projected-at <iso>]",
@@ -28,7 +28,7 @@
         "ml_prediction.json": "3fd72a79aeea87806510720161e14381f1e2f0a3bd28f0a702ac3d2a687cf339",
         "llm_prediction.json": "e3273f062e573c2df9cf6bbc2d5329821d3568035de3424503f4ec40399c45ec",
         "improvement.json": "55d1a2a115b930e89146d5781de09ee275a7897a815e8e1b0a76d869de301444",
-        "day1-morning-verification.json": "3a7d074175fc518aebab74aaf2514385db050e2110bcbe61f0b8510ffca452fc"
+        "day1-morning-verification.json": "eb41fcc8732713ecebf3d83a960561574ae9f666c03f1a8049ed2a2590890090"
       }
     },
     {
