@@ -2,11 +2,11 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "approved",
-    "reason": null,
+    "status": "none",
+    "reason": "no_evaluated_failure_observed",
     "proposal_count": 22,
-    "applied_count": 20,
-    "pending_count": 1,
+    "applied_count": 21,
+    "pending_count": 0,
     "rejected_count": 0
   },
   "records": [
@@ -26,12 +26,12 @@
         },
         "expected_impact": "과매도만으로 상승 방향을 확정해 중기 하락 추세일에 반대 방향을 선택하는 오류와, 해외 위험선호·전일 수급의 전이를 가정하는 오류를 줄입니다."
       },
-      "status": "approved",
+      "status": "applied",
       "approved": true,
-      "actual_applied": false,
+      "actual_applied": true,
       "effective_runtime_readback": null,
       "application_kind": "prompt",
-      "readback_verified": null,
+      "readback_verified": true,
       "observation_state": "pending",
       "evidence_refs": [
         {
