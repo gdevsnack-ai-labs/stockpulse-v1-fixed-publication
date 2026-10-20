@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 21,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 22,
     "applied_count": 20,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-10-20-morning-01",
+      "run_id": "live-shadow-2026-10-20-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-10-20-morning-01",
+      "proposal_id": "proposal-dcf35cb9812dfb4f",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "과매도 지표(20일선 이격 -10% 이하 또는 공포탐욕 35 이하)는 상승 방향의 확정 근거로 사용하지 않습니다. 방향을 상승으로 정하려면 추세 확인 신호(20일선 기울기 개선, 최근 10일 상승일 4일 이상, 또는 거래량 증가를 동반한 20일선 회복) 중 최소 하나를 함께 제시하고, 없으면 중립 또는 하락 우선으로 두며 확신도를 0.5 이하로 제한합니다. 전일 상승을 주도한 업종은 다음 세션 차익실현 되돌림 시나리오를 별도로 명시하고, 해외 위험선호가 직전 국내 세션에서 전이되지 않았다면 해외 신호 가중을 낮춥니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "과대평가한 신호는 해외 위험선호와 전일 수급 개선입니다. 나스닥·SOX·VIX 안정은 국내 지수에 전이되지 않았고, 전일 외국인 +947억원·기관 +1조378억원 순매수는 당일 -5,305억원·-9,997억원으로 반전했습니다. 과소평가한 신호는 추세 지속입니다. 20일선 이격 -12.47%, 10일 중 상승 2일, 20일 변동성 2.65%가 중기 하락을 가리켰는데 과매도 지표를 반등 근거로 앞세웠습니다. 전일 급등 업종의 차익실현 되돌림 위험도 빠졌습니다. 확신도 0.55는 방향 오판을 막지 못했습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "과매도만으로 상승 방향을 확정해 중기 하락 추세일에 반대 방향을 선택하는 오류와, 해외 위험선호·전일 수급의 전이를 가정하는 오류를 줄입니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-10-20-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-10-20-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-10-19-morning-01",
       "run_id": "live-shadow-2026-10-19-morning-01",
