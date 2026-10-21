@@ -2,11 +2,11 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "approved",
-    "reason": null,
+    "status": "none",
+    "reason": "no_evaluated_failure_observed",
     "proposal_count": 23,
-    "applied_count": 21,
-    "pending_count": 1,
+    "applied_count": 22,
+    "pending_count": 0,
     "rejected_count": 0
   },
   "records": [
@@ -26,12 +26,12 @@
         },
         "expected_impact": "급락 직후 반등일에 추세 지속을 기본값으로 두어 방향을 반대로 선택하는 오류와, 거래량 확대만을 반등 요건으로 삼아 저거래량 기술적 반등을 배제하는 오류를 줄입니다. 방어주 차익실현을 지수 하락 신호로 오독하는 오류도 함께 줄입니다."
       },
-      "status": "approved",
+      "status": "applied",
       "approved": true,
-      "actual_applied": false,
+      "actual_applied": true,
       "effective_runtime_readback": null,
       "application_kind": "prompt",
-      "readback_verified": null,
+      "readback_verified": true,
       "observation_state": "pending",
       "evidence_refs": [
         {
