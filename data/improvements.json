@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 22,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 23,
     "applied_count": 21,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-10-21-morning-01",
+      "run_id": "live-shadow-2026-10-21-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-10-21-morning-01",
+      "proposal_id": "proposal-0ffef73592644ea9",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "직전 세션 단일 하락폭이 -3% 이상이거나 20일선 이격도가 -12% 이하이면서 공포탐욕이 30 이하인 급락 직후 국면에서는 추세 지속을 기본 시나리오로 고정하지 않습니다. 하락 방향을 선택하려면 연속 순매도 지속, 신규 악재, 직전 세션 저가 이탈 같은 동시적 지속 신호를 최소 하나 명시해야 하며, 없으면 상승 반등과 하락 지속을 양방향 시나리오로 제시하고 확신도를 0.35 이하로 제한합니다. 반등 확인 조건으로 거래량 확대만을 요구하지 않고, 외국인 순매수 전환과 직전 세션 저가 유지 여부를 함께 사용합니다. 전일 상승 업종이 방어주이고 하락이 대형 수출주에 집중된 경우에는 이를 지수 하락 신호가 아니라 업종 로테이션 시나리오로 분류하고, 방어주 차익실현을 지수 방향 하락 근거로 사용하지 않습니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "과대평가한 신호는 추세 지속입니다. 20일선 이격 -14.99%, 최근 10일 상승일 2일, 20일선 기울기 악화를 근거로 하락을 기본 시나리오로 두었으나, 직전 세션 -3.73% 단일 급락과 공포탐욕 27, 이격도 -15% 수준은 평균회귀 반등이 발생하는 국면이기도 했습니다. Morning은 이 반등 가능성을 '확신도를 0.42로 제한하는' 용도로만 사용하고 방향 선택에서는 배제했습니다. 과소평가한 신호는 수급 반전 가능성과 로테이션의 지수 함의입니다. 전일 네 주체 동반 순매도를 근거로 '다음 세션 매수 주체가 확인되지 않는다'고 보았으나, 외국인은 다음 세션에 +6,595.2억원으로 즉시 순매수로 전환했습니다. 또한 전일 상승 업종이 방어주였다는 사실을 지수 하락 위험으로 해석했는데, 실제로는 대형 수출주 반등과 방어주 차익실현이 동시에 진행되는 업종 교체였습니다. 절차상 결함도 있습니다. Morning은 반등 확인 조건에 거래량 확대를 포함시켰으나, 이번 상승은 거래량 0.46배의 저거래량 반등이었습니다. 급락 직후 반등은 거래량이 마르는 상태에서도 발생하므로, 거래량 확대를 상승 시나리오의 필수 조건으로 둔 것이 반등 시나리오를 사실상 배제했습니다. 확신도 0.42는 낮은 편이었으나 방향 자체를 하락으로 확정한 이상 오판을 피할 수 없었습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "급락 직후 반등일에 추세 지속을 기본값으로 두어 방향을 반대로 선택하는 오류와, 거래량 확대만을 반등 요건으로 삼아 저거래량 기술적 반등을 배제하는 오류를 줄입니다. 방어주 차익실현을 지수 하락 신호로 오독하는 오류도 함께 줄입니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-10-21-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-10-21-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-10-20-morning-01",
       "run_id": "live-shadow-2026-10-20-morning-01",
