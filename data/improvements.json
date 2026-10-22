@@ -2,11 +2,11 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "approved",
-    "reason": null,
+    "status": "none",
+    "reason": "no_evaluated_failure_observed",
     "proposal_count": 24,
-    "applied_count": 22,
-    "pending_count": 1,
+    "applied_count": 23,
+    "pending_count": 0,
     "rejected_count": 0
   },
   "records": [
@@ -26,12 +26,12 @@
         },
         "expected_impact": "국내 추세가 일관되게 약세인 날 해외 강세만으로 중립을 택해 방향을 놓치는 오류를 줄입니다. 또한 스스로 제시한 발동 조건이 충족된 뒤에도 기존 확신도를 유지하는 모순을 줄입니다."
       },
-      "status": "approved",
+      "status": "applied",
       "approved": true,
-      "actual_applied": false,
+      "actual_applied": true,
       "effective_runtime_readback": null,
       "application_kind": "prompt",
-      "readback_verified": null,
+      "readback_verified": true,
       "observation_state": "pending",
       "evidence_refs": [
         {
