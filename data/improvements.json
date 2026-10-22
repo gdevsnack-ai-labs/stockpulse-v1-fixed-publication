@@ -2,14 +2,48 @@
   "schema_version": 1,
   "project_id": "stockpulse-v1-fixed",
   "summary": {
-    "status": "none",
-    "reason": "no_evaluated_failure_observed",
-    "proposal_count": 23,
+    "status": "approved",
+    "reason": null,
+    "proposal_count": 24,
     "applied_count": 22,
-    "pending_count": 0,
+    "pending_count": 1,
     "rejected_count": 0
   },
   "records": [
+    {
+      "cycle_id": "improvement-cycle-live-shadow-2026-10-22-morning-01",
+      "run_id": "live-shadow-2026-10-22-morning-01",
+      "evaluation_id": "evaluation-live-shadow-2026-10-22-morning-01",
+      "proposal_id": "proposal-ddbf0cfc4f007115",
+      "trigger": {},
+      "requested_change": {
+        "action_detail": "국내 추세 지표가 한 방향으로 일관될 때(종가가 20일선을 10% 이상 하회하고, 10일 상승일이 3일 이하이며, 이동평균 역배열 종목이 과반인 경우)에는 해외 위험선호·반도체 강세 같은 단일 counter-signal을 근거로 방향을 보합으로 두지 않습니다. 이 경우 기본 방향은 국내 추세를 따르고, 해외 counter-signal은 상방 위험 요인으로 별도 기재하며 확신도만 낮춥니다. 보합은 상승 신호와 하락 신호가 실제로 혼재할 때만 선택하고, 그때도 하락 시나리오 발동 조건(전일 저가 이탈, 전일 종가 이탈, 심리선 이탈)이 충족되면 확신도를 하락 쪽으로 재배분합니다.",
+        "action_type": "prompt",
+        "analysis_scope": "yura_evening_full_context",
+        "evaluation": {
+          "fail_reason": "핵심 오류는 방향 충돌을 대칭으로 처리한 것입니다. 국내 추세 지표는 모두 약세였고 해외 위험선호만 반대였는데, 두 근거를 같은 무게로 두어 중립을 골랐습니다. 보합은 추세 신호가 실제로 혼재할 때만 성립하는 판단이며, 추세 확인 신호의 부재는 상승의 부재이면서 동시에 하락 구조가 유지된다는 뜻입니다. 또한 하락 시나리오의 발동 조건을 제시하고도 조건 충족 시 확신도를 어떻게 재배분할지 정하지 않아, 조건이 충족된 뒤에도 보합 0.38을 유지했습니다.",
+          "is_correct": false
+        },
+        "expected_impact": "국내 추세가 일관되게 약세인 날 해외 강세만으로 중립을 택해 방향을 놓치는 오류를 줄입니다. 또한 스스로 제시한 발동 조건이 충족된 뒤에도 기존 확신도를 유지하는 모순을 줄입니다."
+      },
+      "status": "approved",
+      "approved": true,
+      "actual_applied": false,
+      "effective_runtime_readback": null,
+      "application_kind": "prompt",
+      "readback_verified": null,
+      "observation_state": "pending",
+      "evidence_refs": [
+        {
+          "kind": "run",
+          "id": "live-shadow-2026-10-22-morning-01"
+        },
+        {
+          "kind": "evaluation",
+          "id": "evaluation-live-shadow-2026-10-22-morning-01"
+        }
+      ]
+    },
     {
       "cycle_id": "improvement-cycle-live-shadow-2026-10-21-morning-01",
       "run_id": "live-shadow-2026-10-21-morning-01",
